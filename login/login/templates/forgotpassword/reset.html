@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block boot_starp_css_media %}
+	
+{% endblock boot_starp_css_media %}
+{% block css_media %}
+    {% include "forgotpassword/_media.html"%}
+{% endblock css_media %}
+{% block title %}
+	<title>{% trans "Reset Password" %} - UIMirror</title>
+{% endblock title %}
+{% block content %}
+	{% include "forgotpassword/card/_reset.html" %}
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
+{% block script_media %}
+	{% include "forgotpassword/_script_media.html" %}
+{% endblock script_media %}

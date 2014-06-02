@@ -1,0 +1,40 @@
+{% load i18n %}
+<!-- Login Main -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="wrap">
+			<p class="form-title">Sign In</p>
+			<form class="login" enctype="application/x-www-form-urlencoded" method="post" id="uimLoginForm" action="{% url 'uim.login' app_code %}?des={{des}}">
+				{% csrf_token %}
+				<p class="alert alert-danger msgWrap {% if INVLDMSG %}hasError{% endif %} textOverFlow" id="uimLgnErr">{% blocktrans %}{{ INVLDMSG }}{% endblocktrans %}</p>
+				<p class="alert alert-info msgWrap {% if INVLDSUG %}hasSug{% endif %} textOverFlow" id="uimLgnSug">{% blocktrans %}{{ INVLDSUG }}{% endblocktrans %}</p>
+				<input type="text" name="user_id" id="user_id" placeholder="{% blocktrans %}Email or Mobile No{% endblocktrans %}." class="{% if 'user_id' in INVLDKEY %}uimFieldErr{% endif %}" required="required" autofocus="autofocus" autocomplete="on"/> 
+				<input type="password" name="password" id="password" placeholder="Password" class="{% if 'pwd' in INVLDKEY %}uimFieldErr{% endif %}" placeholder="{% blocktrans %}Password{% endblocktrans %}" required="required" autocomplete="off"/> 
+				<input type="submit" value="Sign In" class="btn btn-success btn-sm" id="uimLgnActn"/>
+				<div class="remember-forgot">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="checkbox">
+								<label> <input type="checkbox" name="loggedinFlag"/>{% trans " Remember Me" %}
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6 forgot-pass-content">
+							<a href="#" class="forgot-pass">{% blocktrans %} Forgot
+								Password{% endblocktrans %}</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="popup" class="popupwrap {% if not FORGOTPWD %}hidden{% endif %}">
+	<div class="row">
+	<span class="popup_close uimtpd pull-right" id="popup_close" title="{% blocktrans %}Close{% endblocktrans %}">x</span>
+	</div>
+	<div class="row">
+	{% include "forgotpassword/card/_main.html" %}
+	</div>
+</div>
+<div id="fade" class="popupbackground {% if not FORGOTPWD %}hidden{% endif %}"></div>

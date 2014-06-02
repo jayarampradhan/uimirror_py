@@ -1,0 +1,75 @@
+{% load i18n %}
+<div class="container center-block">
+	<div class="row resetContainer">
+		<div class="row">
+			<h4 class="text-primary">{% blocktrans %}We Have Initiated the Password reset request for you, check your email for further instruction(s){% endblocktrans %}.</h4>
+			<p class="text-muted"><small>{% blocktrans %}You may Key in the token received in your email as an alternative{% endblocktrans %}.</small></p>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-md-offset-0">
+       			<div class="well well-sm">
+       				<p class="alert alert-danger msgWrap textOverFlow" id="uimReSendMailErr"><span>Sorry Request Can't be completed Now,</span><a href="{% url 'uim.login' app_code %}?fgp=y&des={{des}}&itest=y">Click</a> To Reset Password.</p>
+       				<p class="alert alert-info msgWrap textOverFlow" id="uimReSendMailSug">{% blocktrans %}We have sent the new token, please check your mail.{% endblocktrans %}</p>
+       				<form class="form-horizontal resendEmailToResetPwdForm" enctype="application/x-www-form-urlencoded" method="post" id="resendEmailToResetPwdForm" action="{% url 'uim.forgot.password.resend.mail' app_code mode pid rid %}?em={{email}}&aem={{alt_email}}&des={{des}}">
+       				{% csrf_token %}
+       					<p>Didn't Receive mail yet? <a href="#" id="resendMailLink">click</a><i class="ajxLoad sendMailRefresh hidden"></i></p>
+       				</form>
+       			</div>
+       		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-md-offset-0">
+       			<div class="well well-sm">
+       				<p class="alert alert-danger msgWrap {% if INVLDMSG %}hasError{% endif %} textOverFlow" id="uimChangePwdErr">{% blocktrans %}{{ INVLDMSG }}{% endblocktrans %}</p>
+					<p class="alert alert-info msgWrap {% if INVLDSUG %}hasSug{% endif %} textOverFlow" id="uimChangePwdSug">{% blocktrans %}{{ INVLDSUG }}{% endblocktrans %}</p>
+         				<form class="form-horizontal resetForm" enctype="application/x-www-form-urlencoded" method="post" id="uimResetForm" action="{% url 'uim.change.password' app_code mode pid rid %}?em={{email}}&aem={{alt_email}}&des={{des}}">
+         					<input type="hidden" value="{{EMAIL}}" name="email">
+         					<input type="hidden" value="{{PID}}" name="pid">
+         					<input type="hidden" value="{{alt_email}}" name="alt_email">
+         					<input type="hidden" value="{{rid}}" name="rid">
+         					<input type="hidden" value="{{des}}" name="des">
+         					<input type="hidden" value="{{src}}" name="source" id="changePwdSource">
+	        				{% csrf_token %}
+	        					<fieldset>
+			            		<!-- New Password input-->
+			          				<div class="form-group">
+			            					<label class="col-md-3 control-label" for="newPassword">{% blocktrans %}New Password{% endblocktrans %}</label>
+			            					<div class="col-md-9 passwordWrap">
+			              					<input id="newPassword" name="newPassword" type="password" class="{% if 'pwd' in INVLDKEY %}uimFieldErr{% endif %}" placeholder="{% blocktrans %}Type a New Password{% endblocktrans %}" autocomplete="off" autofocus="autofocus"/>
+			            					</div>
+			          				</div>
+	  
+			          				<!-- Confirm Password input-->
+			          				<div class="form-group">
+			            					<label class="col-md-3 control-label" for="confirmPassword">{% blocktrans %}Confirm Password{% endblocktrans %}</label>
+			            					<div class="col-md-9">
+			              					<input id="confirmPassword" name="confirmPassword" type="password" class="{% if 'confirmPassword' in INVLDKEY %}uimFieldErr{% endif %}" placeholder="{% blocktrans %}Confirm Password{% endblocktrans %}" autocomplete="off"/>
+			            					</div>
+			          				</div>
+			          				<!-- Token Key-->
+			          				<div class="form-group {% if TOKEN %}hidden{% endif %}">
+			            					<label class="col-md-3 control-label" for="token">{% blocktrans %}Token{% endblocktrans %}</label>
+			            					<div class="col-md-9">
+			              					<input id="token" name="token" type="text" class="{% if 'token' in INVLDKEY %}uimFieldErr{% endif %}" placeholder="{% blocktrans %}Token{% endblocktrans %}" value="{{TOKEN}}" autocomplete="off"/>
+			            					</div>
+			          				</div>
+			  						<div class="form-group {% if MODE == '1' %}hidden{% endif %}">
+			            					<label class="col-md-3 control-label" for="check"></label>
+			            					<div class="col-md-9">
+			            						<div class="col-md-1">
+			              						<input type="checkbox" id="check" name="useAsNewUidFlag">
+			              					</div>
+			              					<div class="col-md-10 no_padding">
+			              						<label><small>{% blocktrans %}Use {% endblocktrans %}<strong>{{alt_email}}</strong>{% blocktrans %} as primary user Id.{% endblocktrans %}</small></label>
+			              					</div>
+			            					</div>
+			          				</div>
+	          				</fieldset>
+	          				<input type="submit" value="{% blocktrans %}Reset Password{% endblocktrans %}" class="btn btn-success btn-sm" id="uimResetActn"/>
+         				</form>
+       			</div>	
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+#Use to install the required library
+pip install -r requirements.txt
+
+*Note (ARCHFLAGS=-Wno-error CFLAGS=-I/opt/local/include sudo -E pip) was used for xcode 5.1 to avoid cc error fpr python to convert it warning
+
+sudo pip install Pillow
+
+sudo pip install Celery
+sudo pip install django-celery
+
+#for prcypto, for MAC XCODE needs an update
+sudo pip install pycrypto
+#*(Extra steps for pycrypto is 
+#  sudo port install gmp
+#  sudo ln -s  /opt/local/lib/libgmp.dylib  /usr/lib/libgmp.dylib  
+#  ARCHFLAGS=-Wno-error CFLAGS=-I/opt/local/include sudo -E pip install pycrypto)
+
+sudo pip install south
+
+sudo pip install unidecode
+
+sudo pip install userena
+
+sudo pip install django-debug_toolbar
+
+sudo pip install django_compressor
+
+
+sudo pip install mysql-python 
+#In case above not working try with below
+ARCHFLAGS=-Wno-error CFLAGS=-I/opt/local/include sudo -E pip install mysql-python
+
+#Then create a symlink (sudo ln -s /usr/local/mysql/lib/libmysqlclient.18.dylib /usr/lib/libmysqlclient.18.dylib)
+
+#Geo Coders Depedancy
+sudo easy_install geopy
+
+sudo pip install requests
+
+sudo pip install lxml

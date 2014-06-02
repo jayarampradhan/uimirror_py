@@ -1,0 +1,41 @@
+{% load i18n %}
+<!-- Forgot Password Main -->
+<div class="pass-reset">
+	<form enctype="application/x-www-form-urlencoded"
+		method="post" id="uimForgotPasswordForm"
+		action="{% url 'uim.forgot.password' app_code %}?des={{des}}">
+		{% csrf_token %}
+		<p class="alert alert-danger msgWrap {% if FP_INVLDMSG %}hasError{% endif %} textOverFlow" id="uimForgotPwdErr">{% blocktrans %}{{ FP_INVLDMSG }}{% endblocktrans %}</p>
+		<p class="alert alert-info msgWrap {% if FP_INVLDSUG %}hasSug{% endif %} textOverFlow" id="uimForgotPwdSug">{% blocktrans %}{{ FP_INVLDSUG }}{% endblocktrans %}</p>
+		<div class="radio-option">
+			<input type="radio" name="preoption" value="1" id="1" {% if mode %}{% if mode == '1'%}checked="checked"{% endif %}{% else %}checked="checked"{% endif %}  /> 
+			<label class="radio-label" for="1">{%blocktrans %}I don't know my password{% endblocktrans %}</label>
+			<div class="hideable-wrapper {% if mode and mode == "2" %}hidden{% endif %}" id="hideable-box1" style="height: 60px;">
+				<div class="hideable-box">
+					<label class="secondary">{% blocktrans %}Enter the email you signed up with{% endblocktrans %}. 
+						<input type="email" placeholder="{% blocktrans %}Email{% endblocktrans %}." name="uimSignedUpEmail" id="uimSignedUpEmail" class="{% if 'signedUpEmail' in FP_INVLDKEY %}uimFieldErr{% endif %}" autofocus="autofocus" autocomplete="on"/>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="radio-option">
+			<input type="radio" name="preoption" value="2" id="2" {% if mode and mode == "2" %}checked="checked"{% endif %}/> 
+			<label class="radio-label" for="1">{% blocktrans %}I lost access to my profile{% endblocktrans %}</label>
+			<div class="hideable-wrapper {% if mode %}{% if mode == '1'%}hidden{% endif %}{% else %}hidden{% endif %}" id="hideable-box2" style="height: 210px;">
+				<div class="hideable-box">
+					<label class="secondary">{% blocktrans %}Enter the Registered email Address{% endblocktrans %}. 
+					<input type="email" name="uimEmail" placeholder="{% blocktrans %}Registered Email{% endblocktrans %}." id="uimEmail" class="{% if 'uimEmail' in FP_INVLDKEY %}uimFieldErr{% endif %}" autofocus="autofocus" autocomplete="on"/>
+					</label>
+					<label class="stacked-label">{% blocktrans %}Enter the most recent password you remember{% endblocktrans %}. 
+					<input type="password" placeholder="{% blocktrans %}Recent Password{% endblocktrans %}." name="uimRecentPwd" id="uimRecentPwd" class="{% if 'recentPwd' in FP_INVLDKEY %}uimFieldErr{% endif %}" autofocus="autofocus" autocomplete="off"/>
+					</label>
+					<label class="stacked-label">{% blocktrans %}Enter the email Address, you have access to{% endblocktrans %}. 
+					<input type="email" name="uimResetEmailAccessTo" placeholder="{% blocktrans %}Alternative Email{% endblocktrans %}." id="uimResetEmailAccessTo" class="{% if 'alterNativeEmail' in FP_INVLDKEY %}uimFieldErr{% endif %}" autofocus="autofocus" autocomplete="on"/>
+					</label>
+				</div>
+			</div>
+		</div>
+		<input type="submit" value="Submit"
+			class="pass-reset-submit btn btn-success btn-sm" id="uimForgotPwdReqAction"/>
+	</form>
+</div>

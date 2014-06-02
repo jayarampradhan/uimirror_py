@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block css_media %}
+    {% include "_media.html"%}
+{% endblock css_media %}
+{% block title %}
+	<title>{% trans "Sign In" %} - UIMirror</title>
+{% endblock title %}
+{% block content %}
+	<div class="container">
+		{% include "login/cards/_header.html" %}
+		{% include "login/cards/_theme.html" %}
+		{% include "login/cards/_main.html" %}
+	</div>
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
+{% block script_media %}
+	{% include "_script_media.html" %}
+{% endblock script_media %}
