@@ -5,8 +5,8 @@
     		}
 		};
 	//First Set the focus to the first visible input
-	UIM_UTILITY.focusWithTimeOut($('#uimResetForm').find('input[type=password],input[type=text],').filter(':visible:first'));
-	$('#newPassword:password').uimpwstrength(pMeteroptions);
+	UIM.focusWithTimeOut($('#uimResetForm').find('input[type=password],input[type=text],').filter(':visible:first'));
+	//$('#newPassword:password').uimpwstrength(pMeteroptions);
 	$('#newPassword:password').focusin(function() {
 		var _self = $(this)
 		_self.uimpwstrength(pMeteroptions);
