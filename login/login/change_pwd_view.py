@@ -4,19 +4,16 @@ import urlparse
 
 from django.conf import settings
 from django.core.exceptions import ValidationError
-from django.core.urlresolvers import reverse
 from django.core.validators import URLValidator, validate_email
 from django.http.response import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from django.views.generic.base import View
-
 from dic_builder import buildValidationErrorDic
-from encryption.uiencrypt import EncryptionUtil
 from lgn_helper import buildLoginGetArguments
 from ui_utilities.dsutilities import DSUtility
-from ui_utilities.http_api import RestClient
-from useragent.determine_user_agent import UserAgent
+
+
 
 
 log = logging.getLogger(__name__)
@@ -87,6 +84,7 @@ class ChangePassword(View):
             log.error("[END]-Invalid request received for password Change.");
             return self.redirectToLoginPage(app_code, destination);  
         # Get user Agent and IP
+        from useragent.determine_user_agent import UserAgent
         USER_AGENT = UserAgent()
         user_ip, user_agent = USER_AGENT.get_client_ip(request), USER_AGENT.get_browser_agent(request);
         
@@ -203,6 +201,7 @@ class ChangePassword(View):
         WEB_BASE_URL = getattr(settings, "REST_BASE_URL", None);
         WEB_BASE_URL += 'changepassword'
         # make instance of rest client
+        from ui_utilities.http_api import RestClient
         client = RestClient();
         return client.postWithAuthHeader(WEB_BASE_URL, data);
     
@@ -311,4 +310,6 @@ class ChangePassword(View):
            @return: The login page with forgot password tab selected and error message on that. 
         '''
         mode = '1' if not mode else mode;
+        from django.shortcuts import redirect
+        from django.core.urlresolvers import reverse
         return redirect('%s?%s' % (reverse('uim.login', kwargs={'app_code':app_code}), buildLoginGetArguments(destination, 'y', sub_tab= mode, _issues = '2')))

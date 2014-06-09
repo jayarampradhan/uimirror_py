@@ -3,9 +3,6 @@ import urllib
 import urlparse
 
 from django.conf import settings
-from django.core.exceptions import ValidationError
-from django.core.validators import URLValidator, validate_email, \
-    validate_ipv46_address
 from django.http.response import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
@@ -13,9 +10,6 @@ from django.views.generic.base import View
 
 from login.lgn_helper import LoginHelper
 from ui_utilities.destination_builder import getDestinationByAppCode
-from ui_utilities.dsutilities import DSUtility
-from ui_utilities.http_api import RestClient
-from useragent.determine_user_agent import UserAgent
 
 
 log = logging.getLogger(__name__)
@@ -100,6 +94,7 @@ class LoginView(View):
         keepmelogin = 'Y' if request.POST.get('loggedinFlag') else 'N'
         
         # Get user Agent and IP
+        from useragent.determine_user_agent import UserAgent
         USER_AGENT = UserAgent()
         user_ip, user_agent = USER_AGENT.get_client_ip(request), USER_AGENT.get_browser_agent(request);
         password, user_id = request.POST.get('password', None), request.POST.get('user_id', None);
@@ -135,6 +130,9 @@ class LoginView(View):
         '''
         # step 1- URL validator
         key, msg, sug = '','','';
+        from django.core.exceptions import ValidationError
+        from django.core.validators import URLValidator, \
+        validate_ipv46_address
         try:
             url_validate = URLValidator();
             url_validate(destination);
@@ -177,6 +175,8 @@ class LoginView(View):
            @return: true if the details are valid else false
         '''
         # First check if user id is email
+        from django.core.validators import validate_email
+        from django.core.exceptions import ValidationError
         try:
             validate_email(user_id);
         except ValidationError:
@@ -213,6 +213,7 @@ class LoginView(View):
         WEB_BASE_URL = getattr(settings, "REST_BASE_URL", None);
         WEB_BASE_URL += 'auth'
         # make instance of rest client
+        from ui_utilities.http_api import RestClient
         client = RestClient();
         return client.postWithAuthHeader(WEB_BASE_URL, data);
     
@@ -237,6 +238,7 @@ class LoginView(View):
           @param destination: Destination End point where Request will be navigated.
           @param app_code: Application Code Trying To access
         '''
+        from ui_utilities.dsutilities import DSUtility
         res_code, res_msg = DSUtility().getlistitem(sr_response, 'RESCD'), DSUtility().getlistitem(sr_response, 'MSG');
         errors = {};
         if res_code == "200":

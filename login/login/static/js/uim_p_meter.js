@@ -18,11 +18,11 @@
             // Options
             minChar: 8,
             errorMessages: {
-                password_to_short: "The Password is too short",
-                same_as_username: "Your password cannot be the same as your username"
+                password_to_short: gettext("The Password is too short"),
+                same_as_username: gettext("Your password cannot be the same as your username")
             },
             scores: [17, 26, 40, 50],
-            verdicts: ["Weak", "Normal", "Medium", "Strong", "Perfect"],
+            verdicts: [gettext("Weak"), gettext("Normal"), gettext("Medium"), gettext("Strong"), gettext("Perfect")],
             showVerdicts: true,
             raisePower: 1.4,
             usernameField: "#username",

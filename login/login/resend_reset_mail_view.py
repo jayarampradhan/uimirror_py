@@ -1,14 +1,6 @@
-import logging
-import urllib
-
 from django.conf import settings
-from django.http.response import HttpResponse
 from django.views.generic.base import View
-
-from ui_utilities.JSONResponseMixin import JSONResponseMixin
-from ui_utilities.http_api import RestClient
-from useragent.determine_user_agent import UserAgent
-
+import logging
 
 log = logging.getLogger(__name__)
 class ResendResetMail(View):
@@ -51,6 +43,7 @@ class ResendResetMail(View):
         
         #write logic for the request process, then return the response
         #Get user Agent and IP
+        from useragent.determine_user_agent import UserAgent
         USER_AGENT = UserAgent()
         user_ip, user_agent = USER_AGENT.get_client_ip(request), USER_AGENT.get_browser_agent(request);
         #build temporary response to be handel but latter it needs to be web service call
@@ -78,12 +71,14 @@ class ResendResetMail(View):
         '''
         # for the Data Form to be sent over network
         forms = {"mode": mode, "client_meta": user_agent, "ip": user_ip, "email": _email, "alt_email":_alt_email, "pid": pid, 'rid': rid, 'app':app_code}
+        import urllib
         data = urllib.urlencode(forms, doseq=True);
         
         # form the URL
         WEB_BASE_URL = getattr(settings, "REST_BASE_URL", None);
         WEB_BASE_URL += 'forgotPassword/re-send/mail'
         # make instance of rest client
+        from ui_utilities.http_api import RestClient
         client = RestClient();
         return client.postWithAuthHeader(WEB_BASE_URL, data);
     
@@ -94,8 +89,10 @@ class ResendResetMail(View):
            @param response: Response that will be sent over network.
         '''
         if(request.is_ajax()):
+            from ui_utilities.JSONResponseMixin import JSONResponseMixin
             return JSONResponseMixin().render_to_response(response);
         else:
+            from django.http.response import HttpResponse
             return HttpResponse(response);
         
     def webMockData(self):

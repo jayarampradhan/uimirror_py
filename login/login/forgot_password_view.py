@@ -8,14 +8,10 @@ from django.core.validators import validate_email
 from django.shortcuts import redirect, render_to_response
 from django.template.context import RequestContext
 from django.views.generic.base import View
-
 from forgot_password_helper import buildChangePasswordGetArguments
 from lgn_helper import buildLoginGetArguments
 from login.forgot_password_helper import ForGotPasswordHelper
 from ui_utilities.dsutilities import DSUtility
-from ui_utilities.http_api import RestClient
-from useragent.determine_user_agent import UserAgent
-
 
 log = logging.getLogger(__name__)
 
@@ -66,6 +62,7 @@ class ForGotPassword(View):
             _email, _alt_email, _recent_pwd = request.POST.get('uimEmail'), request.POST.get('uimResetEmailAccessTo'), request.POST.get('uimRecentPwd');
         
         # Get user Agent and IP
+        from useragent.determine_user_agent import UserAgent
         USER_AGENT = UserAgent()
         user_ip, user_agent = USER_AGENT.get_client_ip(request), USER_AGENT.get_browser_agent(request);
 
@@ -79,6 +76,7 @@ class ForGotPassword(View):
         # process for the service call and return back with the response
         dev_mode = getattr(settings, "SKIP_WEB_CALL", 'n');
         if dev_mode == 'y':
+            # TODO: Webmock Method Delete on production ready
             sr_response = self.buildWebMockData();
         else:
             sr_response = self.forgotPassword(user_agent, user_ip, _email, _alt_email, _recent_pwd, _reset_option, destination);
@@ -149,6 +147,7 @@ class ForGotPassword(View):
         WEB_BASE_URL = getattr(settings, "REST_BASE_URL", None);
         WEB_BASE_URL += 'forgotPassword'
         # make instance of rest client
+        from ui_utilities.http_api import RestClient
         client = RestClient();
         return client.postWithAuthHeader(WEB_BASE_URL, data);
     

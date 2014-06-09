@@ -1,47 +1,4 @@
-+function ($) { "use strict";
-	var pMeteroptions = {
-        	onKeyUp: function (evt) {
-    			$(evt.target).uimpwstrength("outputErrorList");
-    		}
-		};
-	//First Set the focus to the first visible input
-	UIM.focusWithTimeOut($('#uimResetForm').find('input[type=password],input[type=text],').filter(':visible:first'));
-	//$('#newPassword:password').uimpwstrength(pMeteroptions);
-	$('#newPassword:password').focusin(function() {
-		var _self = $(this)
-		_self.uimpwstrength(pMeteroptions);
-		if(_self.hasClass('activated') && _self.val().length > 0){
-			_self.uimpwstrength('forceUpdate');
-		}else{
-			_self.addClass('activated');
-		}
-	});
-	$('#newPassword:password').focusout(function() {
-		var _self = $(this);
-		_self.uimpwstrength('destroy');
-		if(_self.val().length === 0){
-			_self.removeClass('activated');
-		}
-	});
-	$('#resendEmailToResetPwdForm').on('click', '#resendMailLink:not(".inprogress")', function(e){
-		e.preventDefault();
-		UIM.resendTokenMail($(this));
-	});
-	
-	$('#uimResetForm').submit(function(){
-	    if(!UIM.validatChangePasswordForm()){
-	    	return false;
-	    }else{
-	    	$('#uimResetActn:submit', this).click(function(e) {
-		    	return false;
-		    });
-	    	return true;
-	    }
-	});
-	
-}(window.jQuery);
-
-var UIM = (function(CHANGE_PWD) {
+var UIM = (function($, CHANGE_PWD) {
 	var _inprogress= 'inprogress';
 	function applyHidden(_elm) {
 		return _elm.addClass('hidden');
@@ -54,9 +11,6 @@ var UIM = (function(CHANGE_PWD) {
 	}
 	function removeClass(_elm, _class){
 		_elm.removeClass(_class)
-	}
-	function buildStregthMeterOptions(){
-		
 	}
 	function buildResendMailOptions(){
 		var options={},
@@ -79,14 +33,14 @@ var UIM = (function(CHANGE_PWD) {
 	}
 	function updateResendTokenSuccessResponse(_rs){
 		if(_rs.RESCD === '200'){
-			$('#uimReSendMailSug').addClass('hasSug').find('span:first').text('We have sent the new token, please check your mail.');
+			$('#uimReSendMailSug').addClass('hasSug').find('span:first').text(gettext('We have sent the new token, please check your mail.'));
 		}else{
 			$('#uimReSendMailErr').addClass('hasError').find('span:first').text(_rs.MSG);
 		    $('#resendEmailToResetPwdForm').addClass('hidden');
 		}
 	}
 	function updateResendTokenFaildResponse(){
-		$('#uimReSendMailErr').addClass('hasError').find('span:first').text('Something Went Wrong we are working on it.');
+		$('#uimReSendMailErr').addClass('hasError').find('span:first').text(gettext('Something Went Wrong we are working on it.'));
 		$('#resendEmailToResetPwdForm').addClass('hidden');
 	}
 	function isValidChangePassWordForm(){
@@ -99,7 +53,7 @@ var UIM = (function(CHANGE_PWD) {
 			msg = '',
 			_valid_flag = true;
 		if(!_new_pwd_val || !_cnf_pwd_val || !(_new_pwd_val === _cnf_pwd_val)){
-			msg = 'Key In the Correct Password and confirm it.<br>';
+			msg = gettext('Key In the Correct Password and confirm it.<br>');
 			newPassword.addClass('uimFieldErr');
 			confirmPassword.addClass('uimFieldErr');
 			_valid_flag = false;
@@ -107,10 +61,10 @@ var UIM = (function(CHANGE_PWD) {
 		if(!_tkn_val){
 			var _source = $('#changePwdSource').val();
 			if(_source === 'form'){
-				msg += 'Key In the Token You Received in your mail box.';
+				msg += gettext('Key In the Token You Received in your mail box.');
 				token.addClass('uimFieldErr');
 			}else{
-				$('#uimReSendMailErr').addClass('hasError').find('span:first').text('Reqtest Can\'t be processed now, ');
+				$('#uimReSendMailErr').addClass('hasError').find('span:first').text(gettext('Reqtest Can\'t be processed now, '));
 			    $('#resendEmailToResetPwdForm').addClass('hidden');
 			}
 			_valid_flag = false;
@@ -134,7 +88,7 @@ var UIM = (function(CHANGE_PWD) {
 	CHANGE_PWD.resendTokenMail = function(_self){
 		addClass.call(this, _self, _inprogress)
 		var _options = buildResendMailOptions.call();
-		var _promise = $.ajax(buildResendMailOptions.call());
+		var _promise = $.ajax(_options);
 		_promise.done(function(rs){
 			stopLoadingIcon.call(this, _options.loadIcon);
 			removeClass.call(this, _self, _inprogress);
@@ -149,5 +103,65 @@ var UIM = (function(CHANGE_PWD) {
 	CHANGE_PWD.validatChangePasswordForm = function(obj){
 		return isValidChangePassWordForm.call();
 	};
+	CHANGE_PWD.initChangePassword = function(){
+		var _body = $('body');
+		if(_body.attr('data-js_uim_change_pwd') === 'applied'){
+			console.log('Already Applied');
+			return false;
+		}
+		setTimeout(function() { 
+			var pMeteroptions = {
+			    	onKeyUp: function (evt) {
+						$(evt.target).uimpwstrength("outputErrorList");
+					}
+				};
+			UIM.focusWithTimeOut($('#uimResetForm').find('input[type=password],input[type=text],').filter(':visible:first'));
+			//$('#newPassword:password').uimpwstrength(pMeteroptions);
+			$('#newPassword:password').focusin(function() {
+				var _self = $(this)
+				_self.uimpwstrength(pMeteroptions);
+				if(_self.hasClass('activated') && _self.val().length > 0){
+					_self.uimpwstrength('forceUpdate');
+				}else{
+					_self.addClass('activated');
+				}
+			});
+			$('#newPassword:password').focusout(function() {
+				var _self = $(this);
+				_self.uimpwstrength('destroy');
+				if(_self.val().length === 0){
+					_self.removeClass('activated');
+				}
+			});
+			$('#resendEmailToResetPwdForm').on('click', '#resendMailLink:not(".inprogress")', function(e){
+				e.preventDefault();
+				UIM.resendTokenMail($(this));
+			});
+
+			$('#uimResetForm').submit(function(){
+			    if(!UIM.validatChangePasswordForm()){
+			    	return false;
+			    }else{
+			    	$('#uimResetActn:submit', this).click(function(e) {
+				    	return false;
+				    });
+			    	return true;
+			    }
+			});
+		}, 50);
+		_body.attr('data-js_uim_change_pwd', 'applied');
+	};
+	
 	return CHANGE_PWD;
-}(UIM || {})); 
+}(jQuery.noConflict(), UIM || {})); 
+
+/* Define dummy gettext if Django's javascrip_catalog is not being used */
+if (typeof gettext != 'function') {
+    window.gettext = function(text) {
+        return text;
+    };
+}
+
++function ($) { "use strict";
+	UIM.initChangePassword();
+}(window.jQuery);
