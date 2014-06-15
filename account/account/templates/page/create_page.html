@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block title %}
+	<title>{% trans "Create a page" %}|UIMirror</title>
+{% endblock title %}
+{% block css_media %}
+    {% include "page/_media.html"%}
+{% endblock css_media %}
+
+{% block content %}
+	{% include "_theme.html" %}
+	<div></div>
+	<div class="main content clearfix pagemain" id="pagemain">
+		<div class="card page-info-card">
+			<span class="db f12 tc-6">Create a Page for your business, life style, organization, personal usage etc.</span>
+			<!-- In case of validation error -->	    
+	    	<div class="ui_error _ui_e_w_b mb20 _ui_e_w_lgn_w {% if not INVLDMSG %}hidden{% endif %}" id="_ui_signup_faild_msg_wr">
+	    		<i class="ui_error_img dib"></i>
+	    		<span class="f13" id="_ui_signup_faild_msg">{% if INVLDMSG %}{% blocktrans %}{{ INVLDMSG }}{% endblocktrans %}{% endif %}</span>
+	    	</div>
+	    	<!-- In case of any suggestion for user -->
+	    	<div class="ui_info _ui_e_w_b mb20 _ui_e_w_lgn_w {% if not INVLDSUG %}hidden{% endif %}" id="_ui_signup_faild_msg_sug">
+	    		<i class="ui_info_img dib"></i>
+	    		<span class="f13" id="_ui_signup_faild_sug">{% if INVLDSUG %}{% blocktrans %}{{ INVLDSUG }}{% endblocktrans %}{% endif %}</span>
+	    	</div>
+		</div>
+		{% include "page/_page.html"%}
+	</div>
+{% endblock content %}
+
+{% block script_media %}
+	{% include "page/_script_media.html" %}
+{% endblock script_media %}

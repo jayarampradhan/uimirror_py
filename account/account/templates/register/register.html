@@ -1,0 +1,24 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block boot_starp_css_media %}
+	
+{% endblock boot_starp_css_media %}
+{% block css_media %}
+    {% include "register/_media.html"%}
+{% endblock css_media %}
+{% block title %}
+	<title>{% trans "Sign UP" %} - UIMirror</title>
+{% endblock title %}
+{% block content %}
+	{% include "register/_top.html"%}
+	<div class="container center-block">
+		{% include "register/_theme.html"%}
+		{% include "register/_info_error.html"%}
+		{% include "register/_register.html"%}
+	</div>
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
+{% block script_media %}
+	{% include "register/_script_media.html" %}
+{% endblock script_media %}

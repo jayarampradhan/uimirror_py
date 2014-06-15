@@ -1,0 +1,242 @@
+/*Header*/
+.uim-header-bar.centered {
+	height: 150px;
+	overflow: hidden;
+}
+
+.header .logo {
+	margin: 17px 0 0;
+	float: left;
+	height: 81px;
+	width: 238px;
+}
+
+.uim-header-bar.centered .header .logo {
+	float: none;
+	margin: 40px auto 30px;
+	display: block;
+}
+
+.uim-header-bar.centered .header .logo {
+	margin: 25px auto 0px;
+}
+
+.ui_hd_quote {
+	margin: 0px 0px 0px;
+	text-align: center;
+	text-shadow: 2px 0px 17px rgba(70, 112, 184, 1);
+}
+/*Header end*/
+/*Main Content section*/
+/*Register Page*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
+.content {
+	padding: 0 44px;
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 650px;
+	padding-top: 23px;
+	
+}
+.regmain{
+	padding-bottom: 185px;
+}
+
+.card {
+	background-color: #f7f7f7;
+	padding: 20px 25px 30px;
+	margin: 0 auto 25px;
+	width: 304px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.signup-card {
+	width: 465px;
+	padding: 40px 40px;
+}
+
+._ui_sining_act_spa {
+	padding-right: 20px;
+	padding-top: 8px;
+}
+
+._ui_sining_in_cl {
+	color: #6787be;
+}
+
+._ui_e_w_lgn_w {
+	margin-right: 10px;
+	width: 353px;
+}
+h1._ui_sign_txt {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0
+		rgba(0, 0, 0, .5);
+	text-transform: uppercase;
+	text-align: center;
+	color: #666;
+	margin: 0 0 30px 0;
+	letter-spacing: 4px;
+	font: normal 26px/1 Verdana, Helvetica;
+	position: relative;
+}
+
+h1._ui_sign_txt:after,h1._ui_sign_txt:before {
+	background-color: #777;
+	content: "";
+	height: 1px;
+	position: absolute;
+	top: 15px;
+	width: 120px;
+}
+
+h1._ui_sign_txt:after {
+	background-image: -webkit-gradient(linear, left top, right top, from(#777),
+		to(#fff));
+	background-image: -webkit-linear-gradient(left, #777, #fff);
+	background-image: -moz-linear-gradient(left, #777, #fff);
+	background-image: -ms-linear-gradient(left, #777, #fff);
+	background-image: -o-linear-gradient(left, #777, #fff);
+	background-image: linear-gradient(left, #777, #fff);
+	right: 0;
+}
+
+h1._ui_sign_txt:before {
+	background-image: -webkit-gradient(linear, right top, left top, from(#777),
+		to(#fff));
+	background-image: -webkit-linear-gradient(right, #777, #fff);
+	background-image: -moz-linear-gradient(right, #777, #fff);
+	background-image: -ms-linear-gradient(right, #777, #fff);
+	background-image: -o-linear-gradient(right, #777, #fff);
+	background-image: linear-gradient(right, #777, #fff);
+	left: 0;
+}
+#inputs ._ui_in_cs {
+	background: #f1f1f1 url('../../images/login-sprite.png') no-repeat;
+	padding: 15px 15px 15px 30px;
+	margin: 0 0 10px 0;
+	height: 45px;
+	width: 353px; /* 353 + 2 + 45 = 400 */
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+	-webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+	box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+#inputs ._ui_in_cs:focus {
+	background-color: #fff;
+	border-color: #e8c291;
+	outline: none;
+	-moz-box-shadow: 0 0 0 1px #e8c291 inset;
+	-webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+	box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+#actions {
+	margin: 15px 0 0 0;
+}
+.form-cn-cl-r {
+	color: #6787be;
+	border: 1px solid #D20009 !important;
+}
+span._ui_reg_bd_sp ._ui_reg_bd_in{
+	width: 80px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	
+}
+span._ui_reg_bd_sp ._ui_reg_bd_in:focus {
+	background-color: #fff;
+	border-color: #e8c291;
+	outline: none;
+	-moz-box-shadow: 0 0 0 1px #e8c291 inset;
+	-webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+	box-shadow: 0 0 0 1px #e8c291 inset;
+}
+/*Register Page end*/
+
+/*Ajax Loader move to common*/
+#ajaxloader3 {
+	border-left-color: transparent;
+}
+
+#ajaxloader1,#ajaxloader2,#ajaxloader3,#ajaxloader4 {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	top: 15%;
+	margin: 0 0 0 -15px;
+	border: 8px solid #fff;
+	border-right-color: transparent;
+	border-radius: 50%;
+	box-shadow: 0 0 25px 2px #eee;
+	-webkit-animation: spin 1s linear infinite;
+	-moz-animation: spin 1s linear infinite;
+	-ms-animation: spin 1s linear infinite;
+	-o-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+
+#ajaxloader3::after {
+	border-left-color: transparent;
+	border-right-color: transparent;
+}
+
+#ajaxloader3::after,#ajaxloader4::after {
+	display: block;
+	content: " ";
+	width: 9px;
+	height: 9px;
+	border: 6px solid #fff;
+	margin: 4px;
+	border-radius: 50%;
+}
+/*Ajax Loader end*/
+.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+
+.white_content {
+	display: none;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	padding: 16px;
+	border: 16px solid orange;
+	background-color: white;
+	z-index:1002;
+	overflow: auto;
+}

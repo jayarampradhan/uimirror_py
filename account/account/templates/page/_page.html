@@ -1,0 +1,418 @@
+ {#Page#}
+ {% load i18n %}
+<!-- Local Business or Place start -->
+<div class="pagefrmwrapper pa5" id="pagecontainer">
+	<div class="thumbnail mr15 mt15">
+		<div class="thumbnail-box">
+			<div class="thumbnail-inner">
+				<div class="facade">
+					<i class="largeIcon img thumbnail-img thumbnail-img01"></i>
+					<div class="facade_text">{% trans "Local Business or Place" %}</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="thumbnail-form">
+			<div class="mb8 title f13 fwb tc-4">{% trans "Local Business or Place" %}</div>
+			<form id="_lcl_bs_pg_frm" action="{% url 'account.create.page' %}" method="post">
+				<select name="_lcl_bs_in_sl" id="_lcl_bs_in_sl" class="thumbnail-form_selector">
+				<option value="" selected="selected">{% trans "Choose a category" %}</option>
+				<option value="1">{% trans "Airport" %}</option>
+				<option value="2">{% trans "Arts/Entertainment/Nightlife" %}</option>
+				<option value="3">{% trans "Attraction/Things to do" %}</option>
+				<option value="4">{% trans "Automotive" %}</option>
+				<option value="5">{% trans "Bank/Financial Services" %}</option>
+				<option value="6">{% trans "Bar" %}</option>
+				<option value="7">{% trans "BookStore" %}</option>
+				<option value="8">{% trans "Business Services" %}</option>
+				<option value="9">{% trans "Temple/Religious Organization" %}</option>
+				<option value="10">{% trans "Club" %}</option>
+				<option value="11">{% trans "Community/Government" %}</option>
+				<option value="12">{% trans "Concert Venue" %}</option>
+				<option value="13">{% trans "Doctor" %}</option>
+				<option value="14">{% trans "Education" %}</option>
+				<option value="15">{% trans "Event Planning/Event Services" %}</option>
+				<option value="16">{% trans "Food/Grocery" %}</option>
+				<option value="17">{% trans "Health/Medical/Pharmacy" %}</option>
+				<option value="18">{% trans "Home Improvement" %}</option>
+				<option value="19">{% trans "Hospital/Clinic" %}</option>
+				<option value="20">{% trans "Hotel" %}</option>
+				<option value="21">{% trans "Landmark" %}</option>
+				<option value="22">{% trans "Lawyer" %}</option>
+				<option value="23">{% trans "Library" %}</option>
+				<option value="24">{% trans "Local Business" %}</option>
+				<option value="25">{% trans "Movie Theater" %}</option>
+				<option value="26">{% trans "Museum/Art Gallery" %}</option>
+				<option value="27">{% trans "Outdoor Gear/Sporting Goods" %}</option>
+				<option value="28">{% trans "Pet Services" %}</option>
+				<option value="29">{% trans "Professional Services" %}</option>
+				<option value="30">{% trans "Public Places" %}</option>
+				<option value="31">{% trans "Real Estate" %}</option>
+				<option value="32">{% trans "Restaurant/Cafe" %}</option>
+				<option value="33">{% trans "School" %}</option>
+				<option value="34">{% trans "Shopping/Retail" %}</option>
+				<option value="35">{% trans "Spas/Beauty/Personal Care" %}</option>
+				<option value="36">{% trans "Sports Venue" %}</option>
+				<option value="37">{% trans "Sports/Recreation/Activities" %}</option>
+				<option value="38">{% trans "Tours/Sightseeing" %}</option>
+				<option value="39">{% trans "Transportation" %}</option>
+				<option value="40">{% trans "University" %}</option>
+				</select> 
+				
+				<input type="text" aria-label="Business or Place Name" value="" id="_lcl_bs_pl_name" name="_lcl_bs_pl_name" placeholder={% blocktrans %}Business or Place Name{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required"/> 
+				<input type="text" aria-label="Street Address" value="" id="_lcl_bs_st_add" name="_lcl_bs_st_add" placeholder={% blocktrans %}Street Address{% endblocktrans %} class="inputtext mbs DOMControl_placeholder" required="required"/> 
+				<input type="text" aria-label="City/State" value="" id="_lcl_bs_city" name="_lcl_bs_city" placeholder={% blocktrans %}City/State{% endblocktrans %} class="inputtext textInput DOMControl_placeholder" aria-haspopup="true" required="required"/>
+				<input type="text" aria-label="Zip Code" value="" id="_lcl_bs_Zip" name="_lcl_bs_zip" placeholder={% blocktrans %}Zip Code{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required"/>
+				<input type="text" aria-label="Phone" value="" id="_lcl_bs_phone" name="_lcl_bs_phone" placeholder={% blocktrans %}Phone{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required" />
+
+				<div class="official_check">
+					<div class="uiInputLabel clearfix uiInputLabelLegacy">
+						<input type="checkbox" id="u_0_3" class="uiInputLabelInput uiInputLabelCheckbox" value="true" name="official_check" >
+						<label class="uiInputLabelLabel" for="u_0_3">I agree to <a target="_blank" href="/terms_pages.php">{% trans "Uimirror Pages Terms" %}</a></label>
+					</div>
+				</div>
+				<label for="u_0_4" class="">
+					<a class="_uibtn _uibtn_prp _uibtn_img _uibtn_bl_c fwb f12 dib pointer lh-19" role="button" href="#" id="_lcl_bs_pg_sub">{% trans "Get Started" %}</a>
+				</label>
+			</form>
+		</div>
+
+
+	</div>
+
+	<!-- Local Business or Place end -->
+
+	<!--Company, Organization or Institution start -->
+	<div class="thumbnail mr15 mt15">
+		<div class="thumbnail-box">
+			<div class="thumbnail-inner">
+				<div class="facade">
+					<i class="largeIcon img thumbnail-img thumbnail-img02"></i>
+					<div class="facade_text">{% trans "Company, Organization or Institution" %}</div>
+				</div>
+
+				<!-- FORM PART START -->
+
+				<!-- FORM PART END -->
+
+
+			</div>
+		</div>
+
+		<div class="thumbnail-form">
+			<div class="mb8 title f13 fwb tc-4">{% trans "Company, Organization or Institution" %}</div>
+			<div class="pb10 tc-5 subtitle">{% trans "Join your supporters on Uimirror." %}</div>
+			<form id="_com_org_pg_frm" action="{% url 'account.create.page' %}" method="post">
+				<select name="category" id="" class="thumbnail-form_selector">
+					<option value="" selected="selected">{% trans "Choose a category" %}</option>
+					<option value="1">{% trans "Aerospace/Defense" %}</option>
+					<option value="2">{% trans "Automobile and Parts" %}</option>
+					<option value="3">{% trans "Bank/Financial Services" %}</option>
+					<option value="4">{% trans "Biotechnology" %}</option>
+					<option value="5">{% trans "Cause" %}</option>
+					<option value="6">{% trans "Chemicals" %}</option>
+					<option value="7">{% trans "Temple/Religious Organization" %}</option>
+					<option value="8">{% trans "Community or Organization" %}</option>
+					<option value="9">{% trans "Company" %}</option>
+					<option value="10">{% trans "Computers/Technology" %}</option>
+					<option value="11">{% trans "Consulting/Business Services" %}</option>
+					<option value="12">{% trans "Education" %}</option>
+					<option value="13">{% trans "Energy/Utility" %}</option>
+					<option value="14">{% trans "Engineering/Construction" %}</option>
+					<option value="15">{% trans "Farming/Agriculture" %}</option>
+					<option value="16">{% trans "Food/Beverages" %}</option>
+					<option value="17">{% trans "Government Organization" %}</option>
+					<option value="18">{% trans "Health/Beauty" %}</option>
+					<option value="19">{% trans "Health/Medical/Pharmaceuticals" %}</option>
+					<option value="20">{% trans "Industrials" %}</option>
+					<option value="21">{% trans "Insurance Company" %}</option>
+					<option value="22">{% trans "Internet/Software" %}</option>
+					<option value="23">{% trans "Legal/Law" %}</option>
+					<option value="24">{% trans "Media/News/Publishing" %}</option>
+					<option value="25">{% trans "Mining/Materials" %}</option>
+					<option value="26">{% trans "Non-Governmental Organization(NGO))" %}</option>
+					<option value="27">{% trans "Non-Profit Organization" %}</option>
+					<option value="28">{% trans "Organization" %}</option>
+					<option value="29">{% trans "Political Organization" %}</option>
+					<option value="30">{% trans "Retail and Consumer Merchandise" %}</option>
+					<option value="31">{% trans "School" %}</option>
+					<option value="32">{% trans "Small Business" %}</option>
+					<option value="33">{% trans "Telecommunication" %}</option>
+					<option value="34">{% trans "Transport/Freight" %}</option>
+					<option value="35">{% trans "Travel/Leisure" %}</option>
+					<option value="36">{% trans "University" %}</option>
+					<option value="37">{% trans "Political Party" %}</option>
+				</select>
+				
+				 <input type="text" aria-label="Company Name" value="" id="_com_org_name" name="_com_org_name" placeholder={% blocktrans %}Company Name{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required">
+
+				<div class="official_check">
+					<div class="uiInputLabel clearfix uiInputLabelLegacy">
+						<input type="checkbox" id="u_0_5" class="uiInputLabelInput uiInputLabelCheckbox" value="true" name="official_check" required="required">
+						<label class="uiInputLabelLabel" for="u_0_5" >I agree to <a target="_blank" href="/terms_pages.php">{% trans "Uimirror Pages Terms"%}</a></label>
+					</div>
+				</div>
+				<label for="u_0_6" class="">
+					<a class="_uibtn _uibtn_prp _uibtn_img _uibtn_bl_c fwb f12 dib pointer lh-24" role="button" href="#" id="_com_org_pg_sub">{% trans "Get Started" %}</a>
+				</label>
+			</form>
+		</div>
+
+
+	</div>
+	<!-- Company, Organization or Institution end -->
+
+	<!--Brand or Product start -->
+	<div class="thumbnail mt15">
+		<div class="thumbnail-box">
+			<div class="thumbnail-inner">
+				<div class="facade">
+					<i class="largeIcon img thumbnail-img thumbnail-img03"></i>
+					<div class="facade_text">{% trans "Brand or Product" %}</div>
+				</div>
+
+				<!-- FORM PART START -->
+
+				<!-- FORM PART END -->
+
+
+			</div>
+		</div>
+
+		<div class="thumbnail-form">
+			<div class="mb8 title f13 fwb tc-4">{% trans "Brand or Product" %}</div>
+			<form id="_bnd_prd_pg_frm" action="{% url 'account.create.page' %}" method="post">
+				<select name="category" id="" class="thumbnail-form_selector">
+					<option value="" selected="selected">{% trans "Choose a category" %}</option>
+					<option value="1">{% trans "App Page" %}</option>
+					<option value="2">{% trans "Appliances" %}</option>
+					<option value="3">{% trans "Baby Goods/Kids Goods" %}</option>
+					<option value="4">{% trans "Bags/Luggage" %}</option>
+					<option value="5">{% trans "Board Game" %}</option>
+					<option value="6">{% trans "Building Materials" %}</option>
+					<option value="7">{% trans "Camera/Photo" %}</option>
+					<option value="8">{% trans "Cars" %}</option>
+					<option value="9">{% trans "Clothing" %}</option>
+					<option value="10">{% trans "Commercial Equipment" %}</option>
+					<option value="11">{% trans "Computers" %}</option>
+					<option value="12">{% trans "Drugs" %}</option>
+					<option value="13">{% trans "Electronics" %}</option>
+					<option value="14">{% trans "Food/Beverages" %}</option>
+					<option value="15">{% trans "Furniture" %}</option>
+					<option value="16">{% trans "Games/Toys" %}</option>
+					<option value="17">{% trans "Health/Beauty" %}</option>
+					<option value="18">{% trans "Home Decor" %}</option>
+					<option value="19">{% trans "Household Supplies" %}</option>
+					<option value="20">{% trans "Jewelry/Watches" %}</option>
+					<option value="21">{% trans "Kitchen/Cooking" %}</option>
+					<option value="22">{% trans "Office Supplies" %}</option>
+					<option value="23">{% trans "Outdoor Gear/Sporting Goods" %}</option>
+					<option value="24">{% trans "Patio/Garden" %}</option>
+					<option value="25">{% trans "Pet Supplies" %}</option>
+					<option value="26">{% trans "Phone/Tablet" %}</option>
+					<option value="27">{% trans "Product/Service" %}</option>
+					<option value="28">{% trans "Software" %}</option>
+					<option value="29">{% trans "Tools/Equipment" %}</option>
+					<option value="30">{% trans "Video Game" %}</option>
+					<option value="31">{% trans "Vitamins/Supplements" %}</option>
+					<option value="32">{% trans "Website" %}</option>
+					<option value="33">{% trans "Wine/Spirits" %}</option>
+				</select>
+				
+				 <input type="text" aria-label="Brand or Product Name" value="" id="_bnd_prd_name" name="_bnd_prd_name" placeholder={% blocktrans %}Brand or Product Name{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder">
+				
+				<div class="official_check">
+					<div class="uiInputLabel clearfix uiInputLabelLegacy">
+						<input type="checkbox" id="u_0_7" class="uiInputLabelInput uiInputLabelCheckbox" value="true" name="official_check" required="required"> 
+						<label class="uiInputLabelLabel" for="u_0_7">I agree to <a target="_blank" href="/terms_pages.php">{% trans "Uimirror Pages Terms"%}</a></label>
+					</div>
+				</div>
+				<label for="u_0_8" class="">
+					<a class="_uibtn _uibtn_prp _uibtn_img _uibtn_bl_c fwb f12 dib pointer lh-24" role="button" href="#" id="_bnd_prd_pg_sub">{% trans "Get Started" %}</a>
+				</label>
+			</form>
+		</div>
+
+
+	</div>
+	<!-- Brand or Product end -->
+
+	<!--Artist, Band or Public Figure start-->
+	<div class="thumbnail mt15 mr15">
+		<div class="thumbnail-box">
+			<div class="thumbnail-inner">
+				<div class="facade">
+					<i class="largeIcon img thumbnail-img thumbnail-img04"></i>
+					<div class="facade_text">{% trans "Artist, Band or Public Figure"%}</div>
+				</div>
+
+				<!-- FORM PART START -->
+
+				<!-- FORM PART END -->
+
+
+			</div>
+		</div>
+
+		<div class="thumbnail-form">
+			<div class="mb8 title f13 fwb tc-4">{% trans "Artist, Band or Public Figure"%}</div>
+			<div class="pb10 tc-5 subtitle">{% trans "Have a profile? Learn more about letting people follow your public updates. end start"%}</div>
+			<form id="_atst_bnd_pb_pg_frm" action="{% url 'account.create.page'%}" method="post">
+				<select name="category" id="" class="thumbnail-form_selector">
+					<option value="" selected="selected">{% trans "Choose a category"%}</option>
+					<option value="1">{% trans "Actor/Director"%}</option>
+					<option value="2">{% trans "Artist"%}</option>
+					<option value="3">{% trans "Athlete"%}</option>
+					<option value="4">{% trans "Author" %}</option>
+					<option value="5">{% trans "Business Person" %}</option>
+					<option value="6">{% trans "Chef" %}</option>
+					<option value="7">{% trans "Coach" %}</option>
+					<option value="8">{% trans "Comedian" %}</option>
+					<option value="9">{% trans "Dancer" %}</option>
+					<option value="10">{% trans "Designer" %}</option>
+					<option value="11">{% trans "Entertainer" %}</option>
+					<option value="12">{% trans "Entrepreneur" %}</option>
+					<option value="13">{% trans "Fictional Character" %}</option>
+					<option value="14">{% trans "Government Official" %}</option>
+					<option value="15">{% trans "Journalist" %}</option>
+					<option value="16">{% trans "Movie Character" %}</option>
+					<option value="17">{% trans "Musician/Band" %}</option>
+					<option value="18">{% trans "News Personality" %}</option>
+					<option value="19">{% trans "Pet" %}</option>
+					<option value="20">{% trans "Photographer" %}</option>
+					<option value="21">{% trans "Politician" %}</option>
+					<option value="22">{% trans "Producer" %}</option>
+					<option value="23">{% trans "Public Figure" %}</option>
+					<option value="24">{% trans "Teacher" %}</option>
+					<option value="25">{% trans "Writer" %}</option>
+				</select>
+				<input type="text" aria-label="Artist,Band or Public Figure Name" value="" id="_atst_bnd_pb_name" name="_atst_bnd_pb_name" placeholder={% blocktrans %}Name{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required">
+				<div class="official_check">
+					<div class="uiInputLabel clearfix uiInputLabelLegacy">
+						<input type="checkbox" id="u_0_9" class="uiInputLabelInput uiInputLabelCheckbox" value="true" name="official_check" required="required">
+						<label class="uiInputLabelLabel" for="u_0_9">I agree to <a target="_blank" href="/terms_pages.php">{% trans "Uimirror Pages Terms"%}</a></label>
+					</div>
+				</div>
+				<label for="u_0_10" class="">
+				<a class="_uibtn _uibtn_prp _uibtn_img _uibtn_bl_c fwb f12 dib pointer lh-24" role="button" href="#" id="_atst_bnd_pb_pg_sub">{% trans "Get Started" %}</a>
+				</label>
+			</form>
+		</div>
+
+
+	</div>
+	<!-- Artist, Band or Public Figure end -->
+
+
+	<!--Entertainment start-->
+	<div class="thumbnail mt15 mr15">
+		<div class="thumbnail-box">
+			<div class="thumbnail-inner">
+				<div class="facade">
+					<i class="largeIcon img thumbnail-img thumbnail-img05"></i>
+					<div class="facade_text">{% trans "Entertainment"%}</div>
+				</div>
+
+				<!-- FORM PART START -->
+
+				<!-- FORM PART END -->
+
+
+			</div>
+		</div>
+
+		<div class="thumbnail-form">
+			<div class="mb8 title f13 fwb tc-4">{% trans "Entertainment"%}</div>
+			<div class="pb10 tc-5 subtitle">{% trans "Join your community on Uimirror."%}</div>
+			<form id="_ent_pg_frm" action="{% url 'account.create.page' %}" method="post">
+				<select name="category" id="" class="thumbnail-form_selector">
+					<option value="" selected="selected">{% trans "Choose a category"%}</option>
+					<option value="1">{% trans "Album"%}</option>
+					<option value="2">{% trans "Amature Sports Team"%}</option>
+					<option value="3">{% trans "Book"%}</option>
+					<option value="4">{% trans "Book Series" %}</option>
+					<option value="5">{% trans "Book Store" %}</option>
+					<option value="6">{% trans "Concert Tour" %}</option>
+					<option value="7">{% trans "Concert Venue" %}</option>
+					<option value="8">{% trans "Fictional Character" %}</option>
+					<option value="9">{% trans "Library" %}</option>
+					<option value="10">{% trans "Magazine" %}</option>
+					<option value="11">{% trans "Movie" %}</option>
+					<option value="12">{% trans "Movie Character" %}</option>
+					<option value="13">{% trans "Movie Theater" %}</option>
+					<option value="14">{% trans "Music Award" %}</option>
+					<option value="15">{% trans "Music Chart" %}</option>
+					<option value="16">{% trans "Music Video" %}</option>
+					<option value="17">{% trans "Professional Sports Team" %}</option>
+					<option value="18">{% trans "Radio Station" %}</option>
+					<option value="19">{% trans "Record Lebel" %}</option>
+					<option value="20">{% trans "School Sports Team" %}</option>
+					<option value="21">{% trans "Song" %}</option>
+					<option value="22">{% trans "Sports League" %}</option>
+					<option value="23">{% trans "Sports Venue" %}</option>
+					<option value="24">{% trans "Studio" %}</option>
+					<option value="25">{% trans "TV Channel" %}</option>
+					<option value="26">{% trans "TV Network" %}</option>
+					<option value="27">{% trans "TV Show" %}</option>
+					<option value="28">{% trans "TV/Movie Award" %}</option>
+					<option value="29">{% trans "Political Party" %}</option>
+					
+				</select> 
+				<input type="text" aria-label="Entertaintment Name" value="" id="_ent_name" name="_ent_name" placeholder={% blocktrans %}Name{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required">
+				
+				<div class="official_check">
+					<div class="uiInputLabel clearfix uiInputLabelLegacy">
+						<input type="checkbox" id="u_0_11" class="uiInputLabelInput uiInputLabelCheckbox" value="true" name="official_check" required="required">
+						<label class="uiInputLabelLabel" for="u_0_11">{% trans "I agree to"%} <a target="_blank" href="/terms_pages.php">{% trans "Uimirror Pages Terms"%}</a></label>
+					</div>
+				</div>
+				<label for="u_0_12" class="">
+					<a class="_uibtn _uibtn_prp _uibtn_img _uibtn_bl_c fwb f12 dib pointer lh-24" role="button" href="#" id="_ent_pg_sub">{% trans "Get Started" %}</a>
+				</label>
+			</form>
+		</div>
+
+
+	</div>
+	<!-- Entertainment end -->
+
+	<!--Cause or Community start-->
+	<div class="thumbnail mt15">
+		<div class="thumbnail-box">
+			<div class="thumbnail-inner">
+				<div class="facade">
+					<i class="largeIcon img thumbnail-img thumbnail-img06"></i>
+					<div class="facade_text">{% trans "Cause or Community"%}</div>
+				</div>
+
+				<!-- FORM PART START -->
+
+				<!-- FORM PART END -->
+
+
+			</div>
+		</div>
+
+		<div class="thumbnail-form">
+			<div class="mb8 title f13 fwb tc-4">{% trans "Cause or Community"%}</div>
+			<div class="pb10 tc-5 subtitle">{% trans "Join your community on Uimirror."%}</div>
+			<form id="_cus_comuty_pg_frm" action="{% url 'account.create.page'%}" method="post">
+				 
+				 <input type="text" aria-label="Cause or Community Name" value="" id="_cus_comuty_name" name="_cus_comuty_name" placeholder={% blocktrans %}Cause or Community Name{% endblocktrans %} class="inputtext mb5 DOMControl_placeholder" required="required"> 
+					
+				<div class="official_check">
+					<div class="uiInputLabel clearfix uiInputLabelLegacy">
+						<input type="checkbox" id="u_0_13" class="uiInputLabelInput uiInputLabelCheckbox" value="true" name="official_check" required="required"> 
+						<label class="uiInputLabelLabel" for="u_0_13">{% trans "I agree to"%} <a target="_blank" href="/terms_pages.php">{% trans "Uimirror Pages Terms"%}</a></label>
+					</div>
+				</div>
+				<label for="u_0_14" class="">
+					<a class="_uibtn _uibtn_prp _uibtn_img _uibtn_bl_c fwb f12 dib pointer lh-24" role="button" href="#" id="_cus_comuty_pg_sub">{% trans "Get Started" %}</a>
+				</label>
+			</form>
+		</div>
+
+
+	</div>
+	<!-- Cause or Community end -->
+</div>

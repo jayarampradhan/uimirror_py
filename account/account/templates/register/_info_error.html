@@ -1,0 +1,13 @@
+{% load i18n %}
+<div class="row uimInfoWrap">
+	<div class="col-md-12 col-md-offset-0">
+		<div class="well well-sm uimRegInfoErrWrap {% if INVLDMSG or INVLDSUG %}hasErrorOrSug{% endif %}" id="uimRegInfoErrWrap">
+			<p class="alert alert-danger msgWrap textOverFlow {% if INVLDMSG %}hasError{% endif %}"
+				id="uimRegisterErr">
+				{{INVLDMSG}}.
+			</p>
+			<p class="alert alert-info msgWrap textOverFlow {% if INVLDSUG %}hasSug{% endif %}"
+				id="uimRegisterSug">{% blocktrans %}{{INVLDSUG}}.{% endblocktrans %}</p>
+		</div>
+	</div>
+</div>

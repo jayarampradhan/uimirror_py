@@ -1,0 +1,59 @@
+{% load i18n %}
+<div class="row setup-content" id="actorProfileSnapStep">
+	<div class="col-xs-12">
+		<div class="col-md-12 well">
+			<div class="row no_margin text-center">
+				<h3>{% blocktrans %}A snap Speaks More than anything{% endblocktrans %}.</h3>
+			</div>
+			<form class="form-horizontal actorProfileSnapForm" 
+					enctype="application/x-www-form-urlencoded" method="post" 
+					id="actorProfileSnapForm" action="{% url 'uim.file.upload.snap' %}"
+					data-unsaved="">
+				<p class="alert alert-danger msgWrap textOverFlow" id="uimProfilePicUploadErr">
+					<span>{% blocktrans %}Sorry Request Can't be completed Now{% endblocktrans %}.</span>
+				</p>
+       			<p class="alert alert-info msgWrap textOverFlow" id="uimProfilePicUploadSug">
+       				{% blocktrans %}Profile Snap Uploaded Successfully{% endblocktrans %}.
+       			</p>
+				<div class="row no_margin text-center mtl mbl">
+					<div class="col-md-5"></div>
+					<div class="col-md-4">
+						<!-- Currently Image using as it is but it should be sex based if user image not found -->
+						<!-- Make Sure You are using the image path defined in constant file-->
+						{% if usr.profilesnap %}
+							<img class="uimProfilePic img-circle img-responsive" id="actorSnapOrginal"
+									src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
+									alt="{{usr.fname}} {{usr.lname}}"/>
+						{% else %}
+							<!-- <img class="uimProfilePic img-circle img-responsive" id="actorSnapOrginal"
+								src="{{IMAGE_PATH}}/c55.0.160.160/p160x160/d_p_s_{{usr.sex}}.jpg"
+								alt="{{usr.fname}} {{usr.lname}}"/> -->
+						{% endif %}
+						<img class="uimProfilePic img-circle img-responsive" id="actorSnapOrginal"
+							src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
+							alt="{{usr.fname}} {{usr.lname}}"/>
+					</div>
+				</div>
+				<div class="row no_margin hidden" id="snapPreviewCenter">
+					<div class="col-md-4"></div>
+					<div class="col-md-3"><img id="actorSnapRecentUpload" class="uimProfilePic img-responsive"></div>
+					<div class="col-md-4"><canvas id="canvasThumbResult" width="160" height="160" class="uimProfilePic ml109 img-circle"></canvas></div>
+				</div>
+				<div class="row no_margin text-center mbl">
+					<span class="btn btn-default btn-file btn-success"> 
+						<i class="glyphicon glyphicon-camera"></i>
+						<span class="txt">{% blocktrans %}Choose Different One{% endblocktrans %}</span>
+						<i class="ajxLoad loadRefresh hidden" id="profilePicPreviewUploadLoader"></i> 
+						<input type="file" accept="image/*" id="prfSnap" name="prfSnap"
+								multiple="no" title="{% blocktrans %}Choose a Image file to upload{% endblocktrans %}" />
+					</span>
+					<button type="button" class="btn btn-success mll hidden" 
+							id="actorProfileSnapSaveAct" data-ajax-fu="{% url 'uim.file.upload.snap' %}">
+      					{% blocktrans %}Keep This As Profile Snap{% endblocktrans %}
+      					<i class="ajxLoad loadRefresh hidden"></i> 
+    				</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

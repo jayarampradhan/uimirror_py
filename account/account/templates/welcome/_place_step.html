@@ -1,0 +1,54 @@
+{% load i18n %}
+<div class="row setup-content " id="actorPlacesStep">
+    <div class="col-xs-12">
+        <div class="col-md-12 well">
+        	<form class="form-horizontal actorProfileLocForm" 
+        			enctype="application/x-www-form-urlencoded" method="post" id="actorLocForm" 
+        			action="{% url 'uim.location' %}" data-unsaved="">
+				<p class="alert alert-danger msgWrap textOverFlow" id="uimLocUpdateErr">
+					<span>{% blocktrans %}Sorry Request Can't be completed Now{% endblocktrans %}.</span>
+				</p>
+       			<p class="alert alert-info msgWrap textOverFlow" id="uimLocUpdateSug">
+       				{% blocktrans %}Location Updated Successfully{% endblocktrans %}.
+       			</p>
+            	<div class="row no_margin text-center mbl">
+        			<div class="col-md-4">
+        				<h5 class="pull-right">{% blocktrans %}Current Place{% endblocktrans %}</h5>
+        			</div>
+        			<div class="col-md-4">
+						<div class="input-group">
+							<span class="input-group-addon uimbgsc">
+								<i class="glyphicon glyphicon-map-marker"></i>
+							</span>
+							<!-- Make This Data URI_LOC to REVERSE URL Based -->
+							<input type="text" class="form-control" id="actorCurrentPlace" 
+								placeholder="{% blocktrans %}Current Place{% endblocktrans %}" 
+								data-uri_loc="{% url 'uim.location' %}" data-pre-token-val='[{"id":"{{usr.loc.current.id}}","name":"{{usr.loc.current.name}}"}]'>
+						</div>
+					</div>
+        		</div>
+        		<div class="row no_margin text-center">
+        			<div class="col-md-4">
+        				<h5 class="pull-right">{% blocktrans %}Home Town{% endblocktrans %}</h5>
+        			</div>
+        			<div class="col-md-4">
+						<div class="input-group">
+							<span class="input-group-addon uimbgsc">
+								<i class="glyphicon glyphicon-home"></i>
+							</span>
+							<input type="text" class="form-control" id="actorHomeTown" 
+									placeholder="{% blocktrans %}Home Town{% endblocktrans %}" 
+									data-uri_loc="{% url 'uim.location' %}" data-pre-val='[{"id":"{{usr.loc.home.id}}","name":"{{usr.loc.home.name}}"}]'>
+						</div>
+					</div>
+        		</div>
+        		<div class="row no_margin text-center mtl">
+        			<button type="button" class="btn btn-success mll" id="actorLocationSaveAct" data-ajax-fu="{% url 'uim.location' %}">
+      					<span>{% blocktrans %}Update My Location{% endblocktrans %}</span>
+      					<i class="ajxLoad loadRefresh hidden"></i> 
+    				</button>
+        		</div>
+        	</form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block boot_starp_css_media %}
+{% endblock boot_starp_css_media %}
+{% block css_media %}
+    {% include "welcome/_media.html"%}
+{% endblock css_media %}
+{% block title %}
+	<title>{% trans "Complete Your Profile" %} - UIMirror</title>
+{% endblock title %}
+{% block content %}
+	{% include "welcome/_top.html"%}
+	<div class="container center-block visible-lg visible-md">
+		{% include "welcome/_theme.html"%}
+	</div>
+	<div class="container">
+	{% include "welcome/_steps.html"%}
+    {% include "welcome/_profile_snap_step.html"%}
+    {% include "welcome/_place_step.html"%}
+    {% include "welcome/_invite_step.html"%}
+    {% include "welcome/_navigation.html"%}
+</div>
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
+{% block script_media %}
+	{% include "welcome/_script_media.html" %}
+{% endblock script_media %}

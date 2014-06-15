@@ -1,0 +1,47 @@
+{#Register TOP page#}
+{% load i18n %}
+<div class="navbar navbar-inverse navbar-fixed-top uimHead" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand" id="homeLogo" data-ref="" data-url=""> 
+				<img src="{{ STATIC_URL }}images/logoText.png" alt="Logo Text" class="homeLogo" data-url="" id="homeLogoIco">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse visible-lg visible-md">
+	        <ul class="nav navbar-nav">
+	          <li class="active"><a href="#">{% blocktrans %}Sign Up{% endblocktrans %}</a></li>
+	          <li><a href="#about">{% blocktrans %}Sign In{% endblocktrans %}</a></li>
+	          <li><a href="#contact">{% blocktrans %}Why UIMirror{% endblocktrans %}?</a></li>
+	          <li>
+	          	<blockquote class="uimHeadTitle blockquote-reverse">
+						<p class="navbar-text active txt">{% blocktrans %}Its free and always will be{% endblocktrans %}...</p>
+						<footer class="txt">{% blocktrans %}Build Relation{% endblocktrans %}... <cite title="Source Title">{% blocktrans %}Gain Trust{% endblocktrans %}...</cite></footer>
+				</blockquote>
+	          </li>
+	        </ul>
+	        <ul class="nav navbar-nav pull-right visible-lg visible-md">
+	        	<li class="dropdown" id="uimLangDropDownWrap">
+	        		<select id="lang-chooser"
+						class="lang-chooser lh-24 f13" name="lang-chooser">
+						<option value="en" selected="selected">English (United States)‬</option>
+						<option value="ka">‪ქართული‬</option>
+						<option value="hy">‪հայերեն‬</option>
+						<option value="mr">‪मराठी‬</option>
+						<option value="hi">‪हिन्दी‬</option>
+						<option value="bn">‪বাংলা‬</option>
+						<option value="gu">‪ગુજરાતી‬</option>
+						<option value="ta">‪தமிழ்‬</option>
+						<option value="te">‪తెలుగు‬</option>
+						<option value="kn">‪ಕನ್ನಡ‬</option>
+						<option value="ml">‪മലയാളം‬</option>
+						<option value="si">‪සිංහල‬</option>
+						<option value="th">‪ไทย‬</option>
+						<option value="lo">‪ລາວ‬</option>
+						<option value="km">‪ខ្មែរ‬</option>
+						<option value="ko">‪한국어‬</option>
+					</select>
+	          </li>
+	        </ul>
+	      </div><!--/.nav-collapse -->
+	   </div>
+</div>

@@ -1,0 +1,128 @@
+@charset "utf-8";
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    color: #5b74a8;
+}
+
+body { 
+	padding-top: 70px; 
+}
+label{
+	font-weight: normal;
+}
+.no_padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.no_margin {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.col-centered{
+	float: none;
+}
+.verifyContainer{
+	margin: 0 auto;
+}
+.verifyContainer {
+  width: 200px;
+}
+@media (min-width: 768px) {
+  .verifyContainer {
+    width: 400px;
+  }
+}
+
+.text-primary{
+	color: #5b74a8; 
+}
+
+.text-muted{
+	color: #ccd5e4;
+}
+#resendMailLink:hover, #changeEmailLink:hover{
+	cursor: pointer;
+	color: #428bca;
+}
+form.uimVerifyAccountForm input[type="submit"]
+{
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 0px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+form.uimVerifyAccountForm input[type="submit"]:hover
+{
+    transition: background-color 0.5s ease;
+}
+form.uimVerifyAccountForm input[type="text"], form.changeEmailForm input[type="email"]
+{
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid #5b74a8;
+    outline: 0;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #5b74a8;
+    outline: 0;
+}
+.passwordWrap .progress{
+	display: none;
+	margin-bottom: 0px;
+}
+
+.passwordWrap .progress.showProgessBar{
+	display: block;
+	margin-bottom: 0px;
+}
+/*Error sections*/
+.textOverFlow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.alert{
+	color: #333;
+}
+.alert-danger{
+	background-color: #F2DEDE;
+}
+.alert-info{
+	background-color: #DFF0D8;
+}
+.msgWrap{
+	display: none;
+}
+.hasError.msgWrap, .hasSug.msgWrap{
+	display: block;
+}
+.uimFieldErr{
+	border-bottom: 1px solid red !important;
+}
+/*Ajax Loading Image*/
+.ajxLoad {
+	background-image: url('/static/images/ajax_wifi_load.gif');
+}
+
+.ajxLoad.verifyRefresh{
+	display: inline-block;
+	width: 27px;
+	height: 18px;
+	vertical-align: text-top;
+	background-position: 2px -2px;
+	background-repeat: no-repeat;
+}

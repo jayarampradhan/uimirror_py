@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document for arrow*/
+
+._uibtn {
+	-webkit-box-sizing: content-box;
+	padding: 0 6px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+._uibtn_prp {
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+._uibtn_img {
+	background-image: url('../../images/k4FGUTQR78y.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: 0 0;
+	color: #fff;
+}
+
+._uibtn_bl_c{
+	background-color: #5b74a8;
+	border-color: #29447e #29447e #1a356e;
+}
+
+a._uibtn:hover,a._uibtn:focus {
+	text-decoration: none;
+}
+._uibtn_wd_lr{
+	width: 130px;
+}

@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* CSS Document */
+
+@IMPORT url("bootstrap/vendor/jquery.Jcrop.min.css");
+@IMPORT url("bootstrap/uim.welcome.token-input.css");
+/*
+ * Globals
+ */
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    color: #5b74a8;
+    font-size: 12px;
+}
+body { 
+	padding-top: 70px; 
+}
+label{
+	font-weight: normal;
+}
+.no_padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.no_margin {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.text-primary{
+	color: #5b74a8; 
+}
+
+.text-muted{
+	color: #ccd5e4;
+}
+.fs-13{
+	font-size: 13px;
+}
+.uimInfoWrap .alert{
+	margin-bottom: 0px;
+}
+.col-centered{
+	float: none;
+}
+.uimHead .lang-chooser{
+	background-color: #333;
+	color: #fff;
+	margin-top: 10px;
+	height: 21px;
+}
+.uimHead .actorGreetingWrap, .uimHead .actorGreetingWrap>a{
+	font-size: 14px;
+	color: #fff;
+}
+/*First Time Steps*/
+.mbl{
+	margin-bottom: 15px;
+}
+.mbxs{
+	margin-bottom: 5px;
+}
+.mtl{
+	margin-top: 15px;
+}
+.mll{
+	margin-left: 15px;
+}
+.mrl{
+	margin-right: 15px;
+}
+.mtxl{
+	margin-top: 50px;
+}
+.uimbgsc{
+	background-color: #5cb85c;
+	color: #fff;
+}
+.uimProfilePic{
+	height: 160px;
+	width: 160px;
+}
+/*Firct Time Step End*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+/*Ajax Loading Image*/
+.ajxLoad {
+	background-image: url('/static/images/ajax_wifi_load.gif');
+}
+
+.ajxLoad.loadRefresh{
+	display: inline-block;
+	width: 27px;
+	height: 18px;
+	vertical-align: text-top;
+	background-position: 2px -2px;
+	background-repeat: no-repeat;
+}
+/*Contacts*/
+ul.contacttokenlist >li{
+	cursor: move;
+	/* white-space: nowrap; */
+    -ms-word-break: break-all;
+
+     /* Be VERY careful with this, breaks normal words wh_erever */
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+ul.contacttokenlist >li{
+	margin-bottom: 4px;
+}
+ul.contacttokenlist{
+	margin-top: 4px;
+	min-height: 200px;
+}
+.contacttokenlist .selected, .contacttokenlist .uimcontacttodrag{
+	background-color: #5cb85c;
+	color: #fff; 
+}
+.contactfromwrapper, .contacttowrapper{
+	overflow: visible;
+}
+.uimContactShortActn >button {
+	margin-top: 5px;
+}
+/*Error sections*/
+.textOverFlow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.alert{
+	color: #333;
+}
+.alert-danger{
+	background-color: #F2DEDE;
+}
+.alert-info{
+	background-color: #DFF0D8;
+}
+.msgWrap{
+	display: none;
+}
+.hasError.msgWrap, .hasSug.msgWrap{
+	display: block;
+}
+.uimFieldErr{
+	border-bottom: 1px solid red !important;
+}

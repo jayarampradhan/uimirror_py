@@ -1,0 +1,92 @@
+{% load i18n %}
+<div class="row setup-content" id="actorInviteContactStep">
+    <div class="col-xs-12">
+        <div class="col-md-12 well">
+        	<div class="row no_margin text-center">
+        		<h3>{% blocktrans %}Let's Reach to the people you know{% endblocktrans %}.</h3>
+        		<p><small>{% blocktrans %}Invite Your Contacts Now{% endblocktrans %}.</small></p>
+        	</div>
+        	<div class="row no_margin text-center">
+        		<div class="btn-group-vertical">
+        			<form class="form-horizontal actorGContactImportForm" 
+        				enctype="application/x-www-form-urlencoded" method="get" 
+        				id="actorGContactImportForm" action="{% url 'uim.contact.third.party.import' %}">
+        				{% csrf_token %}
+        				<input type="hidden" name="provider" value="google">
+            			<button type="button" class="btn btn-success mbxs" id="importFromGoogle" data-provider="google" data-contact="{{importsp}}">
+            				Google
+            				<i class="ajxLoad loadRefresh hidden"></i>
+            			</button>
+            		</form>
+            		<form class="form-horizontal actorYContactImportForm" 
+            			enctype="application/x-www-form-urlencoded" method="get" 
+            			id="actorYContactImportForm" action="{% url 'uim.contact.third.party.import'%}?provider=yahoo">
+            			{% csrf_token %}
+            			<input type="hidden" name="provider" value="google">
+            			<button type="button" class="btn btn-success" id="importFromYahoo" data-provider="yahoo" data-contact="{{importsp}}">
+            				Yahoo!
+            				<i class="ajxLoad loadRefresh hidden"></i>
+            			</button>
+            		</form>
+				</div>
+        	</div>
+        </div>
+    </div>
+</div>
+<div class="modal fade {% if contacts %}hasContact{% endif %} {{importsp}}" id="invitationContactWrap">
+  <div class="modal-dialog modal-lg">
+  	<form class="form-horizontal actorSendInvitationForm" 
+  			enctype="application/x-www-form-urlencoded" method="post" id="actorSendInvitationForm" 
+  			action="{% url 'account.uiwelcome.contacts.invite' %}?provider={{importsp}}"
+  			data-unsaved="">
+	    <div class="modal-content" id="actorContacts">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">{% blocktrans %}Choose and Invite People{% endblocktrans %}.</h4>
+	      </div>
+	      <div class="modal-body" id="invitationContacts">
+	        <div class="row no_margin">
+				<div class="col-md-5 no_padding">
+					<div class="panel panel-default">
+	  					<div class="panel-heading">{% blocktrans %}Known Contact{{ contacts|length|pluralize:"s" }}{% endblocktrans %}.</div>
+	  					<!-- List group -->
+	  					<div id="contactfromwrapper">
+	  						<ul class="list-group contacttokenlist" id="contact_token_list">
+	  							{% for contact in contacts %}
+		           					<li id="{{forloop.counter}}" class="list-group-item contact">{{contact}}</li>
+								{% endfor %}
+	  						</ul>
+	  					</div>
+					</div>
+				</div>
+				<div class="col-md-2 text-center mtxl">
+					<div class="btn-group-vertical uimContactShortActn">
+						<button type="button" class="btn btn-success inviteShortAct invite" id="inviteSelected">{% blocktrans %}Invite{% endblocktrans %}. &rarr;</button>
+	  					<button type="button" class="btn btn-success inviteShortAct inviteAll" id="inviteAll">{% blocktrans %}Invite All{% endblocktrans %} &rarr;</button>
+	  					<button type="button" class="btn btn-success inviteShortAct dontinvite" id="removeinviteSelected">&larr; {% blocktrans %}Don't Invite{% endblocktrans %}</button>
+					</div>
+				</div>
+				<div class="col-md-5 no_padding">
+					<div class="panel panel-default">
+	  					<!-- Default panel contents -->
+	  					<div class="panel-heading">{% blocktrans %}To Invite{% endblocktrans %}.</div>
+	  					<!-- List group -->
+	  					<div id="contacttowrapper">
+	  						<ul class="list-group contacttokenlist" id="invite_token_list" >
+	  						</ul>
+	  					</div>
+					</div>
+				</div>
+			</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-success" 
+	        		id="uimContactInviteActn" data-ajax-fu="{% url 'account.uiwelcome.contacts.invite' %}?provider={{importsp}}">
+	        		{% blocktrans %}Send Invitation{% endblocktrans %}.
+	        		<i class="ajxLoad loadRefresh hidden"></i>
+	        </button>
+	      </div>
+	    </div><!-- /.modal-content -->
+    </form>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -1,0 +1,9 @@
+redis-server
+redis-cli FLUSHALL
+redis-cli MONITOR
+select 1
+get :1:123.state
+INFO
+keys *
+
+python manage.py celeryd -v 2 -l debug --settings=account.settings.dev

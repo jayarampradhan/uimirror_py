@@ -1,0 +1,32 @@
+  <ul class="extrawrap" id="{{:_id}}">
+  	<li class="action">
+  		<div class="uiToggle wrap uimtpd" data-pr-title="{{:current.title}}" 
+  			title="{{:current.title}}" data-pr-id="{{:current._id}}" 
+  			data-pr-class="{{:current._class}}" data-pr-value="{{:current.value}}">
+  			<a class="uiDropIco uiSelectorNormal uiButton" href="#">
+  				<i class="_1_prv_edit im_visibility im_v_{{:current._class}}"></i>
+  			</a>
+  			<ul class="extrawrap">
+  				{{for options}}
+  					{{if value}}
+  						{{if _id && _class}}
+  						<li class="{{:value}}" data-value="{{:value}}" tabindex="{{:#getIndex()}}" 
+  							data-pr-id="{{:_id}}" data-pr-class="{{:_class}}" data-title="{{:title}}">
+  						{{else}}
+  						<li class="{{:label}}" data-label="{{:label}}" tabindex="{{:#getIndex()}}">
+  						{{/if}}
+  							<a class="itemAnchor" href="#">
+  								{{if _class}}
+  								<i class="itemIcon mr5 img im_visibility im_v_{{:_class}}" data-pr-id="{{:_id}}"></i>
+  								{{/if}}
+  								<span class="m14 itemLabel">{{:value}}</span>
+  							</a>
+  						</li>
+  						{{else}}
+  						<li class="menuSeparator" tabindex="{{:#getIndex()}}"></li>
+  						{{/if}}
+  				{{/for}}
+  			</ul>
+  		</div>
+  	</li>
+  </ul>

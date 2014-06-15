@@ -1,0 +1,8 @@
+/ThirdPartyContactImport.pyc
+/__init__.pyc
+/invite_contacts.pyc
+/register_view.pyc
+/resend_register_verify_token_view.pyc
+/verify_change_email_view.pyc
+/verify_register_token_view.pyc
+/welcome_view.pyc

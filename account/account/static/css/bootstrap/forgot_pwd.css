@@ -1,0 +1,97 @@
+.uim-header-bar.centered {
+	height: 150px;
+	overflow: hidden;
+}
+
+.header .logo {
+	margin: 17px 0 0;
+	float: left;
+	height: 81px;
+	width: 238px;
+}
+
+.uim-header-bar.centered .header .logo {
+	float: none;
+	margin: 40px auto 30px;
+	display: block;
+}
+
+.uim-header-bar.centered .header .logo {
+	margin: 25px auto 0px;
+}
+
+.ui_hd_quote {
+	margin: 0px 0px 0px;
+	text-align: center;
+	text-shadow: 2px 0px 17px rgba(70, 112, 184, 1);
+}
+/*Header end*/
+/*Main Content section*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
+.content {
+	padding: 0 44px;
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 650px;
+	padding-top: 23px;
+	
+}
+.fgtpwdmain{
+	padding-bottom: 395px;
+}
+.main h1:first-child {
+	margin: 0 0 .92em;
+}
+
+.recovery .radio-option input[type="radio"] {
+	float: left;
+	margin-top: 1px;
+}
+
+.recovery .radio-option .radio-label {
+	margin-left: 22px;
+	display: block;
+	line-height: 18px;
+}
+
+.recovery .hideable-wrapper {
+	overflow: hidden;
+	-ms-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+.recovery .hideable-box {
+	margin-top: 10px;
+	margin-left: 22px;
+	line-height: 18px;
+}
+
+.recovery .hideable-box div {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.secondary {
+	font-size: 11px;
+	color: #666;
+	line-height: 18px;
+}
+
+.recovery .stacked-label {
+	line-height: 18px;
+	margin-bottom: 8px;
+}
+
+.english-text {
+	direction: ltr;
+	text-align: left;
+}

@@ -1,0 +1,25 @@
+{% load i18n %}
+<div class="row form-group">
+   <div class="col-xs-12">
+       <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+            <li class="{% if step == '1' %}active{% endif %}">
+                <a href="#actorProfileSnapStep" data-next-step="#actorPlacesStep">
+                    <h4 class="list-group-item-heading">{% blocktrans %}Step 1{% endblocktrans %}</h4>
+                    <h5 class="list-group-item-text">{% blocktrans %}Keep A Profile Snap{% endblocktrans %} <small>{% blocktrans %}Help Us To find best for you{% endblocktrans %}.</small></h5>
+                </a>
+            </li>
+            <li class="{% if step == '2' %}active{% endif %}">
+               	<a href="#actorPlacesStep" data-next-step="#actorPlacesStep"  data-back-step="#actorProfileSnapStep">
+                    <h4 class="list-group-item-heading">{% blocktrans %}Step 2{% endblocktrans %}</h4>
+                    <h5 class="list-group-item-text">{% blocktrans %}Where have you been{% endblocktrans %}? <small>{% blocktrans %}Help Us To find best for you{% endblocktrans %}.</small></h5>
+                </a>
+            </li>
+            <li class="{% if step == '3' %}active{% endif %}">
+                <a href="#actorInviteContactStep" data-back-step="#actorPlacesStep">
+                    <h4 class="list-group-item-heading">{% blocktrans %}Step 3{% endblocktrans %}</h4>
+                    <h5 class="list-group-item-text">{% blocktrans %}Be Reachable{% endblocktrans %} <small>{% blocktrans %}Invite people whom you want to reach{% endblocktrans %}.</small></h5>
+                </a>
+            </li>
+         </ul>
+    </div>
+</div>

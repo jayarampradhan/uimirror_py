@@ -1,0 +1,154 @@
+@charset "utf-8";
+@IMPORT url("bootstrap/uimtip.css");
+/*
+ * Globals
+ */
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    color: #5b74a8;
+    font-size: 12px;
+}
+body { 
+	padding-top: 70px; 
+}
+label{
+	font-weight: normal;
+}
+.no_padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.no_margin {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.text-primary{
+	color: #5b74a8; 
+}
+
+.text-muted{
+	color: #ccd5e4;
+}
+.fs-13{
+	font-size: 13px;
+}
+.uimInfoWrap .alert{
+	margin-bottom: 0px;
+}
+.col-centered{
+	float: none;
+}
+.registerContainer{
+	margin: 0 auto;
+}
+.registerContainer {
+  width: 200px;
+}
+@media (min-width: 768px) {
+  .registerContainer {
+    width: 400px;
+  }
+}
+form.registerForm select
+{
+    background-color: #f5f5f5;
+}
+form.registerForm input[type="submit"]
+{
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 0px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+form.registerForm input[type="submit"]:hover
+{
+    transition: background-color 0.5s ease;
+}
+form.registerForm input[type="text"], form.registerForm input[type="password"], form.registerForm input[type="email"]
+{
+    width: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid #5b74a8;
+    outline: 0;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #5b74a8;
+    outline: 0;
+}
+.uimRegInfoErrWrap{
+	padding: 0px;
+	display: none;
+}
+.uimRegInfoErrWrap.hasErrorOrSug{
+	display: block;
+}
+.msgWrap{
+	display: none;
+}
+.hasError.msgWrap, .hasSug.msgWrap{
+	display: block;
+}
+.uimFieldErr{
+	border-bottom: 1px solid red !important;
+}
+#genderSelect{
+	color: #5b74a8;
+	background-color: #f5f5f5;
+}
+#genderSelect:hover, #genderSelect.active{
+	background-color: #fff;
+}
+/*Header*/
+.uimHeadTitle{
+	padding: 0px; 
+	margin: 0 0 0px;
+	font-size: 13.5px;
+	border-left: none;
+}
+.uimHeadTitle.blockquote-reverse, .uimHeadTitle.blockquote.pull-right{
+	border-right: none;
+}
+.uimHeadTitle>p{
+	margin-bottom: 2px;
+}
+.uimHeadTitle .txt{
+	color: #fff;
+}
+.uimHead .uimLangOptWrap{
+	max-height: 319px;
+	overflow: scroll;
+}
+/*Header END*/
+.registerTermsCondition{
+	font-size: 10px;
+}
+.passwordWrap .progress{
+	display: none;
+	margin-bottom: 0px;
+}
+
+.passwordWrap .progress.showProgessBar{
+	display: block;
+	margin-bottom: 0px;
+}
+
+.uimHead .lang-chooser{
+	background-color: #333;
+	color: #fff;
+	margin-top: 10px;
+	height: 21px;
+}

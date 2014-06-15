@@ -1,0 +1,7 @@
+-Main Objective:
+	-This application should able to give below use case requirement.
+		1- User should able to see Register Screen.
+		2- User will be able to perform registration process.
+		3- User will able to verify his email id which he has registered.
+		4- User should able to see his settings page.
+		5- User should able to see his profile.

@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+/*Header*/
+.uim-header-bar.centered {
+	height: 150px;
+	overflow: hidden;
+}
+
+.header .logo {
+	margin: 17px 0 0;
+	float: left;
+	height: 81px;
+	width: 238px;
+}
+
+.uim-header-bar.centered .header .logo {
+	float: none;
+	margin: 40px auto 30px;
+	display: block;
+}
+
+.uim-header-bar.centered .header .logo {
+	margin: 25px auto 0px;
+}
+
+.ui_hd_quote {
+	margin: 0px 0px 0px;
+	text-align: center;
+	text-shadow: 2px 0px 17px rgba(70, 112, 184, 1);
+}
+/*Header end*/
+/*Main Content section*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
+.content {
+	padding: 0 44px;
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 870px;
+	padding-top: 23px;
+	
+}
+/*Main Content section end*/
+/*Content Section Start*/
+.card {
+	background-color: #f7f7f7;
+	padding: 20px 25px 30px;
+	margin: 0 auto 25px;
+	width: 304px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.page-info-card{
+	min-width: 500px;
+}
+/*Content section end*/
+/**/
+/* CSS Document */
+/*Page Form*/
+.pagefrmwrapper {
+	width: 898px;
+}
+.thumbnail {
+	background-color: #FFFFFF;
+	border: 5px solid #E9E9E9;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.thumbnail .thumbnail-box {
+	float: left;
+	height: 273px;
+	width: 276px;
+}
+
+.thumbnail-inner {
+	display: block;
+	margin: 3px;
+	position: relative;
+	background-color: #E9E9E9;
+}
+
+.largeIcon {
+	display: block;
+	margin: 50px auto 10px auto;
+}
+
+.thumbnail:hover .facade {
+	background-color: #e9e9e9;
+}
+
+.facade {
+	background-color: #F2F2F2;
+	cursor: pointer;
+	height: 270px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 270px;
+}
+
+.facade_text {
+	font-size: 15px;
+	text-align: center;
+}
+
+.thumbnail-img {
+	background-image: url("../../images/crpgicon.png");
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	height: 110px;
+	width: 110px;
+}
+
+.thumbnail-img01 {
+	background-position: 0 -444px;
+}
+
+.thumbnail-img02 {
+	background-position: 0 -222px;
+}
+
+.thumbnail-img03 {
+	background-position: 0 -555px;
+}
+
+.thumbnail-img04 {
+	background-position: 0 0;
+}
+
+.thumbnail-img05 {
+	background-position: 0 -333px;
+}
+
+.thumbnail-img06 {
+	background-position: 0 -111px;
+}
+
+.thumbnail-form {
+	left: 0;
+	margin: 0 auto;
+	padding: 5px 10px;
+	position: absolute;
+	top: 270px;
+	width: 275px;
+	height: 275px;
+	background: #ffffff;
+}
+
+.thumbnail-form_selector {
+	margin: 0 0 8px;
+	max-width: 275px;
+	width: 100%;
+}
+
+.thumbnail-form .DOMControl_placeholder {
+	color: #777777;
+}
+
+.thumbnail-form .inputtext,.thumbnail-form .inputpassword {
+	padding-bottom: 4px;
+}
+
+.thumbnail-form textarea,.thumbnail-form .inputtext,.thumbnail-form .inputpassword
+	{
+	border: 1px solid #BDC7D8;
+	margin: 0;
+	padding: 3px;
+}
+
+.thumbnail-form .inputtext {
+	width: 100%;
+	margin: 0 0 8px;
+}
+
+.thumbnail-form .official_check {
+	padding-bottom: 6px;
+	width: 100%;
+}
+
+.uiInputLabelInput {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.thumbnail-form .official_check label {
+	width: 100%;
+}
+
+.uiInputLabel .uiInputLabelLabel {
+	display: block;
+	margin-left: 17px;
+	vertical-align: baseline;
+}
+
+.uiButtonConfirm {
+	background-color: #5B74A8;
+	background-image: url("../images/button-arrrow.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	border-color: #29447E #29447E #1A356E;
+}

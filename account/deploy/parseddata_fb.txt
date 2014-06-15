@@ -1,0 +1,16 @@
+{
+	"website": 
+		{
+			"url": "", 
+			"privacy": {"privacy": "public"}
+		}, 
+		"tz": 5.5, 
+		"name": {"last": "Pradhan", "first": "Jayaram"}, 
+		"places": {"home": {"name": "Bhubaneshwar, Orissa, India", "privacy": {"privacy": "public"}}}, 
+		"dob": {"bday": {"day": "Mar 18", "privacy": {"privacy": "public"}}, "byear": {"privacy": {"privacy": "private"}, "year": "1988"}}, 
+		"gender": "male", 
+		"image": "https://graph.facebook.com/me/picture?access_token=CAAFKFqjsbzwBAB1o1604AF7KCZAKMDtCUVCqskSvT3dpzXrByjFuGUr5Xm7vZB4wmAKRhZCXhRgxlDjbU1Hvfjw8nWQjZCTieeaERm1Y4OzkPp6AcPhZAZAFJlkREdTpJazUZCbmg414olAgyJafGd1Jpy3LbEAL0tTP6zE9j0NXyLZCsvpCkeazsIVCbQsinEwoj117gOZAmygZDZD&type=large", 
+		"work": [{"position": "Java Programmer", "location": {"name": "Bangalore, India"}, "start": "2013-03-27", "employer": {"name": "EMC India"}}, {"position": "Senior Software Developer", "end": "2013-03-15", "start": "2011-04-15", "employer": {"name": "Mahindra Satyam"}}, {"position": "Software Developer", "location": {"name": "Bangalore, India"}, "end": "2010-12-01", "start": "2009-10-01", "employer": {"name": "Infosys Technologies Ltd."}}, {"start": "0000-00", "end": "0000-00", "employer": {"name": "Sears IT and Mangaement Services India Pvt. Ltd"}}], 
+		"locale": "en_US", 
+		"education": [{"duration": {"start": "2003", "end": "2003"}, "school": {"name": "Nimapada"}, "type": "High School", "privacy": {"privacy": "public"}}, {"duration": {"start": "2003", "end": "2003"}, "school": {"name": "Nimapara High School, Nimapara"}, "type": "High School", "privacy": {"privacy": "public"}}, {"duration": {"start": "2005", "end": "2005"}, "school": {"name": "Nimapara High School"}, "type": "High School", "privacy": {"privacy": "public"}}, {"school": {"name": "Utkal University - Integrated MCA"}, "type": "PreGraduation", "privacy": {"privacy": "public"}}, {"duration": {"start": "2008", "end": "2008"}, "school": {"name": "Utkal University"}, "type": "Graduation", "privacy": {"privacy": "public"}}, {"duration": {"start": "2010", "end": "2010"}, "school": {"name": "Utkal University - Integrated MCA"}, "type": "Graduation", "privacy": {"privacy": "public"}}]
+}

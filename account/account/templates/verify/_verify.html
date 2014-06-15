@@ -1,0 +1,68 @@
+{% load i18n %}
+<div class="container center-block">
+	<div class="row verifyContainer" id="verifyContainer">
+		<div class="row">
+			<h4 class="text-primary">{% blocktrans %}WOW!!! You have created your profile with us, Just a few Steps, Please check your email for further instruction(s){% endblocktrans %}.</h4>
+			<p class="text-muted"><small>{% blocktrans %}You may Key in the token received in your email as an alternative{% endblocktrans %}.</small></p>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-md-offset-0">
+       			<div class="well well-sm">
+       				<p class="alert alert-danger msgWrap textOverFlow" id="uimVerifyCommonErr"><span>{% blocktrans %}Sorry Request Can't be completed Now{% endblocktrans %}.</span></p>
+       				<p class="alert alert-info msgWrap textOverFlow" id="uimVerifyCommonSug">{% blocktrans %}We have sent the new token, please check your mail{% endblocktrans %}.</p>
+       				<form class="form-horizontal resendEmailToVerifyAccountForm" enctype="application/x-www-form-urlencoded" method="post" id="resendEmailToVerifyAccountForm" action="{% url 'uim.register.token.verify.resend.mail' prfid %}?em={{email}}">
+       				{% csrf_token %}
+       					<p>Didn't Receive mail yet? <a href="#" id="resendMailLink">click</a><i class="ajxLoad verifyRefresh hidden"></i></p>
+       				</form>
+       				<form class="form-horizontal changeEmailForm" enctype="application/x-www-form-urlencoded" method="post" id="changeEmailForm" action="{% url 'uim.register.token.verify.change.mail' prfid %}?oem={{email}}">
+       					{% csrf_token %}
+       					<input type="hidden" value="{{prfid}}" name="pid">
+       					<input type="hidden" value="{{email}}" name="oldEmail" id="oldEmail">
+         				<input type="hidden" value="{{src}}" name="src">
+         				<input type="hidden" value="{{des}}" name="des">
+       					<p>Email Was Incorrect? Wanna To Change <a href="#" id="changeEmailLink">click</a><i class="ajxLoad verifyRefresh hidden"></i></p>
+       					<div class="row no_margin hidden" id="changeEmailWrap">
+       						<div class="col-md-12 col-md-offset-0">
+       							<div class="row no_margin">
+       								<input type="email" name="email" id="newEmail" value="" placeholder="{% blocktrans %}Key In New Email{% endblocktrans %}." required="required" autofocus="autofocus" autocomplete="on"/>
+       							</div>
+       						</div>
+       						<div class="row no_margin">
+       							<button type="button" class="btn btn-success btn-sm pull-right" id="uimAccountChangeEmailAct">
+      								<i class="ajxLoad verifyRefresh hidden"></i>
+      								Update
+    							</button>	
+       						</div>
+       					</div>
+       				</form>
+       			</div>
+       		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 col-md-offset-0">
+       			<div class="well well-sm">
+       				<p class="alert alert-danger msgWrap {% if INVLDMSG %}hasError{% endif %} textOverFlow" id="uimVerifyAccountErr">{% blocktrans %}{{ INVLDMSG }}{% endblocktrans %}</p>
+					<p class="alert alert-info msgWrap {% if INVLDSUG %}hasSug{% endif %} textOverFlow" id="uimVerifyAccountSug">{% blocktrans %}{{ INVLDSUG }}{% endblocktrans %}</p>
+         				<form class="form-horizontal uimVerifyAccountForm" enctype="application/x-www-form-urlencoded" method="post" id="uimVerifyAccountForm" action="{% url 'uim.register.token.verify' prfid %}?src={{src}}&em={{email}}&app={{app_code}}&des={{des}}">
+         					<input type="hidden" value="{{email}}" name="email">
+         					<input type="hidden" value="{{prfid}}" name="pid">
+         					<input type="hidden" value="{{src}}" name="src">
+         					<input type="hidden" value="{{des}}" name="des">
+	        				{% csrf_token %}
+	        				<fieldset>
+			          			<!-- Token Key-->
+			          			<div class="form-group">
+			            			<label class="col-md-3 control-label" for="token">{% blocktrans %}Token{% endblocktrans %}</label>
+			            				<div class="col-md-9">
+			              					<input id="token" name="token" type="text" class="{% if 'token' in INVLDKEY %}uimFieldErr{% endif %}" placeholder="{% blocktrans %}Token{% endblocktrans %}" value="" autocomplete="off"/>
+			            				</div>
+			          			</div>
+	          				</fieldset>
+	          				<input type="submit" value="{% blocktrans %}Verify{% endblocktrans %}" class="btn btn-success btn-sm" id="uimAccountVerifyActn"/>
+         				</form>
+       			</div>	
+			</div>
+		</div>
+	</div>
+</div>

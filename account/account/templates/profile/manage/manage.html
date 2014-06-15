@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block css_media %}
+    {% include "profile/manage/_media.html"%}
+{% endblock css_media %}
+{% block title %}
+	<!-- Mae Dynamic Title name followed by manage -->
+	<title>{% trans "Sign UP" %} - UIMirror</title>
+{% endblock title %}
+{% block content %}
+	<div class="wrapper">
+		{% include "profile/manage/header/_header.html" %}
+		<div></div>
+		<div class="main content clearfix regmain" id="registermain">
+			{% include "profile/manage/_cover_pic.html" %}
+		</div>
+	</div>
+{% endblock content %}
+
+{% block script_media %}
+	{% include "profile/manage/_script_media.html" %}
+{% endblock script_media %}

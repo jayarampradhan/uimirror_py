@@ -1,0 +1,146 @@
+{#Register page#}
+{% load i18n %}
+<div class="row registerContainer col-centered">
+	<div class="row">
+		<div class="col-md-12 col-md-offset-0">
+ 			<div class="well well-sm">
+   				<form class="form-horizontal registerForm" enctype="application/x-www-form-urlencoded" method="post" id="uimRegisterForm" action="{% url 'uim.register.create.with.path.app' app_code %}?des={{des}}">
+   				{% csrf_token %}
+   					<input type="hidden" id="timeZone" name="timeZone" value=""/>
+   					<input type="hidden" id="langCode" value="{{LANGUAGE_CODE}}">
+   					<fieldset>
+         			<!-- First Name input-->
+       				<div class="form-group">
+        				<label class="col-md-3 control-label no_padding" for="fname">{% blocktrans %}First Name{% endblocktrans %}</label>
+        				<div class="col-md-9">
+           					<input id="fname" name="fname" type="text" 
+           							value= "{% if fldval %}{{fldval.fname}}{% endif %}" class="{% if 'fname' in INVLDKEY %}uimFieldErr{% endif %} uimTip" 
+           							placeholder="{% blocktrans %}What's Your First name{% endblocktrans %}?" 
+           							autocomplete="on" autofocus="autofocus"  
+           							title="{% blocktrans %}Key In Your Name!{% endblocktrans %}"
+           							x-moz-errormessage="{% blocktrans %}Key In Your Name!{% endblocktrans %}"/>
+        				</div>
+       				</div>
+
+       				<!-- Last Name input-->
+       				<div class="form-group">
+         				<label class="col-md-3 control-label no_padding" for="lname">{% blocktrans %}Last Name{% endblocktrans %}</label>
+        					<div class="col-md-9">
+           					<input id="lname" name="lname" type="text" 
+           							value= "{% if fldval %}{{fldval.lname}}{% endif %}" class="{% if 'lname' in INVLDKEY %}uimFieldErr{% endif %} uimTip" 
+           							placeholder="{% blocktrans %}What's Your Last name{% endblocktrans %}?" autocomplete="on" autofocus="autofocus"/>
+        					</div>
+       				</div>
+       				<!-- Email input-->
+       				<div class="form-group">
+        					<label class="col-md-3 control-label no_padding" for="email">{% blocktrans %}Email{% endblocktrans %}</label>
+        					<div class="col-md-9">
+          						<input id="email" name="email" type="email"  class="{% if 'email' in INVLDKEY %}uimFieldErr{% endif %} uimTip"  
+          								value="{% if fldval %}{{fldval.email}}{% endif %}" placeholder="{% blocktrans %}What's Your Email{% endblocktrans %}?" 
+          								autocomplete="on" autofocus="autofocus" required="required"
+          								title="{% blocktrans %}Key In Your Email ID!{% endblocktrans %}"
+           								x-moz-errormessage="{% blocktrans %}Key In Your Email ID!{% endblocktrans %}"/>
+        					</div>
+       				</div>
+       				<!-- Password Input -->
+       				<div class="form-group">
+        					<label class="col-md-3 control-label no_padding" for="newPassword">{% blocktrans %}Password{% endblocktrans %}</label>
+        					<div class="col-md-9 passwordWrap">
+          						<input id="password" name="password" type="password" class="{% if 'pwd' in INVLDKEY %}uimFieldErr{% endif %} uimTip" 
+          								placeholder="{% blocktrans %}Type a New Password{% endblocktrans %}." autocomplete="off" 
+          								autofocus="autofocus" required="required"
+          								title="{% blocktrans %}Create a password!{% endblocktrans %}"
+           								x-moz-errormessage="{% blocktrans %}Create a password!{% endblocktrans %}"/>
+        					</div>
+       				</div>
+       				<!-- Confirm Password Input -->
+       				<div class="form-group">
+        					<label class="col-md-3 control-label no_padding" for="confirmPassword">{% blocktrans %}Confirm Password{% endblocktrans %}</label>
+        					<div class="col-md-9">
+          						<input id="confirmPassword" name="confirmPassword" type="password" class="{% if 'pwd' in INVLDKEY %}uimFieldErr{% endif %} uimTip" 
+          								placeholder="{% blocktrans %}Type password one more time{% endblocktrans %}." autocomplete="off" 
+          								autofocus="autofocus" required="required"
+										title="{% blocktrans %}Confirm the password!{% endblocktrans %}"
+           								x-moz-errormessage="{% blocktrans %}Confirm the password!{% endblocktrans %}"/>
+        					</div>
+       				</div>
+       				<!-- Birth Day Box -->
+					<div class="form-group">
+        					<label class="col-md-3 control-label no_padding" for="confirmPassword">{% blocktrans %}B'Day{% endblocktrans %}</label>
+        					<div class="col-md-9">
+        						<div class="row no_margin">
+        							<a href="#" id="uimWhyBdTip">{% blocktrans %}Why do I need to provide my birthday{% endblocktrans %}?</a>
+        						</div>
+        						<div class="row no_margin">
+        							<div class="col-md-4">
+        								<input id="birth_date" name="birth_date" type="text" value="{% if fldval %}{{fldval.birth_date}}{% endif %}" 
+        										class="{% if 'dob' in INVLDKEY %}uimFieldErr{% endif %} uimTip" placeholder="{% blocktrans %}Date{% endblocktrans %}." 
+        										autocomplete="off" autofocus="autofocus" required="required"
+        										title="{% blocktrans %}Key In Your Date Of Birth! i.e 12, 1, 01 etc{% endblocktrans %}"
+           										x-moz-errormessage="{% blocktrans %}Key In Your Date Of Birth!{% endblocktrans %}"
+           										pattern="^\d{0,2}$"/>
+        							</div>
+        							<div class="col-md-4">
+        								<input id="birth_month" name="birth_month" type="text" value="{% if fldval %}{{fldval.birth_month}}{% endif %}" 
+        										class="{% if 'dob' in INVLDKEY %}uimFieldErr{% endif %} uimTip" placeholder="{% blocktrans %}Month{% endblocktrans %}." 
+        										autocomplete="off" autofocus="autofocus" required="required"
+        										title="{% blocktrans %}Key In Your Month Of Birth!{% endblocktrans %}"
+           										x-moz-errormessage="{% blocktrans %}Key In Your Month Of Birth!, i.e Jan, 1, 01 etc{% endblocktrans %}"
+        										pattern="^\d{0,2}|[A-Z,a-z]{3}$"/>
+        							</div>
+        							<div class="col-md-4">
+        								<input id="birth_year" name="birth_year" type="text" 
+        										value="{% if fldval %}{{fldval.birth_year}}{% endif %}" 
+        										class="{% if 'dob' in INVLDKEY %}uimFieldErr{% endif %} uimTip" 
+        										placeholder="{% blocktrans %}Year{% endblocktrans %}." autocomplete="off" autofocus="autofocus" 
+        										required="required"
+        										title="{% blocktrans %}Key In Your Year Of Birth! i.e 1980, 2014 etc{% endblocktrans %}"
+           										x-moz-errormessage="{% blocktrans %}Key In Your Year Of Birth!{% endblocktrans %}"
+        										pattern="^\d{4}$"/>
+        							</div>
+        						</div>
+        					</div>
+       				</div>
+       				<!-- Sex Input -->
+       				<div class="form-group">
+        				<label class="col-md-3 control-label no_padding" for="gender">{% blocktrans %}Gender{% endblocktrans %}</label>
+        				<div class="col-md-9">
+        					<select class="form-control" name="gender" id="gender">
+  								<option value="F" selected="selected">Female</option>
+  								<option value="M">Male</option>
+  								<option value="T">Trans Gender</option>
+  								<option value="O">Other</option>
+							</select>
+        				</div>
+       				</div>			          				
+     				</fieldset>
+     				<p class="registerTermsCondition"><span class="db mt15 f10">
+						<label for="acceptTerms">{% trans "By clicking Be reachable,you agree to our" %} 
+							<a class="tc-6" href="#"> {% trans "Terms" %} </a>{% trans "and that you have read our"%} 
+							<a class="tc-6" href="#">{% trans "Data Use Policy" %}</a>,
+							{% trans "including our" %} <a class="tc-6" href="#"> {% trans "Cookie" %} </a>{% trans "Use."%}
+						</label>
+						</span>
+					</p>
+     				<input type="submit" value="{% blocktrans %}Be Reachable{% endblocktrans %}" class="btn btn-success btn-sm" id="uimRegisterActn"/>
+   				</form>
+ 			</div>	
+		</div>
+	</div>
+</div>
+<div id="_whybd_hlp" class="hidden">
+	<div class="panel panel-default uimTipWrap">
+		<div class="panel-body">
+			<b>{% trans "Providing your birthday" %}</b> 
+				{% blocktrans %}helps make sure you get the right UIMirror experience for your age. 
+				You can choose to hide this info from your timeline later if you want. For more details, please visit our{% endblocktrans %} 
+				<a href="/about/privacy/">{% trans "Data Use Policy"%}</a>.
+		</div>
+		<div class="panel-footer">
+			<button type="button" class="btn btn-success btn-xs" onclick="UIM.hideWhyBirthDayTip('bd_hlp_tip',event);return false;">
+  				<span class="glyphicon glyphicon-ok"></span> Got It.
+			</button>
+		</div>
+	</div>
+
+</div>

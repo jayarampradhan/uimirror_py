@@ -1,0 +1,367 @@
+/*
+ * qTip2 - Pretty powerful tooltips - v2.2.0
+ * http://qtip2.com
+ *
+ * Copyright (c) 2013 Craig Michael Thompson
+ * Released under the MIT, GPL licenses
+ * http://jquery.org/license
+ *
+ * Date: Thu Nov 21 2013 08:34 GMT+0000
+ * Plugins: tips modal viewport svg imagemap ie6
+ * Styles: basic css3
+ */
+.uitip{
+	position: absolute;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+
+	/* max-width: 280px; */
+	min-width: 50px;
+	
+	/* font-size: 10.5px; */
+	/* line-height: 12px; */
+
+	direction: ltr;
+
+	box-shadow: none;
+	padding: 0;
+}
+.uimTipWrap{
+	max-width: 150px;
+}
+.uimTipWrap.panel{
+	margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .uimTipWrap {
+    max-width: 300px;
+  }
+}
+
+	.uitip-content{
+		position: relative;
+		/* padding: 5px 9px; */
+		overflow: hidden;
+
+		text-align: left;
+		word-wrap: break-word;
+	}
+
+	.uitip-titlebar{
+		position: relative;
+		/* padding: 5px 35px 5px 10px; */
+		overflow: hidden;
+
+		border-width: 0 0 1px;
+		font-weight: bold;
+	}
+
+	.uitip-titlebar + .uitip-content{ border-top-width: 0 !important; }
+
+	/* Default close button class */
+	.uitip-close{
+		position: absolute;
+		right: -9px; top: -9px;
+
+		cursor: pointer;
+		outline: medium none;
+
+		border-width: 1px;
+		border-style: solid;
+		border-color: transparent;
+	}
+
+		.uitip-titlebar .uitip-close{
+			right: 4px; top: 50%;
+			margin-top: -9px;
+		}
+	
+		* html .uitip-titlebar .uitip-close{ top: 16px; } /* IE fix */
+
+		.uitip-titlebar .ui-icon,
+		.uitip-icon .ui-icon{
+			display: block;
+			text-indent: -1000em;
+			direction: ltr;
+		}
+
+		.uitip-icon, .uitip-icon .ui-icon{
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			text-decoration: none;
+		}
+
+			.uitip-icon .ui-icon{
+				width: 18px;
+				height: 14px;
+
+				line-height: 14px;
+				text-align: center;
+				text-indent: 0;
+				font: normal bold 10px/13px Tahoma,sans-serif;
+
+				color: inherit;
+				background: transparent none no-repeat -100em -100em;
+			}
+
+/* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+.uitip-focus{}
+
+/* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+.uitip-hover{}
+
+/* Default tooltip style */
+.uitip-default{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #F1D031;
+
+	background-color: #FFFFA3;
+	color: #555;
+}
+
+	.uitip-default .uitip-titlebar{
+		background-color: #FFEF93;
+	}
+
+	.uitip-default .uitip-icon{
+		border-color: #CCC;
+		background: #F1F1F1;
+		color: #777;
+	}
+	
+	.uitip-default .uitip-titlebar .uitip-close{
+		border-color: #AAA;
+		color: #111;
+	}
+
+
+
+/*! Light tooltip style */
+/* .qtip-light{
+	background-color: white;
+	border-color: #E2E2E2;
+	color: #454545;
+}
+
+	.qtip-light .qtip-titlebar{
+		background-color: #f1f1f1;
+	}
+
+
+! Dark tooltip style
+.qtip-dark{
+	background-color: #505050;
+	border-color: #303030;
+	color: #f3f3f3;
+}
+
+	.qtip-dark .qtip-titlebar{
+		background-color: #404040;
+	}
+
+	.qtip-dark .qtip-icon{
+		border-color: #444;
+	}
+
+	.qtip-dark .qtip-titlebar .ui-state-hover{
+		border-color: #303030;
+	} */
+
+._ui_context_shadow{
+	-webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+	box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Add rounded corners to your tooltips in: FF3+, Chrome 2+, Opera 10.6+, IE9+, Safari 2+ */
+.uitip-rounded,
+.uitip-tipsy,
+._uim_context_boot{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.uitip-rounded .uitip-titlebar{
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+/**
+ * Twitter Bootstrap style.
+ *
+ * Tested with IE 8, IE 9, Chrome 18, Firefox 9, Opera 11.
+ * Does not work with IE 7.
+ */
+._uim_context_boot{
+	/** Taken from Bootstrap body */
+	/* font-size: 14px; */
+	/* line-height: 20px; */
+	color: #333333;
+
+	/** Taken from Bootstrap .popover */
+	padding: 1px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+	._uim_context_boot .uitip-titlebar{
+		/** Taken from Bootstrap .popover-title */
+		/* padding: 8px 14px; */
+		margin: 0;
+		/* font-size: 14px; */
+		font-weight: normal;
+		/* line-height: 18px; */
+		background-color: #f7f7f7;
+		border-bottom: 1px solid #ebebeb;
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
+	}
+
+		._uim_context_boot .uitip-titlebar .uitip-close{
+			/**
+			 * Overrides qTip2:
+			 * .qtip-titlebar .uitip-close{
+			 *   [...]
+			 *   right: 4px;
+			 *   top: 50%;
+			 *   [...]
+			 *   border-style: solid;
+			 * }
+			 */
+			right: 11px;
+			top: 45%;
+			border-style: none;
+		}
+
+	._uim_context_boot .uitip-content{
+		/** Taken from Bootstrap .popover-content */
+		/* padding: 9px 14px; */
+	}
+
+	._uim_context_boot .uitip-icon{
+		/**
+		 * Overrides qTip2:
+		 * .qtip-default .qtip-icon {
+		 *   border-color: #CCC;
+		 *   background: #F1F1F1;
+		 *   color: #777;
+		 * }
+		 */
+		background: transparent;
+	}
+
+		._uim_context_boot .uitip-icon .ui-icon{
+			/**
+			 * Overrides qTip2:
+			 * .qtip-icon .ui-icon{
+			 *   width: 18px;
+			 *   height: 14px;
+			 * }
+			 */
+			width: auto;
+			height: auto;
+
+			/* Taken from Bootstrap .close */
+			float: right;
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 18px;
+			color: #000000;
+			text-shadow: 0 1px 0 #ffffff;
+			opacity: 0.2;
+			filter: alpha(opacity=20);
+		}
+
+		._uim_context_boot .uitip-icon .ui-icon:hover{
+			/* Taken from Bootstrap .close:hover */
+			color: #000000;
+			text-decoration: none;
+			cursor: pointer;
+			opacity: 0.4;
+			filter: alpha(opacity=40);
+		}
+
+
+/* IE9 fix - removes all filters */
+.uitip:not(.ie9haxors) div.uitip-content,
+.uitip:not(.ie9haxors) div.uitip-titlebar{
+	filter: none;
+	-ms-filter: none;
+}
+
+
+
+.uitip .uitip-tip{
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 10;
+	
+}
+
+	/* Opera bug #357 - Incorrect tip position
+	https://github.com/Craga89/qTip2/issues/367 */
+	x:-o-prefocus, .uitip .uitip-tip{
+		visibility: hidden;
+	}
+
+	.uitip .uitip-tip,
+	.uitip .uitip-tip .uitip-vml,
+	.uitip .uitip-tip canvas{
+		position: absolute;
+
+		color: #123456;
+		background: transparent;
+		border: 0 dashed transparent;
+	}
+	
+	.uitip .uitip-tip canvas{ top: 0; left: 0; }
+
+	.uitip .uitip-tip .uitip-vml{
+		behavior: url(#default#VML);
+		display: inline-block;
+		visibility: visible;
+	}
+
+#uitip-overlay{
+	position: fixed;
+	left: 0; top: 0;
+	width: 100%; height: 100%;
+}
+
+	/* Applied to modals with show.modal.blur set to true */
+	#uitip-overlay.blurs{ cursor: pointer; }
+
+	/* Change opacity of overlay here */
+	#uitip-overlay div{
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+
+		background-color: black;
+
+		opacity: 0.7;
+		filter:alpha(opacity=70);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	}
+
+
+
+.uitipmodal-ie6fix{
+	position: absolute !important;
+}
