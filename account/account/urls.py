@@ -50,6 +50,8 @@ urlpatterns = patterns('',
     (r'^upload/', include('file_uploader.urls')),
     #location
     (r'^location/', include('locationservice.urls')),
+    #Settings
+    (r'^setting/', include('profile_settings.urls')),
 )
 
 if settings.DEBUG:

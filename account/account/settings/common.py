@@ -208,6 +208,7 @@ INSTALLED_APPS = (
     'custom_mixins',
     'user_management',
     'file_uploader',
+    'profile_settings',
 )
 ########## END APP CONFIGURATION
 

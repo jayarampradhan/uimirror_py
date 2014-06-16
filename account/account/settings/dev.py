@@ -238,6 +238,10 @@ LOGGING = {
              'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
             'propagate': True,
+        },'profile_settings': {
+             'handlers': ['console', 'logfile'],
+            'level': 'DEBUG',
+            'propagate': True,
         },'': {
             'handlers': [],
             'level': 'WARNING',
