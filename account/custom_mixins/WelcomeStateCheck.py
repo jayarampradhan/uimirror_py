@@ -2,8 +2,6 @@
    This will handle the state for the welcome page.
    State Object Common format is {Obj, Step, }
 '''
-
-from django.conf import settings
 from django.core.cache import cache
 
 from account.constant import Constants
@@ -22,12 +20,10 @@ class WelcomeStateCheck(LoginWithStateCheckMixin):
            then call analyse state to take the routing logic.
         '''
         # TODO: This will be a call to user profile if user really needs the welcome page or not.
-        attr = findOrUpdateProfileAttribute(profile_id)
+        attr, state = findOrUpdateProfileAttribute(profile_id), False;
         if attr.get('age') == 'new':
-            dev_mode = getattr(settings, "SKIP_WEB_CALL", 'n');
-            if dev_mode == 'y':
-                state = {Constants.OBJECT:'welcome', Constants.STEP:'1'};
-        cache.set(profile_id+Constants.STATE_POST_FIX, state)
+            state = {Constants.OBJECT:'welcome', Constants.STEP:'1'};
+            cache.set(profile_id+Constants.STATE_POST_FIX, state)
         return self.analyse_state(state)
     
     def analyse_state(self, state):
