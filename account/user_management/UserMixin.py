@@ -50,3 +50,4 @@ def findOrUpdateProfileAttribute(profile_id):
     else:
         cache.set(profile_id+'.prf.attr', dic, None);
         return attr;
+        return attr;

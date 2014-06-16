@@ -4565,3 +4565,239 @@ INFO 2014-06-15 13:55:55,935 welcome_view 8218 4358479872 [INTERIM]- User State 
 INFO 2014-06-15 13:55:55,960 welcome_view 8218 4354273280 [INTERIM]- User State Restored and doing the fresh render.
 INFO 2014-06-15 13:55:56,047 welcome_view 8218 4358479872 [END]- Welcome View rendered.
 INFO 2014-06-15 13:55:56,057 welcome_view 8218 4354273280 [END]- Welcome View rendered.
+INFO 2014-06-16 14:45:29,891 register_view 827 4513591296 [START]-Request Received for Register Page.
+INFO 2014-06-16 14:45:30,000 register_view 827 4513591296 [END]- Request Served for the register page.
+ERROR 2014-06-16 14:45:32,026 base 827 4518060032 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 26, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+ERROR 2014-06-16 14:45:32,920 base 827 4522266624 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 26, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+WARNING 2014-06-16 14:45:38,896 base 827 4518060032 Not Found: /favicon.ico
+ERROR 2014-06-16 14:47:47,470 base 840 4581486592 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 26, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+INFO 2014-06-16 14:58:41,932 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 14:58:41,959 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 14:58:42,126 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 15:09:53,678 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 15:09:53,691 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 15:09:53,717 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 15:11:07,498 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 15:11:07,500 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 15:11:07,523 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 15:11:27,010 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 15:11:27,031 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 15:11:27,065 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 15:13:01,558 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 15:13:01,560 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 15:13:01,587 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 15:15:32,765 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 15:15:32,809 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 15:15:32,841 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 15:21:32,136 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 15:21:32,146 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 15:21:32,172 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 16:43:44,789 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 16:43:44,822 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 16:43:44,855 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 16:45:17,289 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 16:45:17,290 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 16:45:17,318 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 17:19:52,151 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:19:52,168 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:19:52,201 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 17:21:24,458 welcome_view 888 4492980224 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:21:24,497 welcome_view 888 4492980224 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:21:24,527 welcome_view 888 4492980224 [END]- Welcome View rendered.
+INFO 2014-06-16 17:22:58,737 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:22:58,740 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:22:58,785 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:24:28,835 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:24:28,838 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:24:28,872 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:29:04,535 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:29:04,652 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:29:04,697 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:29:28,474 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:29:28,493 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:29:28,530 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:30:39,890 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:30:39,891 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:30:39,928 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:32:33,617 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:32:33,651 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:32:33,684 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:45:24,468 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:45:24,470 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:45:24,508 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:45:57,501 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:45:57,506 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:45:57,547 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:46:37,518 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:46:37,519 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:46:37,560 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 17:47:15,223 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 17:47:15,226 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 17:47:15,265 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:48:58,904 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:48:59,096 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:48:59,148 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:51:44,167 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:51:44,169 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:51:44,223 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:52:01,544 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:52:01,545 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:52:01,587 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:52:33,383 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:52:33,384 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:52:33,435 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:54:32,129 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:54:32,131 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:54:32,173 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:55:22,016 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:55:22,019 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:55:22,061 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:56:47,575 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:56:47,578 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:56:47,629 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 18:58:32,652 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 18:58:32,654 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 18:58:32,706 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:01:32,734 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:01:32,735 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:01:32,786 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:02:32,570 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:02:32,572 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:02:32,629 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:03:27,879 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:03:27,882 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:03:27,936 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:05:55,516 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:05:55,519 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:05:55,570 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:06:33,844 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:06:33,846 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:06:33,911 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:07:36,673 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:07:36,675 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:07:36,735 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:09:36,287 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:09:36,289 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:09:36,329 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:10:04,286 welcome_view 888 4517269504 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:10:04,289 welcome_view 888 4517269504 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:10:04,322 welcome_view 888 4517269504 [END]- Welcome View rendered.
+INFO 2014-06-16 19:51:11,500 welcome_view 1691 4375719936 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:51:11,521 welcome_view 1691 4375719936 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:51:11,687 welcome_view 1691 4375719936 [END]- Welcome View rendered.
+INFO 2014-06-16 19:51:21,306 LocationView 1691 4375719936 Request as {u'csrfmiddlewaretoken': u'EY4cgyogHP0JO5BZpFneDsCXZT4lxjyy'}
+INFO 2014-06-16 19:52:21,715 welcome_view 1691 4375719936 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:52:21,717 welcome_view 1691 4375719936 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:52:21,747 welcome_view 1691 4375719936 [END]- Welcome View rendered.
+INFO 2014-06-16 19:52:28,378 LocationView 1691 4389388288 Request as {u'csrfmiddlewaretoken': u'EY4cgyogHP0JO5BZpFneDsCXZT4lxjyy'}
+INFO 2014-06-16 19:54:31,871 welcome_view 1691 4375719936 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:54:31,873 welcome_view 1691 4375719936 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:54:31,902 welcome_view 1691 4375719936 [END]- Welcome View rendered.
+INFO 2014-06-16 19:54:37,711 LocationView 1691 4389388288 Request as {u'csrfmiddlewaretoken': u'EY4cgyogHP0JO5BZpFneDsCXZT4lxjyy'}
+INFO 2014-06-16 19:55:54,860 welcome_view 1691 4375719936 [START]- Request Received for the Welcome View
+INFO 2014-06-16 19:55:54,862 welcome_view 1691 4375719936 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 19:55:54,894 welcome_view 1691 4375719936 [END]- Welcome View rendered.
+INFO 2014-06-16 19:56:02,465 LocationView 1691 4389388288 Request as {u'current[current][lat]': u'48.7187376', u'current[current][lon]': u'18.2591798', u'csrfmiddlewaretoken': u'EY4cgyogHP0JO5BZpFneDsCXZT4lxjyy', u'current[current][location]': u'B\xe1novce nad Bebravou, Slovakia'}
+INFO 2014-06-16 20:01:29,995 welcome_view 1728 4423852032 [START]- Request Received for the Welcome View
+INFO 2014-06-16 20:01:29,996 welcome_view 1728 4423852032 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 20:01:30,123 welcome_view 1728 4423852032 [END]- Welcome View rendered.
+INFO 2014-06-16 20:01:37,423 LocationView 1728 4436733952 [START]- Request Received to update the location details of the user.
+ERROR 2014-06-16 20:01:37,424 base 1728 4436733952 Internal Server Error: /location/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/locationservice/LocationView.py", line 54, in post
+    log.debug('Current City Lat ', locations_to_update.get('current').get('current').get('lat'))
+AttributeError: 'NoneType' object has no attribute 'get'
+INFO 2014-06-16 20:03:12,932 welcome_view 1735 4598996992 [START]- Request Received for the Welcome View
+INFO 2014-06-16 20:03:12,933 welcome_view 1735 4598996992 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 20:03:13,458 welcome_view 1735 4598996992 [END]- Welcome View rendered.
+INFO 2014-06-16 20:03:19,028 LocationView 1735 4611878912 [START]- Request Received to update the location details of the user.
+ERROR 2014-06-16 20:03:19,055 base 1735 4611878912 Internal Server Error: /location/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/locationservice/LocationView.py", line 55, in post
+    log.debug('Current City Lat ', locations_to_update.get('current').get('lat'));
+AttributeError: 'NoneType' object has no attribute 'get'
+INFO 2014-06-16 20:03:40,928 LocationView 1735 4598996992 [START]- Request Received to update the location details of the user.
+INFO 2014-06-16 20:03:48,135 LocationView 1735 4603465728 [START]- Request Received to update the location details of the user.
+ERROR 2014-06-16 20:04:21,471 base 1735 4598996992 Internal Server Error: /location/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/locationservice/LocationView.py", line 55, in post
+    log.debug('Current City Lat ', locations_to_update.get('current').get('lat'));
+AttributeError: 'NoneType' object has no attribute 'get'
+ERROR 2014-06-16 20:04:22,174 base 1735 4603465728 Internal Server Error: /location/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/locationservice/LocationView.py", line 55, in post
+    log.debug('Current City Lat ', locations_to_update.get('current').get('lat'));
+AttributeError: 'NoneType' object has no attribute 'get'
+INFO 2014-06-16 20:11:24,237 welcome_view 1752 4600696832 [START]- Request Received for the Welcome View
+INFO 2014-06-16 20:11:24,238 welcome_view 1752 4600696832 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-16 20:11:24,264 welcome_view 1752 4600696832 [END]- Welcome View rendered.
+INFO 2014-06-16 20:11:30,687 LocationView 1752 4613578752 [START]- Request Received to update the location details of the user.
+INFO 2014-06-16 20:11:55,473 LocationView 1752 4613578752 [END]- Request for location update completed.

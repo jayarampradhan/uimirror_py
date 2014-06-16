@@ -5,6 +5,7 @@
         	<form class="form-horizontal actorProfileLocForm" 
         			enctype="application/x-www-form-urlencoded" method="post" id="actorLocForm" 
         			action="{% url 'uim.location' %}" data-unsaved="">
+        		{% csrf_token %}
 				<p class="alert alert-danger msgWrap textOverFlow" id="uimLocUpdateErr">
 					<span>{% blocktrans %}Sorry Request Can't be completed Now{% endblocktrans %}.</span>
 				</p>
@@ -23,7 +24,8 @@
 							<!-- Make This Data URI_LOC to REVERSE URL Based -->
 							<input type="text" class="form-control" id="actorCurrentPlace" 
 								placeholder="{% blocktrans %}Current Place{% endblocktrans %}" 
-								data-uri_loc="{% url 'uim.location' %}" data-pre-token-val='[{"id":"{{usr.loc.current.id}}","name":"{{usr.loc.current.name}}"}]'>
+								data-uri_loc="{% url 'uim.location' %}" 
+								data-pre-token-val='{% if usr.loc.current %}[{"id":"{{usr.loc.current.id}}","name":"{{usr.loc.current.name}}"}]{% endif %}'>
 						</div>
 					</div>
         		</div>
@@ -38,14 +40,14 @@
 							</span>
 							<input type="text" class="form-control" id="actorHomeTown" 
 									placeholder="{% blocktrans %}Home Town{% endblocktrans %}" 
-									data-uri_loc="{% url 'uim.location' %}" data-pre-val='[{"id":"{{usr.loc.home.id}}","name":"{{usr.loc.home.name}}"}]'>
+									data-uri_loc="{% url 'uim.location' %}" 
+									data-pre-token-val='{% if usr.loc.home %}[{"id":"{{usr.loc.home.id}}","name":"{{usr.loc.home.name}}"}]{% endif %}'>
 						</div>
 					</div>
         		</div>
         		<div class="row no_margin text-center mtl">
-        			<button type="button" class="btn btn-success mll" id="actorLocationSaveAct" data-ajax-fu="{% url 'uim.location' %}">
-      					<span>{% blocktrans %}Update My Location{% endblocktrans %}</span>
-      					<i class="ajxLoad loadRefresh hidden"></i> 
+        			<button type="button" class="btn btn-success mll hidden" id="actorLocationSaveAct" data-ajax-fu="{% url 'uim.location' %}">
+      					{% blocktrans %}Update My Location{% endblocktrans %}
     				</button>
         		</div>
         	</form>

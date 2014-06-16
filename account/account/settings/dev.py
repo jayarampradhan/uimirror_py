@@ -234,6 +234,10 @@ LOGGING = {
              'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
             'propagate': True,
+        },'locationservice': {
+             'handlers': ['console', 'logfile'],
+            'level': 'DEBUG',
+            'propagate': True,
         },'': {
             'handlers': [],
             'level': 'WARNING',

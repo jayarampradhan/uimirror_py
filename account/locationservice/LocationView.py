@@ -47,10 +47,15 @@ class HandleLocation(LoginCheckMixin, View):
            This will handle the location add/update request.
            this will handle in ajax calls. 
         '''
+        log.info('[START]- Request Received to update the location details of the user.')
         # TODO: Checks for the parameter which location user wants to update.
+        locations_to_update = request.POST.dict();
+        # TODO: Handle Current and and home town separate
+        log.debug('Current City Lat %s', locations_to_update.get('current.current.location'));
         dic = {}
         dic['STATUS_CODE'] = 200;
         dic['MSG'] = 'success';
+        log.info('[END]- Request for location update completed.')
         return sendResponse(request, dic)
         
     def delete(self, request):
