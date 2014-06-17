@@ -239,13 +239,6 @@ var UIM = (function($, WELCOME) {
 			_home = {},
 			_current = {};
 		_data.csrfmiddlewaretoken = _form.find('input[name="csrfmiddlewaretoken"]').val();
-		
-		if(_home_city_data && _home_city_data.changed){
-			_home.old = _home_city_data.old;
-			_home.current = _home_city_data.current;
-			_data.home = _home; 
-		}
-		//TODO Do similar
 		if(_curr_city_data && _curr_city_data.changed){
 			if(_curr_city_data.old){
 				_data['current.old.id'] = _curr_city_data.old.id;
@@ -257,7 +250,17 @@ var UIM = (function($, WELCOME) {
 				_data['current.current.location'] = _curr_city_data.current.location;
 			}
 		}
-		console.log(_data);
+		if(_home_city_data && _home_city_data.changed){
+			if(_home_city_data.old){
+				_data['home.old.id'] = _home_city_data.old.id;
+				_data['home.old.name'] = _home_city_data.old.name;
+			}
+			if(_home_city_data.current){
+				_data['home.current.lat'] = _home_city_data.current.lat;
+				_data['home.current.lon'] = _home_city_data.current.lon;
+				_data['home.current.location'] = _home_city_data.current.location;
+			}
+		}
 		options.url = _form.attr('action')
 		options.type = "post";
 		options.data = _data;
@@ -297,8 +300,15 @@ var UIM = (function($, WELCOME) {
 		}
 		return _data; 
 	};
-	function updateLocationData(_elm, _data){
-		_elm.data('pre-token-val', '[{"name":"'+_data.location+'"}]')
+	function updateLocationData(_res, _data){
+		if(_res && _rs.RESCD === '200' || _rs.RESCD === 200){
+			if(_data['current.current.location']){
+				_elm.data('pre-token-val', '[{"id" : "'+_rs.MSG.ID+'", "name":"'+_data['current.current.location']+'"}]')
+			}
+			if(_data['home.current.location']){
+				_elm.data('pre-token-val', '[{"id" : "'+_rs.MSG.ID+'","name":"'+_data['home.current.location']+'"}]')
+			}
+		}
 	};
 	function currentCityData(){
 		var _elm = $('#actorCurrentPlace'),
@@ -326,13 +336,15 @@ var UIM = (function($, WELCOME) {
 		console.log(_curr_city_data);
 		var _options = buildLocationUpDateProp.call(this, _home_city_data, _curr_city_data);
 		var _promise = $.ajax(_options);
-		// TODO : complete the ajax success and fail
-		//UIM.showLocationUpdateing(_self);
-		console.log('Save Location Data');
-		//updateLocationData.call(this, _elm, _data.current);
-		//saveCurrentCity.call();
-		//saveHomeCity.call();
-		//UIM.hideLocationUpdateing(_self);
+		UIM.showLocationUpdateing(_self);
+		_promise.done(function(rs){
+			UIM.hideLocationUpdateing(_self);
+			updateLocationData.call(this, rs, _options);
+		});
+		_promise.fail(function(rs){
+			//Do really need to show error message
+			UIM.hideLocationUpdateing(_self);
+		});
 	};
 	function importContact(_self){
 		//TODO save the other forms if unsaved
