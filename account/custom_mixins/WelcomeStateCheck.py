@@ -8,7 +8,6 @@ from account.constant import Constants
 from custom_mixins.LoginWithStateCheckMixin import LoginWithStateCheckMixin
 from user_management.UserMixin import findOrUpdateProfileAttribute
 
-
 class WelcomeStateCheck(LoginWithStateCheckMixin):
     state_presume_failure_path = '';
     
@@ -22,7 +21,7 @@ class WelcomeStateCheck(LoginWithStateCheckMixin):
         # TODO: This will be a call to user profile if user really needs the welcome page or not.
         attr, state = findOrUpdateProfileAttribute(profile_id), False;
         if attr.get('age') == 'new':
-            state = {Constants.OBJECT:'welcome', Constants.STEP:'1'};
+            state = {Constants.OBJECT:'welcome', Constants.STEP:'1', Constants.APP :'1'};
             cache.set(profile_id+Constants.STATE_POST_FIX, state)
         return self.analyse_state(state)
     

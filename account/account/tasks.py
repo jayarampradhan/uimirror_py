@@ -2,13 +2,9 @@
    This is the shared task definition for the user activity or welcome page activity
    This stores the common task definition
 '''
-
 from __future__ import absolute_import
-
 from celery.app import shared_task
-
 from account.constant import Constants
-
 
 @shared_task
 def updateImportedContactCache(contacts, provider, profile_id):
@@ -37,3 +33,12 @@ def sendInvite(contacts, provider, profile_id):
     '''
     # TODO: Implement this latter
     pass
+
+@shared_task
+def updateStateCache(state, profile_id):
+    '''
+       This will store the state of the user flow into session async
+    '''
+    if state and profile_id:
+        from django.core.cache import cache
+        cache.set(profile_id+Constants.STATE_POST_FIX, state, None);

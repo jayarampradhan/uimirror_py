@@ -186,8 +186,8 @@ var UIM = (function($, WELCOME) {
 			var oFile = input.files[0];
 			// check for file size
 		    if (oFile.size > 250 * 1024) {
-		    	 //TODO : Update the error field
-		        $('.error').html('You have selected too big file, please select a one smaller image file').show();
+		        $('#uimProfilePicUploadErr').text(gettext('You have selected too big file, please select a one smaller image file')).addClass('hasError');
+		        $('#uimProfilePicUploadSug').text(gettext('Please Try with file size less than 250 MB')).addClass('hasSug');
 		        return;
 		    }
 	    	var reader = new FileReader();
@@ -406,12 +406,19 @@ var UIM = (function($, WELCOME) {
 				handelStepNavigationManualy.call(this, $(this));
 			});
 			allNavLink.click(function(e){
+				var _self = $(this);
+				if(_self.hasClass('home')){
+					console.log('comming');
+					return true;
+				}
 				e.preventDefault();
-				handelStepNavigationByPager.call(this, $(this));
+				handelStepNavigationByPager.call(this, _self);
 			});
 			//On Click Of change Image
 			$('#actorProfileSnapForm').on('change', '#prfSnap',function(e){
 				e.preventDefault();
+				$('#uimProfilePicUploadErr').removeClass('hasError');
+		        $('#uimProfilePicUploadSug').removeClass('hasSug');
 				handelProfileSnapPreview(this, this);
 			});
 			//On Click Of Save Image

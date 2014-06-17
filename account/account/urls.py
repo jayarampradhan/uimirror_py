@@ -13,6 +13,7 @@ from create_page_view import CreatePage
 from forgot_password_view import ForgotPasswordView
 from profile_manage_view import ProfileManageView
 from reset_password_view import ResetPasswordView
+from account.views.WelcomeLandingView import WelcomeLandingView
 
 admin.autodiscover()
 
@@ -32,6 +33,9 @@ urlpatterns = patterns('',
     
     #First time edit profile
     url(r'^uiwelcome/$', WelcomeView.as_view(), name='account.uiwelcome'),
+    #First time edit profile complete
+    url(r'^uiwelcome/home$', WelcomeLandingView.as_view(), name='account.uiwelcome.home'),
+    
     #Contact Import Third Party
     url(r'^contacts/$', ContactImporter.as_view(), name='uim.contact.third.party.import'),
     

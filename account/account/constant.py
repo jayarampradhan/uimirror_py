@@ -15,7 +15,10 @@ class Constants(object):
     LAST_NAME = 'lname';
     
     #########Cookie Constant End##########
-    
+    ###########App and Destination########
+    APP = 'app'
+    DESTINATION = 'des'
+    ###########App and Destination########
     ########Email Contact/ Profile Import####
     PROVIDER = 'provider'
     RQ_SCH_SECURE = 'https'

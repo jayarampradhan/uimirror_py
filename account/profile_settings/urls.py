@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, url
-from locationservice.LocationView import HandleLocation
-
+from profile_settings.ProfileSettingsView import ProfileSettingsView
 
 urlpatterns = patterns('',
-    url(r'^$', HandleLocation.as_view(), name='uim.location'),
+    url(r'^$', ProfileSettingsView.as_view(), name='uim.profile.setting'),
 )

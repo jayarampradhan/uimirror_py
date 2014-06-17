@@ -8,11 +8,11 @@ from django.views.generic.base import View
 from account.constant import Constants
 from account.tasks import updateContactImportStateCache
 from contact_importer.lib.outh_helper import OuathHelper
-from custom_mixins.LoginCheckMixin import LoginCheckMixin
+from custom_mixins.WelcomeStateCheck import WelcomeStateCheck
 
 
 log = logging.getLogger(__name__)
-class ContactImporter(LoginCheckMixin, View):
+class ContactImporter(WelcomeStateCheck, View):
     '''
        Generic Contact Importer, which will make request to the service provider.
        Once Contact Information is available request will be back to the welcome page -> get

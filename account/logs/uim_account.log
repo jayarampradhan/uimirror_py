@@ -4801,3 +4801,61 @@ INFO 2014-06-16 20:11:24,238 welcome_view 1752 4600696832 [INTERIM]- User State 
 INFO 2014-06-16 20:11:24,264 welcome_view 1752 4600696832 [END]- Welcome View rendered.
 INFO 2014-06-16 20:11:30,687 LocationView 1752 4613578752 [START]- Request Received to update the location details of the user.
 INFO 2014-06-16 20:11:55,473 LocationView 1752 4613578752 [END]- Request for location update completed.
+INFO 2014-06-17 17:29:16,308 welcome_view 2252 4617580544 [START]- Request Received for the Welcome View
+INFO 2014-06-17 17:29:16,339 welcome_view 2252 4617580544 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 17:29:16,493 welcome_view 2252 4617580544 [END]- Welcome View rendered.
+INFO 2014-06-17 17:40:10,972 ThirdPartyContactImport 2252 4617580544 [START]-Request Received for importing contact from google
+ERROR 2014-06-17 17:40:11,195 base 2252 4617580544 Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/account/views/ThirdPartyContactImport.py", line 41, in get
+    updateContactImportStateCache.delay(state, provider, profile_id)
+  File "/Library/Python/2.7/site-packages/celery/app/task.py", line 453, in delay
+    return self.apply_async(args, kwargs)
+  File "/Library/Python/2.7/site-packages/celery/app/task.py", line 547, in apply_async
+    link=link, link_error=link_error, **options)
+  File "/Library/Python/2.7/site-packages/celery/app/task.py", line 735, in apply
+    request=request, propagate=throw)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 354, in eager_trace_task
+    uuid, args, kwargs, request)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 253, in trace_task
+    I, R, state, retval = on_error(task_request, exc, uuid)
+  File "/Library/Python/2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/account/tasks.py", line 28, in updateContactImportStateCache
+    state[Constants.IMPORT_SERVICE_PRVOVIDER] = provider;
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-17 17:41:46,216 welcome_view 2252 4617580544 [START]- Request Received for the Welcome View
+INFO 2014-06-17 17:41:46,217 welcome_view 2252 4617580544 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 17:41:46,246 welcome_view 2252 4617580544 [END]- Welcome View rendered.
+INFO 2014-06-17 17:41:51,981 ThirdPartyContactImport 2252 4628738048 [START]-Request Received for importing contact from google
+INFO 2014-06-17 17:42:33,849 ThirdPartyContactImport 2252 4628738048 [END]-Request Redirecting to the Provider site.
+INFO 2014-06-17 17:50:58,702 welcome_view 2252 4617580544 [START]- Request Received for the Welcome View
+INFO 2014-06-17 17:50:58,743 welcome_view 2252 4617580544 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 17:50:58,770 welcome_view 2252 4617580544 [END]- Welcome View rendered.
+INFO 2014-06-17 17:50:59,032 welcome_view 2252 4624531456 [START]- Request Received for the Welcome View
+INFO 2014-06-17 17:50:59,034 welcome_view 2252 4624531456 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 17:50:59,120 welcome_view 2252 4624531456 [END]- Welcome View rendered.
+INFO 2014-06-17 18:44:56,442 welcome_view 2464 4476620800 [START]- Request Received for the Welcome View
+INFO 2014-06-17 18:44:56,449 welcome_view 2464 4476620800 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 18:44:56,568 welcome_view 2464 4476620800 [END]- Welcome View rendered.
+INFO 2014-06-17 18:47:27,297 welcome_view 2501 4518965248 [START]- Request Received for the Welcome View
+INFO 2014-06-17 18:47:27,304 welcome_view 2501 4518965248 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 18:47:27,794 welcome_view 2501 4518965248 [END]- Welcome View rendered.
+INFO 2014-06-17 18:47:52,892 welcome_view 2501 4518965248 [START]- Request Received for the Welcome View
+INFO 2014-06-17 18:47:52,894 welcome_view 2501 4518965248 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 18:47:52,913 welcome_view 2501 4518965248 [END]- Welcome View rendered.
+INFO 2014-06-17 18:48:39,089 welcome_view 2501 4518965248 [START]- Request Received for the Welcome View
+INFO 2014-06-17 18:48:39,091 welcome_view 2501 4518965248 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 18:48:39,115 welcome_view 2501 4518965248 [END]- Welcome View rendered.
+INFO 2014-06-17 18:49:45,346 welcome_view 2501 4518965248 [START]- Request Received for the Welcome View
+INFO 2014-06-17 18:49:45,348 welcome_view 2501 4518965248 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-17 18:49:45,373 welcome_view 2501 4518965248 [END]- Welcome View rendered.
+INFO 2014-06-17 18:49:51,008 ProfileSettingsView 2501 4536840192 [END]- Welcome View rendered.
