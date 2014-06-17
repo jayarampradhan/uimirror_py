@@ -1,0 +1,260 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * Globals
+ */
+
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+    color: #5b74a8;
+    font-size: 12px;
+}
+body { 
+	padding-top: 70px; 
+}
+label{
+	font-weight: normal;
+}
+.no_padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.no_margin {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.text-primary{
+	color: #5b74a8; 
+}
+
+.text-muted{
+	color: #ccd5e4;
+}
+.fs-13{
+	font-size: 13px;
+}
+.uimInfoWrap .alert{
+	margin-bottom: 0px;
+}
+.col-centered{
+	float: none;
+}
+.mbl{
+	margin-bottom: 15px;
+}
+.mbxs{
+	margin-bottom: 5px;
+}
+.mtl{
+	margin-top: 15px;
+}
+.mll{
+	margin-left: 15px;
+}
+.mrl{
+	margin-right: 15px;
+}
+.mtxl{
+	margin-top: 50px;
+}
+.uimbgsc{
+	background-color: #5cb85c;
+	color: #fff;
+}
+.uimProfilePic{
+	height: 160px;
+	width: 160px;
+}
+
+/*Ajax Loading Image*/
+.ajxLoad {
+	background-image: url('/static/images/ajax_wifi_load.gif');
+}
+
+.ajxLoad.loadRefresh{
+	display: inline-block;
+	width: 27px;
+	height: 18px;
+	vertical-align: text-top;
+	background-position: 2px -2px;
+	background-repeat: no-repeat;
+}
+/*Error sections*/
+.textOverFlow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.alert{
+	color: #333;
+}
+.alert-danger{
+	background-color: #F2DEDE;
+}
+.alert-info{
+	background-color: #DFF0D8;
+}
+.msgWrap{
+	display: none;
+}
+.hasError.msgWrap, .hasSug.msgWrap{
+	display: block;
+}
+.uimFieldErr{
+	border-bottom: 1px solid red !important;
+}
+/*Customization*/
+.uimHead .badge{
+	top: 4px;
+}
+
+/*Experiment*/
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+
+#wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+    height: 100%
+}
+
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: 70px;
+    width: 150px;
+    background: #222;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+#sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 150px;
+    background: #252525;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #1A1A1A;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+    transition: background .5s;
+}
+.sidebar_name {
+    padding-top: 25px;
+    color: #fff;
+    opacity: .7;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+#main_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:20px;
+}
+.sub_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:10px;
+}
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+}
+#sidebar-wrapper {
+    left: 70px;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    transition: all .4s ease 0s;
+}
+}

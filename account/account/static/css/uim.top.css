@@ -1,0 +1,11 @@
+@charset "utf-8";
+.uimHead .lang-chooser{
+	background-color: #333;
+	color: #fff;
+	margin-top: 10px;
+	height: 21px;
+}
+.uimHead .actorGreetingWrap, .uimHead .actorGreetingWrap>a{
+	font-size: 14px;
+	color: #fff;
+}
