@@ -197,7 +197,6 @@ var UIM = (function($, WELCOME) {
 	        		if (profile_pic_jcrop_api) {
 	        			profile_pic_jcrop_api.destroy();
 	        			profile_pic_jcrop_api = null;
-	        			console.log('destroying');
 	        		}
 	        		$('#snapPreviewCenter').removeClass('hidden');
 	        		$('#actorSnapRecentUpload').attr('src', e.target.result);
@@ -221,7 +220,10 @@ var UIM = (function($, WELCOME) {
 	};
 	function handelProfilePicSave(_self){
 		//TODO not yet implemented
-		console.log('Give implementation');
+		var canvas = document.getElementById('canvasThumbResult'),
+	    	_img_data = canvas.toDataURL("image/png");
+		console.log('Give implementation' +_img_data);
+		//Remove The Preview Options and Canvas Element
 	}
 	function applyCurrentCityToken(_self){
 		_self.uimTokenInput('destroy');
@@ -332,7 +334,6 @@ var UIM = (function($, WELCOME) {
 	function updateLocationClick(_self){
 		var _home_city_data = homeCityData.call(this);
 		var _curr_city_data = currentCityData.call(this);
-		console.log(_curr_city_data);
 		var _options = buildLocationUpDateProp.call(this, _home_city_data, _curr_city_data);
 		var _promise = $.ajax(_options);
 		UIM.showLocationUpdateing(_self);
@@ -367,6 +368,13 @@ var UIM = (function($, WELCOME) {
 	WELCOME.hideLocationUpdateing = function(_elm){
 		UIM.addHiddenCLass.apply(this,[_elm]);
 		_elm.text(gettext('Update My Location'));
+	};
+	WELCOME.showProfileSnapUpdateing = function(_elm){
+		_elm.html('<span>'+gettext('Updating Your Profile Snap')+'</span> <i class="ajxLoad loadRefresh"></i>');
+	};
+	WELCOME.hideProfileSnapUpdateing = function(_elm){
+		UIM.addHiddenCLass.apply(this,[_elm]);
+		_elm.text(gettext('Keep This As Profile Snap'));
 	};
 	WELCOME.addHiddenCLass = function() {
 		var argsArray = Array.prototype.slice.call(arguments);
@@ -409,7 +417,7 @@ var UIM = (function($, WELCOME) {
 			//On Click Of Save Image
 			$('#actorProfileSnapForm').on('click', '#actorProfileSnapSaveAct',function(e){
 				e.preventDefault();
-				handelProfilePicSave.call(this, this)
+				handelProfilePicSave.call(this, $(this))
 			});
 			
 			//Apply Token Input
