@@ -176,8 +176,7 @@ var UIM = (function($, WELCOME) {
 				$('ul.setup-panel li.active').next(':not(".disabled")').find('>a').trigger('click');
 			}else{
 				$('ul.setup-panel li.active').prev(':not(".disabled")').find('>a').trigger('click');
-			}
-			
+			}			
 		}
 	};
 	function handelProfileSnapPreview(input){
@@ -342,15 +341,23 @@ var UIM = (function($, WELCOME) {
 			updateLocationData.call(this, rs, _options);
 		});
 		_promise.fail(function(rs){
-			//Do really need to show error message
+			//TODO Do really need to show error message
 			UIM.hideLocationUpdateing(_self);
 		});
 	};
 	function importContact(_self){
-		//TODO save the other forms if unsaved
 		if(_self.attr('data-contact') === _self.attr('data-provider')){
 			$('#invitationContactWrap').modal('show');
 		}else{
+			//Check if other form is unsaved and save them now
+			var _invite_form = $('#actorLocForm');
+			var _profile_snap_form = $('#actorProfileSnapForm');
+			if(_invite_form.attr('data-unsaved')){
+				updateLocationClick.call(this, $('#actorLocationSaveAct'));
+			}
+			if(_profile_snap_form.attr('data-unsaved')){
+				handelProfilePicSave.call(this, $('#actorProfileSnapSaveAct'));
+			}
 			_self.parent().submit();
 		}
 	};
