@@ -4878,3 +4878,263 @@ INFO 2014-06-17 20:21:05,530 ProfileSettingsView 2571 4599287808 [END]- Welcome 
 INFO 2014-06-17 20:21:45,742 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
 INFO 2014-06-17 20:23:41,427 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
 INFO 2014-06-17 20:27:09,602 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 13:57:49,156 register_view 2571 4599287808 [START]-Request Received for Register Page.
+INFO 2014-06-19 13:57:49,246 register_view 2571 4599287808 [END]- Request Served for the register page.
+INFO 2014-06-19 13:57:51,585 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 13:59:38,242 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 14:01:28,916 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 14:01:53,060 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 14:10:40,715 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 14:11:51,337 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 14:13:25,276 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 14:15:41,816 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 15:43:13,109 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 15:49:16,652 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 15:49:32,368 ProfileSettingsView 2571 4618735616 [END]- Welcome View rendered.
+INFO 2014-06-19 16:00:43,477 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 16:04:12,632 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 16:11:19,639 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 16:59:11,180 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 16:59:44,723 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:01:12,318 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:01:36,086 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:07:28,413 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+ERROR 2014-06-19 17:07:28,479 base 2571 4599287808 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 332, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'blocktrans'
+INFO 2014-06-19 17:07:47,067 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:12:40,247 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:13:03,123 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:16:24,483 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:16:38,014 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:17:19,849 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:30:05,931 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:30:29,095 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:30:50,495 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:32:08,835 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:32:51,703 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:33:05,305 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:34:13,842 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:35:46,135 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:38:31,980 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:39:48,188 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:43:23,607 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 17:44:19,853 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:24:50,817 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:27:02,018 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:27:56,997 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:29:31,375 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:30:45,502 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:32:05,776 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:32:21,603 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:34:38,381 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:35:58,223 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:36:12,970 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:37:16,424 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:39:45,189 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:39:59,333 ProfileSettingsView 2571 4622942208 [END]- Welcome View rendered.
+INFO 2014-06-19 18:40:10,567 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:42:20,322 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:42:44,297 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:43:50,108 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:46:46,201 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:47:16,931 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:50:25,282 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:52:31,176 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:52:46,363 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:54:13,214 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:55:33,555 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 18:57:44,414 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:01:20,496 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:01:29,415 ProfileSettingsView 2571 4631355392 [END]- Welcome View rendered.
+INFO 2014-06-19 19:02:02,521 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:03:10,992 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:04:22,815 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:05:06,959 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:05:59,924 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:06:17,716 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:06:25,477 ProfileSettingsView 2571 4622942208 [END]- Welcome View rendered.
+INFO 2014-06-19 19:35:44,182 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:36:14,769 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:37:45,239 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:38:54,386 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:39:33,413 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:39:46,063 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:40:51,673 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:41:02,121 ProfileSettingsView 2571 4622942208 [END]- Welcome View rendered.
+INFO 2014-06-19 19:41:17,152 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:44:35,440 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:45:27,150 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:51:57,391 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:52:17,571 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:53:43,609 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:54:08,939 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:54:24,021 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:54:32,867 ProfileSettingsView 2571 4622942208 [END]- Welcome View rendered.
+INFO 2014-06-19 19:55:35,273 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 19:55:42,379 ProfileSettingsView 2571 4622942208 [END]- Welcome View rendered.
+INFO 2014-06-19 20:11:10,789 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:22:33,032 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:24:01,911 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:25:24,626 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:25:40,992 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:30:17,542 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:32:08,829 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:35:00,086 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:39:11,085 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:39:40,795 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:40:08,617 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:40:18,252 ProfileSettingsView 2571 4618735616 [END]- Welcome View rendered.
+INFO 2014-06-19 20:41:56,605 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-19 20:42:47,107 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 16:53:38,433 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 16:55:16,044 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 16:55:39,851 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 16:56:18,987 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 16:57:06,729 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 17:00:47,217 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 17:01:26,860 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 17:07:55,457 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 17:10:30,594 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 17:12:57,942 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+INFO 2014-06-20 17:40:34,992 ProfileSettingsView 2571 4599287808 [END]- Welcome View rendered.
+ERROR 2014-06-20 18:42:01,680 base 2571 4599287808 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 24, in dispatch
+    return super(LoginWithStateCheckMixin, self).do_fail_navigation(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 33, in do_fail_navigation
+    return redirect(self.state_presume_failure_path);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 78, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-20 18:42:08,802 base 2571 4618735616 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 24, in dispatch
+    return super(LoginWithStateCheckMixin, self).do_fail_navigation(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 33, in do_fail_navigation
+    return redirect(self.state_presume_failure_path);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 78, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-20 18:43:19,311 base 4820 4569399296 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 24, in dispatch
+    return super(LoginWithStateCheckMixin, self).do_fail_navigation(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 33, in do_fail_navigation
+    return redirect(self.state_presume_failure_path);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 78, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-20 18:43:51,316 base 4820 4569399296 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 24, in dispatch
+    return super(LoginWithStateCheckMixin, self).do_fail_navigation(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 33, in do_fail_navigation
+    return redirect(self.state_presume_failure_path);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 78, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []

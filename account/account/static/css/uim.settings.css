@@ -13,18 +13,22 @@ body
     font-size: 12px;
 }
 body { 
-	padding-top: 70px; 
+	padding-top: 51px; 
 }
 label{
 	font-weight: normal;
 }
-.no_padding {
+.no_padding, .btn-group.appChooser>.btn+.dropdown-toggle {
 	padding-left: 0px;
 	padding-right: 0px;
 }
 .no_margin {
 	margin-left: 0px;
 	margin-right: 0px;
+}
+.no_tb_margin {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 .text-primary{
 	color: #5b74a8; 
@@ -59,6 +63,13 @@ label{
 }
 .mtxl{
 	margin-top: 50px;
+}
+.nop{
+	padding: 0px;
+}
+.plrxs{
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .uimbgsc{
 	background-color: #5cb85c;
@@ -112,6 +123,15 @@ label{
 }
 
 /*Experiment*/
+.navbar.uimHead{
+	margin-bottom: 0px;
+} 
+.navbar.uimSubHead{
+	margin-bottom: 5px;
+}
+.glyphicon:empty {
+width: 1em;
+}
 .row{
     margin-left:0px;
     margin-right:0px;
@@ -159,7 +179,7 @@ label{
   width: 100%;
 }
 
-#sidebar_menu li a, .sidebar-nav li a {
+.sidebar-nav li a {
     color: #999;
     display: block;
     float: left;
@@ -191,7 +211,7 @@ label{
   text-decoration: none;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li a:hover , .sidebar-nav li a.active{
   color: #fff;
   background: rgba(255,255,255,0.2);
   text-decoration: none;
@@ -201,22 +221,6 @@ label{
 .sidebar-nav li a:focus {
   text-decoration: none;
 }
-
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  line-height: 60px;
-  font-size: 18px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-  color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
-}
-
 #main_icon
 {
     float:right;
@@ -257,4 +261,11 @@ label{
     width: 150px;
     transition: all .4s ease 0s;
 }
+}
+.uimSubHead .btn{
+	font-size: 13px;
+}
+.contentHolder{
+	background-color: #fff;
+	min-height: 700px;
 }

@@ -1,23 +1,40 @@
-<div class="container">
-    <nav class="navbar navbar-default navbar-xs" role="navigation">
+{% load i18n %}
+<nav class="navbar navbar-default navbar-xs uimSubHead" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="container">
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#"><b>Tiny</b> Navbar</a>
+    <!-- <a class="navbar-brand" href="#"><b>Hello,</b> Navbar</a> -->
+    <p class="navbar-text actorGreetingWrap no_tb_margin">
+       <a id="uimLeftMenuTogl" href="#"><span id="uimLeftMenuToglIco" class="glyphicon glyphicon-indent-right"></span></a>
+	   <span>{% blocktrans %}Hello{% endblocktrans %}, </span>
+	   <!-- Update the link for edit user profile page -->
+	   <a href="#" title="{{usr.fname}} {{usr.lname}}" class="navbar-link actorNameLn">
+	   		<span class="actorName">{{usr.fname}}</span>
+	   </a>
+	</p>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li><a href="#"><i class="glyphicon glyphicon-adjust"></i></a></li>
-      <li><a href="#"><i class="glyphicon glyphicon-bell"></i></a></li>
-      <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
+			<ul class="nav navbar-nav navbar-right">
+				<li><span>Application : </span>
+					<div class="btn-group appChooser">
+						<button type="button" class="btn btn-xs btn-default nop plrxs">Social</button>
+						<button type="button" class="btn btn-xs btn-success dropdown-toggle nop "
+							data-toggle="dropdown">
+							<span class="caret"></span> <span class="sr-only">Toggle
+								Dropdown</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</div></li>
+
+			</ul>
+		</div><!-- /.navbar-collapse -->
+  </div>
 </nav>
-</div>
