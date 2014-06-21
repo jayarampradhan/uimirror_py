@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//account/templates/profile/settings/_top.html=UTF-8
+encoding//account/templates/register/_top.html=UTF-8
+encoding//account/templates/register/register.html=UTF-8
+encoding//account/templates/welcome/_top.html=UTF-8
+encoding//contact_importer/providers/google.py=utf-8
+encoding//contact_importer/providers/yahoo.py=utf-8
+encoding//facebook_sdk/middleware.py=utf-8
+encoding//facebook_sdk/migrations/0001_initial.py=utf-8
+encoding//open_facebook/api.py=utf-8
+encoding//open_facebook/tests.py=utf-8

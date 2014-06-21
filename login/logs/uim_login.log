@@ -8,3 +8,9 @@ INFO 2014-06-03 17:26:29,890 change_pwd_view 5811 4434493440 [START]-Request Rec
 INFO 2014-06-03 17:26:29,894 change_pwd_view 5811 4434493440 [END]-Request completed for the rendering the change password screen.
 INFO 2014-06-03 18:11:47,414 forgot_password_view 5811 4434493440 [START]-Requesting for the forgot password process to be started to navigate to the change password page.
 INFO 2014-06-03 18:11:47,515 forgot_password_view 5811 4434493440 [END]-As the inputs are not valid asking user to re input the details.
+INFO 2014-06-20 18:46:57,596 pre_login_view 4829 4346228736 [START]- Request will be redirected to login page.
+INFO 2014-06-20 18:46:57,636 pre_login_view 4829 4346228736 [END]- URL formation for the login page redirect completed.
+INFO 2014-06-20 18:46:57,811 pre_login_view 4829 4350435328 [START]- Request will be redirected to login page.
+INFO 2014-06-20 18:46:57,812 pre_login_view 4829 4350435328 [END]- URL formation for the login page redirect completed.
+INFO 2014-06-20 18:46:58,254 login_view 4829 4350697472 [START]- Request Received for the login page.
+INFO 2014-06-20 18:46:58,255 login_view 4829 4350697472 [END]- Request Completed for the login page.
