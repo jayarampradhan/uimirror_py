@@ -11,21 +11,8 @@
 {% block content %}
 	{% include "profile/settings/_top.html"%}
 	{% include "profile/settings/_sub_top.html"%}
-		<div id="wrapper" class="active">
-      
-      <!-- Sidebar -->
-            <!-- Sidebar -->
-      <div id="sidebar-wrapper">
-        <ul class="sidebar-nav" id="sidebar">     
-          <li><a class="active">Chat<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a>Visibility<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a>Image<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a>Post<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a>Spread<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-          <li><a>Password<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-        </ul>
-      </div>
-          
+	<div id="wrapper" class="active">
+      {% include "profile/settings/_sidebar.html"%}    
       <!-- Page content -->
       <div id="page-content-wrapper">
         <!-- Keep all page content within the page-content inset div! -->
@@ -33,56 +20,8 @@
           <div class="row">
 				<div class="col-md-10 no_padding">
 					<div class="well well-lg contentHolder">
-						<div class="row no-margin">
-							<div class="checkbox">
-  								<label>
-    								<input type="checkbox" value="">
-    								Display My Location To others
-  								</label>
-  								<p>
-  									<small>This controls your current location visibility to the people in your chat list.</small>
-									<small>By selecting you are allowing us to show your current location to your chat list.</small>
-								</p>
-							</div>
-							<div class="checkbox">
-  								<label>
-    								<input type="checkbox" value="">
-    								Minimize Always
-  								</label>
-  								<p>
-									<small>This controls the chat window display option.</small>
-									<small>By Selecting, chat list will be always in minimize mode.</small>
-								</p>
-							</div>
-							<div class="row">
-								<span class="list-inline">Make Me </span>
-								<div class="btn-group">
-									<button type="button" class="btn btn-default btn-sm">Invisible to selected people or Group</button>
-									<button type="button" class="btn btn-default dropdown-toggle btn-sm"
-										data-toggle="dropdown">
-										<span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">Visible To all</a></li>
-										<li><a href="#">Invisible</a></li>
-										<li><a href="#">Visible to selected people or Group</a></li>
-										<li><a href="#">Invisible to selected people or Group</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="row">
-								<form class="form-inline" role="form">
-									<div class="form-group">
-										<label for="exampleInputEmail1">Email address</label> <input
-											type="email" class="form-control" id="exampleInputEmail1"
-											placeholder="Enter email">
-									</div>
-								</form>
-							</div>
-							<!-- /input-group -->
-						</div>
+						{% include "profile/settings/_chat.html"%}
 					</div>
-					
 				</div>
 				<div class="col-md-10 col-md-2 visible-md visible-lg">
 					Addd

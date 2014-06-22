@@ -58,6 +58,9 @@ label{
 .mll{
 	margin-left: 15px;
 }
+.mlxl{
+	margin-left: 25px;
+}
 .mrl{
 	margin-right: 15px;
 }
@@ -78,6 +81,9 @@ label{
 .uimProfilePic{
 	height: 160px;
 	width: 160px;
+}
+.db{
+	display: block;
 }
 
 /*Ajax Loading Image*/
@@ -132,6 +138,9 @@ label{
 .glyphicon:empty {
 width: 1em;
 }
+.fa:empty {
+width: 1em;
+}
 .row{
     margin-left:0px;
     margin-right:0px;
@@ -178,7 +187,9 @@ width: 1em;
 #page-content-wrapper {
   width: 100%;
 }
-
+.sidebar-nav li a {
+    font-size: 14px;
+}
 .sidebar-nav li a {
     color: #999;
     display: block;
@@ -268,4 +279,16 @@ width: 1em;
 .contentHolder{
 	background-color: #fff;
 	min-height: 700px;
+}
+
+/*Setings finalized*/
+.settingsText{
+	font-size: 14px;
+}
+.uimSetingLeftPad{
+	margin-left: 25px;
+}
+.selectedVal{
+	color: #5b74a8;
+	font-weight: bold;
 }

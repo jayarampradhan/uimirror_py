@@ -5138,3 +5138,687 @@ Traceback (most recent call last):
   File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+INFO 2014-06-21 10:26:02,270 register_view 8395 4588953600 [START]-Request Received for Register Page.
+INFO 2014-06-21 10:26:02,283 register_view 8395 4588953600 [END]- Request Served for the register page.
+INFO 2014-06-21 10:26:03,541 register_view 8395 4588953600 [START]-Request Received for Register Page.
+INFO 2014-06-21 10:26:03,542 register_view 8395 4588953600 [END]- Request Served for the register page.
+INFO 2014-06-21 10:26:08,116 register_view 8395 4588953600 [START]-Request Received for Register Page.
+INFO 2014-06-21 10:26:08,117 register_view 8395 4588953600 [END]- Request Served for the register page.
+WARNING 2014-06-21 10:26:09,988 base 8395 4588953600 Not Found: /welcome
+WARNING 2014-06-21 10:26:10,508 base 8395 4588953600 Not Found: /favicon.ico
+ERROR 2014-06-21 10:26:53,709 base 8395 4588953600 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/StateCheckMixin.py", line 20, in check_state
+    state = cache.get(state_id)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis_cache/cache.py", line 27, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis_cache/cache.py", line 83, in get
+    client=client)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis_cache/client/default.py", line 212, in get
+    value = client.get(key)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/client.py", line 807, in get
+    return self.execute_command('GET', name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/client.py", line 526, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 819, in get_connection
+    connection = self.make_connection()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 828, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 381, in __init__
+    self._parser = parser_class(socket_read_size=socket_read_size)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 263, in __init__
+    raise RedisError("Hiredis is not installed")
+RedisError: Hiredis is not installed
+ERROR 2014-06-21 10:30:38,810 base 8395 4588953600 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/StateCheckMixin.py", line 20, in check_state
+    state = cache.get(state_id)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis_cache/cache.py", line 27, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis_cache/cache.py", line 83, in get
+    client=client)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis_cache/client/default.py", line 212, in get
+    value = client.get(key)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/client.py", line 807, in get
+    return self.execute_command('GET', name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/client.py", line 526, in execute_command
+    connection = pool.get_connection(command_name, **options)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 819, in get_connection
+    connection = self.make_connection()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 828, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 381, in __init__
+    self._parser = parser_class(socket_read_size=socket_read_size)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/redis/connection.py", line 263, in __init__
+    raise RedisError("Hiredis is not installed")
+RedisError: Hiredis is not installed
+INFO 2014-06-21 12:14:40,494 welcome_view 8523 4354334720 [START]- Request Received for the Welcome View
+INFO 2014-06-21 12:14:40,499 welcome_view 8523 4354334720 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 12:14:40,523 welcome_view 8523 4354334720 [END]- Welcome View rendered.
+WARNING 2014-06-21 12:15:00,973 base 8523 4351176704 Not Found: /settings
+WARNING 2014-06-21 12:15:01,192 base 8523 4355383296 Not Found: /favicon.ico
+INFO 2014-06-21 12:15:04,060 ProfileSettingsView 8523 4363796480 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:01:40,614 base 8656 4582825984 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+ERROR 2014-06-21 13:02:08,995 base 8656 4582825984 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+ERROR 2014-06-21 13:02:17,246 base 8656 4587032576 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 13:02:22,043 welcome_view 8656 4595445760 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:02:22,043 welcome_view 8656 4595445760 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:02:22,063 welcome_view 8656 4595445760 [END]- Welcome View rendered.
+INFO 2014-06-21 13:02:26,057 ProfileSettingsView 8656 4583247872 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:18:14,570 base 8656 4583247872 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+ERROR 2014-06-21 13:18:18,738 base 8656 4587454464 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 13:18:30,225 welcome_view 8656 4583870464 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:18:30,225 welcome_view 8656 4583870464 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:18:30,232 welcome_view 8656 4583870464 [END]- Welcome View rendered.
+INFO 2014-06-21 13:18:32,635 ProfileSettingsView 8656 4588077056 [END]- Welcome View rendered.
+INFO 2014-06-21 13:21:12,228 ProfileSettingsView 8656 4583870464 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:36:54,350 base 8656 4583870464 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 13:36:56,495 welcome_view 8656 4610498560 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:36:56,495 welcome_view 8656 4610498560 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:36:56,501 welcome_view 8656 4610498560 [END]- Welcome View rendered.
+INFO 2014-06-21 13:36:58,443 ProfileSettingsView 8656 4606291968 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:36:58,449 base 8656 4606291968 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/home.html',context);
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 332, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'blocktrans'
+INFO 2014-06-21 13:37:18,436 ProfileSettingsView 8656 4583870464 [END]- Welcome View rendered.
+INFO 2014-06-21 13:37:58,064 ProfileSettingsView 8656 4583870464 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:42:17,473 base 8656 4583870464 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 13:42:20,667 welcome_view 8656 4588077056 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:42:20,668 welcome_view 8656 4588077056 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:42:20,674 welcome_view 8656 4588077056 [END]- Welcome View rendered.
+INFO 2014-06-21 13:42:22,539 ProfileSettingsView 8656 4583870464 [END]- Welcome View rendered.
+INFO 2014-06-21 13:42:34,035 ProfileSettingsView 8656 4583870464 [END]- Welcome View rendered.
+INFO 2014-06-21 13:43:02,819 ProfileSettingsView 8656 4583870464 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:47:50,221 base 8656 4583870464 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 13:47:53,174 welcome_view 8656 4588077056 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:47:53,175 welcome_view 8656 4588077056 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:47:53,184 welcome_view 8656 4588077056 [END]- Welcome View rendered.
+INFO 2014-06-21 13:47:54,999 ProfileSettingsView 8656 4602085376 [END]- Welcome View rendered.
+INFO 2014-06-21 13:48:11,361 ProfileSettingsView 8656 4584132608 [END]- Welcome View rendered.
+INFO 2014-06-21 13:48:51,182 ProfileSettingsView 8656 4584132608 [END]- Welcome View rendered.
+INFO 2014-06-21 13:48:57,878 ProfileSettingsView 8656 4584132608 [END]- Welcome View rendered.
+INFO 2014-06-21 13:49:15,052 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:50:03,678 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:50:26,763 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:50:49,024 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:54:27,284 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 13:54:30,215 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:54:30,216 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:54:30,220 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:54:32,639 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:54:32,643 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/home.html',context);
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/templatetags/i18n.py", line 465, in do_block_translate
+    raise TemplateSyntaxError("'blocktrans' doesn't allow other block tags (seen %r) inside it" % token.contents)
+TemplateSyntaxError: 'blocktrans' doesn't allow other block tags (seen u'blocktrans') inside it
+INFO 2014-06-21 13:54:50,524 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:54:50,528 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/home.html',context);
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/templatetags/i18n.py", line 465, in do_block_translate
+    raise TemplateSyntaxError("'blocktrans' doesn't allow other block tags (seen %r) inside it" % token.contents)
+TemplateSyntaxError: 'blocktrans' doesn't allow other block tags (seen u'blocktrans') inside it
+INFO 2014-06-21 13:54:53,359 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 13:54:53,360 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 13:54:53,369 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:54:55,965 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 13:54:55,970 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/home.html',context);
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/templatetags/i18n.py", line 465, in do_block_translate
+    raise TemplateSyntaxError("'blocktrans' doesn't allow other block tags (seen %r) inside it" % token.contents)
+TemplateSyntaxError: 'blocktrans' doesn't allow other block tags (seen u'blocktrans') inside it
+INFO 2014-06-21 13:55:13,362 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:57:15,352 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 13:57:47,770 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 14:03:17,939 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 14:03:21,148 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 14:03:21,149 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 14:03:21,157 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 14:03:23,143 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 14:04:34,588 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 14:04:59,526 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 14:05:56,131 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 14:36:48,331 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 14:36:52,614 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 14:36:52,615 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 14:36:52,632 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 14:36:55,016 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 14:37:45,485 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 14:58:06,867 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 14:58:08,985 welcome_view 8720 4441096192 [START]- Request Received for the Welcome View
+INFO 2014-06-21 14:58:08,986 welcome_view 8720 4441096192 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 14:58:08,991 welcome_view 8720 4441096192 [END]- Welcome View rendered.
+INFO 2014-06-21 14:58:10,861 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 15:02:22,885 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 15:03:02,926 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 15:03:06,821 ProfileSettingsView 8720 4435103744 [END]- Welcome View rendered.
+ERROR 2014-06-21 15:04:02,927 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 15:04:06,760 welcome_view 8720 4435103744 [START]- Request Received for the Welcome View
+INFO 2014-06-21 15:04:06,761 welcome_view 8720 4435103744 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 15:04:06,768 welcome_view 8720 4435103744 [END]- Welcome View rendered.
+INFO 2014-06-21 15:04:09,845 ProfileSettingsView 8720 4441096192 [END]- Welcome View rendered.
+INFO 2014-06-21 15:05:51,420 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 15:05:53,375 ProfileSettingsView 8720 4441096192 [END]- Welcome View rendered.
+INFO 2014-06-21 15:06:03,835 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 15:06:35,693 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 16:00:32,204 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 16:00:35,306 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 16:00:35,308 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 16:00:35,331 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 16:00:37,254 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 16:01:22,349 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 16:40:37,784 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+ERROR 2014-06-21 16:40:39,868 base 8720 4449509376 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 16:40:43,917 welcome_view 8720 4453715968 [START]- Request Received for the Welcome View
+INFO 2014-06-21 16:40:43,918 welcome_view 8720 4453715968 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 16:40:43,927 welcome_view 8720 4453715968 [END]- Welcome View rendered.
+INFO 2014-06-21 16:40:47,024 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 16:45:05,430 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 16:58:47,054 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 16:58:49,553 welcome_view 8720 4435103744 [START]- Request Received for the Welcome View
+INFO 2014-06-21 16:58:49,554 welcome_view 8720 4435103744 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 16:58:49,566 welcome_view 8720 4435103744 [END]- Welcome View rendered.
+INFO 2014-06-21 16:58:51,714 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 17:00:27,002 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 17:19:56,186 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 17:19:56,187 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 17:19:56,192 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 17:19:58,224 ProfileSettingsView 8720 4445302784 [END]- Welcome View rendered.
+INFO 2014-06-21 17:20:34,128 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 17:23:12,858 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:34:00,963 welcome_view 8720 4419014656 [START]- Request Received for the Welcome View
+INFO 2014-06-21 18:34:00,978 welcome_view 8720 4419014656 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 18:34:00,989 welcome_view 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:34:03,085 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:34:53,407 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:37:16,701 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:38:41,791 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-21 18:39:09,501 base 8720 4419014656 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/uim_dev/account_dev/lib/python2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror_py/account/profile_settings/ProfileSettingsView.py", line 19, in get
+    state['usr'] = findOrUpdateBasicProfileCache(profile_id);
+TypeError: 'NoneType' object does not support item assignment
+INFO 2014-06-21 18:39:13,422 welcome_view 8720 4435103744 [START]- Request Received for the Welcome View
+INFO 2014-06-21 18:39:13,422 welcome_view 8720 4435103744 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-21 18:39:13,430 welcome_view 8720 4435103744 [END]- Welcome View rendered.
+INFO 2014-06-21 18:39:15,361 ProfileSettingsView 8720 4441096192 [END]- Welcome View rendered.
+INFO 2014-06-21 18:40:07,893 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:40:55,377 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+INFO 2014-06-21 18:41:20,311 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
