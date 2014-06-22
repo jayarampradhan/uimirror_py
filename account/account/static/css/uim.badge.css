@@ -1,6 +1,6 @@
 @charset "utf-8";
 .badge-error {
-  background-color: #b94a48;
+  background-color: #CB4437;
 }
 .badge-error:hover {
   background-color: #953b39;
@@ -39,12 +39,11 @@
   padding: 0 5px;
   color: white;
   text-shadow: 0 1px rgba(0, 0, 0, 0.25);
-  
   border-width: 1px;
   border-style: solid;
   border-radius: 10px;
-  border-color: @gray;
-  background-color: @grayLight;
+  border-color: #CB4437;
+  background-color: #CB4437;
 }
 
 .btn {

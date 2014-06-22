@@ -3,46 +3,39 @@
 <div class="navbar navbar-inverse navbar-fixed-top uimHead" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a href="#" class="navbar-brand" id="homeLogo" data-ref="" data-url=""> 
-				<img src="{{ STATIC_URL }}images/logoText.png" alt="Logo Text" class="homeLogo" data-url="" id="homeLogoIco">
+			<a href="#" class="navbar-brand" id="homeLogo" data-ref="" data-url="">
+				<i class="uimLogo social" id="homeLogoIco"></i> 
 			</a>
 		</div>
 		<div class="navbar-collapse collapse visible-lg visible-md">
 			<ul class="nav navbar-nav">
-	        	<li class="" id="actorGreetings">
-	        		<p class="navbar-text actorGreetingWrap">
-	        			<span>{% blocktrans %}Hello{% endblocktrans %}, </span>
-	        			<!-- Update the link for edit user profile page -->
-	        			<a href="#" title="{{usr.fname}} {{usr.lname}}" class="navbar-link">{{usr.fname}}</a>
-	        		</p>
-	          	</li>
 	          	<li class="" id="">
 	          		<a>
-	          			<span class="glyphicon glyphicon-globe"></span>
+	          			<i class="fa fa-globe fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
 	          	</li>
 	          	<li class="" id="">
 	          		<a>
-	          			<span class="glyphicon glyphicon-user"></span>
+	          			<i class="fa fa-signal fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
 	          	</li>
 	          	<li class="" id="">
 	          		<a>
-	          			<span class="glyphicon glyphicon-envelope"></span>
+	          			<i class="fa fa-envelope-o fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
 	          	</li>
 	        </ul>
-			<div class="col-sm-3 col-md-3">
+			<div class="col-sm-4 col-md-4">
 				<form class="navbar-form" role="search">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search"
+						<input type="text" class="form-control uimHeadSerach" placeholder="Search"
 							name="q">
 						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
+							<button class="btn btn-default uimHeadSerachIco" type="submit">
+								<i class="fa fa-search fa-fw"></i>
 							</button>
 						</div>
 					</div>
@@ -51,7 +44,9 @@
 			<ul class="nav navbar-nav">
 				<li class="" id="">
 	          		<a>
-	          			<span class="glyphicon glyphicon-cog"></span>
+	          			<img class="uimHeaderPic img-circle img-responsive" id="actorSnapOrginal"
+									src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
+									alt="{{usr.fname}} {{usr.lname}}"/>
 	          		</a>
 	          	</li>
 	        	<li class="" id="actorGreetings">
@@ -61,6 +56,31 @@
 	        			<span class="glyphicon glyphicon-cloud"></span>
 	        			<span class="badge badge-info">30 <sup>oC</sup></span>
 	        		</p>
+	          	</li>
+	          	<li class="dropdown">
+	          		<a class="dropdown-toggle" data-toggle="dropdown">
+	          			<i class="fa fa-th-large fa-fw"></i>
+	          		</a>
+	          		<ul class="dropdown-menu" id="icons">
+            			<li>
+            				<a href="#">
+            					<i class="uimLogo homeUimLogo"></i>
+            					Social
+            				</a>
+            			</li>
+            			<li>
+            				<a href="#">
+            					<i class="uimLogo homeUimLogo"></i>
+            					Calendar
+            				</a>
+            			</li>
+            			<li>
+            				<a href="#"><i class="uimLogo homeUimLogo"></i>Challenge</a>
+            			</li>
+            			<li class="divider"></li>
+            			<li><a href="#"><i class="uimLogo homeUimLogo"></i>Expense</a></li>
+            			<li><a href="#"><i class="uimLogo homeUimLogo"></i>Blog</a></li>
+          			</ul>
 	          	</li>
 	        </ul>
 			<ul class="nav navbar-nav pull-right visible-lg visible-md">

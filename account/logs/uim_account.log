@@ -5822,3 +5822,286 @@ INFO 2014-06-21 18:39:15,361 ProfileSettingsView 8720 4441096192 [END]- Welcome 
 INFO 2014-06-21 18:40:07,893 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
 INFO 2014-06-21 18:40:55,377 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
 INFO 2014-06-21 18:41:20,311 ProfileSettingsView 8720 4419014656 [END]- Welcome View rendered.
+ERROR 2014-06-22 06:34:06,734 base 685 4377042944 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 23, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+WARNING 2014-06-22 06:34:09,822 base 685 4381249536 Not Found: /favicon.ico
+ERROR 2014-06-22 06:35:08,795 base 685 4377042944 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 24, in dispatch
+    return super(LoginWithStateCheckMixin, self).do_fail_navigation(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 33, in do_fail_navigation
+    return redirect(self.state_presume_failure_path);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 78, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-06-22 06:35:20,325 base 685 4377042944 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 24, in dispatch
+    return super(LoginWithStateCheckMixin, self).do_fail_navigation(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 33, in do_fail_navigation
+    return redirect(self.state_presume_failure_path);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 78, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for '' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+INFO 2014-06-22 06:35:39,346 ProfileSettingsView 685 4381249536 [END]- Welcome View rendered.
+INFO 2014-06-22 06:43:56,854 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 06:45:53,990 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 06:50:55,958 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+ERROR 2014-06-22 06:50:56,063 base 685 4377042944 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: profile/settings/home.html
+INFO 2014-06-22 06:51:18,015 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+ERROR 2014-06-22 06:51:18,050 base 685 4377042944 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/social/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 141, in get_template
+    template = get_template_from_string(template, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: profile/settings/_media.html
+INFO 2014-06-22 06:52:20,335 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+ERROR 2014-06-22 06:52:20,399 base 685 4377042944 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/social/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 141, in get_template
+    template = get_template_from_string(template, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: profile/settings/_script_media.html
+INFO 2014-06-22 06:52:36,671 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 07:06:55,507 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 07:21:41,041 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 07:37:39,790 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 07:40:28,898 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 07:42:30,445 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 07:59:08,977 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 08:18:26,075 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 08:19:19,180 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 08:20:09,413 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:01:00,097 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+ERROR 2014-06-22 10:01:00,496 base 685 4377042944 Internal Server Error: /setting/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginCheckMixin.py", line 22, in dispatch
+    return super(LoginCheckMixin, self).dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/profile_settings/ProfileSettingsView.py", line 22, in get
+    return render_to_response('profile/settings/social/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 141, in get_template
+    template = get_template_from_string(template, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: profile/settings/_sub_top.html
+INFO 2014-06-22 10:01:16,104 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:03:02,307 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:03:36,875 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:04:18,545 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:14:40,799 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:15:33,577 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:18:26,645 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:25:15,513 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:25:50,397 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:26:39,702 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:27:14,526 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:27:46,957 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:30:06,103 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:30:51,658 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:32:14,849 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:33:24,683 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:36:51,690 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:39:04,891 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:42:53,102 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:43:58,092 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 10:44:24,777 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 13:51:23,522 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 13:52:32,665 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 13:55:48,728 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 13:57:45,619 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 13:57:51,406 ProfileSettingsView 685 4381249536 [END]- Welcome View rendered.
+INFO 2014-06-22 13:57:55,955 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 14:05:36,985 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 15:44:05,265 register_view 685 4377042944 [START]-Request Received for Register Page.
+INFO 2014-06-22 15:44:05,776 register_view 685 4377042944 [END]- Request Served for the register page.
+INFO 2014-06-22 15:47:21,095 register_view 685 4377042944 [START]-Request Received for Register Page.
+INFO 2014-06-22 15:47:21,116 register_view 685 4377042944 [END]- Request Served for the register page.
+INFO 2014-06-22 16:37:40,736 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:37:50,158 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:37:53,106 ProfileSettingsView 685 4381249536 [END]- Welcome View rendered.
+INFO 2014-06-22 16:38:42,239 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:39:38,465 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:40:37,948 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:40:59,368 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:44:04,900 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:44:57,396 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:52:31,054 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:52:51,874 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 16:55:32,274 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:01:56,897 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:02:41,982 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:09:22,846 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:17:42,769 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:24:57,383 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:25:07,887 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 17:34:44,642 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 18:13:39,880 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 18:17:36,510 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 18:18:04,088 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 18:18:06,020 ProfileSettingsView 685 4404838400 [END]- Welcome View rendered.
+INFO 2014-06-22 18:19:38,824 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 18:21:28,425 ProfileSettingsView 685 4377042944 [END]- Welcome View rendered.
+INFO 2014-06-22 18:21:38,425 ProfileSettingsView 685 4400631808 [END]- Welcome View rendered.

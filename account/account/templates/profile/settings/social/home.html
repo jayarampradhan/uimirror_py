@@ -3,24 +3,27 @@
 {% block boot_starp_css_media %}
 {% endblock boot_starp_css_media %}
 {% block css_media %}
-    {% include "profile/settings/_media.html"%}
+    {% include "profile/settings/social/_media.html"%}
 {% endblock css_media %}
 {% block title %}
 	<title>{% trans "Set Up" %} - {{usr.fname}} {{usr.lname}} - UIMirror</title>
 {% endblock title %}
 {% block content %}
 	{% include "profile/settings/_top.html"%}
-	{% include "profile/settings/_sub_top.html"%}
+	{% include "profile/settings/social/_sub_top.html"%}
 	<div id="wrapper" class="active">
-      {% include "profile/settings/_sidebar.html"%}    
+      {% include "profile/settings/social/_sidebar.html"%}    
       <!-- Page content -->
       <div id="page-content-wrapper">
         <!-- Keep all page content within the page-content inset div! -->
         <div class="page-content inset">
           <div class="row">
-				<div class="col-md-10 no_padding">
+				<div class="col-md-7 no_padding">
 					<div class="well well-lg contentHolder">
-						{% include "profile/settings/_chat.html"%}
+						{% include "profile/settings/social/_update.html"%}
+						{#{% include "profile/settings/social/_image.html"%}#}
+						{#{% include "profile/settings/social/_visibility.html"%}#}
+						{#{% include "profile/settings/social/_chat.html"%}#}
 					</div>
 				</div>
 				<div class="col-md-10 col-md-2 visible-md visible-lg">
@@ -35,5 +38,5 @@
 {% block footer %}
 {% endblock footer %}
 {% block script_media %}
-	{% include "profile/settings/_script_media.html" %}
+	{% include "profile/settings/social/_script_media.html" %}
 {% endblock script_media %}

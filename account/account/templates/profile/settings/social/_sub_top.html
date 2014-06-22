@@ -1,0 +1,39 @@
+{% load i18n %}
+<nav class="navbar navbar-default navbar-xs uimSubHead navbar-lower" role="navigation" data-spy="affix" data-offset-top="10">
+  <div class="container">
+	  <div class="navbar-header">
+	    <p class="navbar-text actorGreetingWrap no_tb_margin">
+	       <a id="uimLeftMenuTogl" href="#">
+	       		<span id="uimLeftMenuToglIco" class="glyphicon glyphicon-indent-right"></span>
+	       	</a>
+		   <span>{% blocktrans %}Hello{% endblocktrans %}, </span>
+		   <a href="#" title="{{usr.fname}} {{usr.lname}}" class="navbar-link actorNameLn">
+		   		<span class="actorName">{{usr.fname}}</span>
+		   </a>
+		</p>
+	  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  		<ul class="nav navbar-nav">
+			<li class="active"><a><i class="fa fa-comments-o fa-fw"></i> {% blocktrans %}Chat{% endblocktrans %}</a></li>
+	 		<li><a><i class="fa fa-eye fa-fw"></i> {% blocktrans %}Visibility{% endblocktrans %}</a></li>
+	 		<li><a><i class="fa fa-file-image-o fa-fw"></i> {% blocktrans %}Image{% endblocktrans %}</a></li>
+	 		<li><a><i class="fa fa-fax fa-fw"></i> {% blocktrans %}Post{% endblocktrans %}</a></li>
+	 		<li><a><i class="fa fa-share fa-fw"></i> {% blocktrans %}Spread{% endblocktrans %}</a></li>
+	 		<li><a><i class="fa fa-lock fa-fw"></i> {% blocktrans %}Password{% endblocktrans %}</a></li>
+		</ul>
+		<ul class="nav navbar-nav">
+			<li class="dropdown active">
+          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Social <b class="caret"></b></a>
+          		<ul class="dropdown-menu">
+            		<li><a href="#">Challenge</a></li>
+            		<li><a href="#">Calendar</a></li>
+            		<li><a href="#">Expense</a></li>
+            		<li><a href="#">Blog</a></li>
+          		</ul>
+        	</li>
+		</ul>
+	</div><!-- /.navbar-collapse -->
+  </div>
+</nav>

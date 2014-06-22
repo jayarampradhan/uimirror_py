@@ -19,6 +19,6 @@ class ProfileSettingsView(LoginCheckMixin, View):
         state['usr'] = findOrUpdateBasicProfileCache(profile_id);
         context = RequestContext(request, state);
         log.info('[END]- Welcome View rendered.');
-        return render_to_response('profile/settings/home.html',context);
+        return render_to_response('profile/settings/social/home.html',context);
         pass
         # TODO: Complete This Functionality with UI 

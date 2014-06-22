@@ -1,0 +1,103 @@
+{% load i18n %}
+{#Chat Settings Page#}
+<div class="row no-margin">
+	<p>{% blocktrans %}These below set ups helps you to manage whom you want to give control of your snaps{% endblocktrans %},
+		<br/>
+		{% blocktrans %}Who can Download{% endblocktrans %}.
+	</p>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.showlocation}}" 
+					{% if usr.settings.chat.showlocation %}checked{% endif %} data-current="{{usr.settings.chat.showlocation}}">
+			</form>
+			{% blocktrans %}Allow Other people to download snap{% endblocktrans %}
+  		</label>
+  		<p>
+  			<small>{% blocktrans %}This allows you to manage if people can save your snap{% endblocktrans %}.</small>
+  			<br/>
+			<small>{% blocktrans %}By selecting People who is unknown to you can save/download your snap visible to them{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
+					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+			</form>
+    		{% blocktrans %}Allow Reachable users to download snap {% endblocktrans %}
+  		</label>
+  		<p>
+			<small>{% blocktrans %}This allows you to manage if Reachable people can save your snap{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}By selecting Reachable People can save/download your snap visible to them{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
+					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+			</form>
+    		{% blocktrans %}Make a List of people who can download/save my snap{% endblocktrans %}
+  		</label>
+  		<p>
+			<small>{% blocktrans %}This allows you to manage whom you want to give control of your snap{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}By Selecting You have to make a list of users who can download/save your snap visible to them{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
+					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+			</form>
+    		{% blocktrans %}Make a List of people who can't download/save my snap{% endblocktrans %}
+  		</label>
+  		<p>
+			<small>{% blocktrans %}This allows you to manage whom you don't want to give control of your snap{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}By Selecting You have to make a list of users who can't download/save your snap visible to them{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="row mbxs mlxl uimSetingLeftPad">
+		<span class="list-inline settingsText">{% blocktrans %}Who Can Contribute to my snap{% endblocktrans %} </span>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown">
+				{% blocktrans %}Everybody{% endblocktrans %}
+			</button>
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
+				data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">{% blocktrans %}Reachable users only{% endblocktrans %}</a></li>
+				<li><a href="#">{% blocktrans %}Snap/Album Specific{% endblocktrans %}</a></li>
+				<li class="divider"></li>
+				<li><a href="#">{% blocktrans %}Custom{% endblocktrans %}</a></li>
+				<li><a href="#">{% blocktrans %}No One{% endblocktrans %}</a></li>
+			</ul>
+		</div>
+		<!-- # TODO : Update this latter-->
+		<p class="row">
+			<small>{% blocktrans %}This controls Who can help you to add/update your album/snap{% endblocktrans %}.</small>
+		</p>
+	</div>
+</div>

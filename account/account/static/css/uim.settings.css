@@ -279,6 +279,7 @@ width: 1em;
 .contentHolder{
 	background-color: #fff;
 	min-height: 700px;
+	padding-top: 2px;
 }
 
 /*Setings finalized*/

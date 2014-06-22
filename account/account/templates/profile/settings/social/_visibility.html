@@ -1,0 +1,100 @@
+{% load i18n %}
+{#Chat Settings Page#}
+<div class="row no-margin">
+	<p>{% blocktrans %}These below set ups helps you to manage how you will appear to others{% endblocktrans %},
+		<br/>
+		{% blocktrans %}Who can search you{% endblocktrans %} and
+		<br/>
+		{% blocktrans %}who can see your updates{% endblocktrans %}.
+	</p>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.showlocation}}" 
+					{% if usr.settings.chat.showlocation %}checked{% endif %} data-current="{{usr.settings.chat.showlocation}}">
+			</form>
+			{% blocktrans %}Make me an observer{% endblocktrans %}
+  		</label>
+  		<p>
+  			<small>{% blocktrans %}This allows you to make yourself invisible to other people{% endblocktrans %}.</small>
+  			<br/>
+			<small>{% blocktrans %}By selecting you will not able to post your updates, 
+			you can't chat with other user,
+			you can't promote and 
+			You can't spread other's update{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}However you will be only able to see other's update{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
+					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+			</form>
+    		{% blocktrans %}Show me to my Reachable Users {% endblocktrans %}
+  		</label>
+  		<p>
+			<small>{% blocktrans %}This allows to make visible to your Reachable Users{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}By Selecting you will be able to share your updates to your Reachable users, 
+			People who is not in your Reachable list can't find you{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}However you will be able to search other unknown people{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="checkbox">
+  		<label class="settingsText">
+  			<form class="form-horizontal" 
+  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
+  				action="#"
+  				data-unsaved="">
+  				{% csrf_token %}
+				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
+					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+			</form>
+    		{% blocktrans %}Show me to my Followers {% endblocktrans %}
+  		</label>
+  		<p>
+			<small>{% blocktrans %}This allows to make visible to your Followers{% endblocktrans %}.</small>
+			<br/>
+			<small>{% blocktrans %}By Selecting followers will able to see your updates{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="row mbxs mlxl uimSetingLeftPad">
+		<span class="list-inline settingsText">{% blocktrans %}Who Can Reach Me{% endblocktrans %} </span>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown">
+				{% blocktrans %}Everybody{% endblocktrans %}
+			</button>
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
+				data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#">{% blocktrans %}Who Know my email{% endblocktrans %}</a></li>
+				<li><a href="#">{% blocktrans %}Who has common reachable{% endblocktrans %}</a></li>
+				<li role="presentation" class="divider"></li>
+				<li><a href="#">{% blocktrans %}Who has common School{% endblocktrans %}</a></li>
+				<li><a href="#">{% blocktrans %}Who has common College{% endblocktrans %}</a></li>
+				<li role="presentation" class="divider"></li>
+				<li><a href="#">{% blocktrans %}Who is currently working with me {% endblocktrans %}</a></li>
+				<li><a href="#">{% blocktrans %}With whom I have worked{% endblocktrans %}</a></li>
+				<li role="presentation" class="divider"></li>
+				<li><a href="#">{% blocktrans %}No One{% endblocktrans %}</a></li>
+			</ul>
+		</div>
+		<!-- # TODO : Update this latter-->
+		<p class="row">
+			<small>{% blocktrans %}This controls Who can send you request to be reachable{% endblocktrans %}.</small>
+		</p>
+	</div>
+</div>

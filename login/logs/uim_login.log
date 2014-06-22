@@ -14,3 +14,7 @@ INFO 2014-06-20 18:46:57,811 pre_login_view 4829 4350435328 [START]- Request wil
 INFO 2014-06-20 18:46:57,812 pre_login_view 4829 4350435328 [END]- URL formation for the login page redirect completed.
 INFO 2014-06-20 18:46:58,254 login_view 4829 4350697472 [START]- Request Received for the login page.
 INFO 2014-06-20 18:46:58,255 login_view 4829 4350697472 [END]- Request Completed for the login page.
+INFO 2014-06-21 10:40:57,747 login_view 5982 4388642816 [START]- Request Received for the login page.
+INFO 2014-06-21 10:40:58,154 login_view 5982 4388642816 [END]- Request Completed for the login page.
+WARNING 2014-06-21 10:41:49,119 base 5982 4388642816 Not Found: /1/safari-extension://com.slicefactory.firebug-M6DQ5JZ52E/1e66334a/skin/xp/pixel_transparent.gif
+WARNING 2014-06-21 10:42:03,348 base 5982 4388642816 Not Found: /1/blank.gif
