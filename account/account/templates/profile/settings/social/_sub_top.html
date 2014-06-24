@@ -1,39 +1,77 @@
 {% load i18n %}
 <nav class="navbar navbar-default navbar-xs uimSubHead navbar-lower" role="navigation" data-spy="affix" data-offset-top="10">
-  <div class="container">
-	  <div class="navbar-header">
-	    <p class="navbar-text actorGreetingWrap no_tb_margin">
-	       <a id="uimLeftMenuTogl" href="#">
-	       		<span id="uimLeftMenuToglIco" class="glyphicon glyphicon-indent-right"></span>
-	       	</a>
-		   <span>{% blocktrans %}Hello{% endblocktrans %}, </span>
-		   <a href="#" title="{{usr.fname}} {{usr.lname}}" class="navbar-link actorNameLn">
-		   		<span class="actorName">{{usr.fname}}</span>
-		   </a>
-		</p>
-	  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  		<ul class="nav navbar-nav">
-			<li class="active"><a><i class="fa fa-comments-o fa-fw"></i> {% blocktrans %}Chat{% endblocktrans %}</a></li>
-	 		<li><a><i class="fa fa-eye fa-fw"></i> {% blocktrans %}Visibility{% endblocktrans %}</a></li>
-	 		<li><a><i class="fa fa-file-image-o fa-fw"></i> {% blocktrans %}Image{% endblocktrans %}</a></li>
-	 		<li><a><i class="fa fa-fax fa-fw"></i> {% blocktrans %}Post{% endblocktrans %}</a></li>
-	 		<li><a><i class="fa fa-share fa-fw"></i> {% blocktrans %}Spread{% endblocktrans %}</a></li>
-	 		<li><a><i class="fa fa-lock fa-fw"></i> {% blocktrans %}Password{% endblocktrans %}</a></li>
-		</ul>
-		<ul class="nav navbar-nav">
-			<li class="dropdown active">
-          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Social <b class="caret"></b></a>
-          		<ul class="dropdown-menu">
-            		<li><a href="#">Challenge</a></li>
-            		<li><a href="#">Calendar</a></li>
-            		<li><a href="#">Expense</a></li>
-            		<li><a href="#">Blog</a></li>
-          		</ul>
-        	</li>
-		</ul>
-	</div><!-- /.navbar-collapse -->
-  </div>
+	<div class="container">
+		<div class="navbar-header">
+	    	<p class="navbar-text actorGreetingWrap no_tb_margin">
+	       		<a id="uimLeftMenuTogl" href="#">
+	       			<span id="uimLeftMenuToglIco" class="glyphicon glyphicon-indent-right"></span>
+	       		</a>
+		   		<span>{% blocktrans %}Hello{% endblocktrans %}, </span>
+		   		<a href="#" title="{{usr.fname}} {{usr.lname}}" class="navbar-link actorNameLn">
+		   			<span class="actorName">{% blocktrans %}{{usr.displayname}}{% endblocktrans %}</span>
+		   		</a>
+			</p>
+	  	</div>
+  		<div class="collapse navbar-collapse">
+  			<ul class="nav navbar-nav">
+				<li class="{% if social.chat%}active {% endif %}">
+					<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=chat">
+						<i class="fa fa-comments-o fa-fw"></i> 
+						{% blocktrans %}Chat{% endblocktrans %}
+					</a>
+				</li>
+	 			<li class="{% if social.visibility%}active {% endif %}">
+	 				<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=visibility">
+	 					<i class="fa fa-eye fa-fw"></i> 
+	 					{% blocktrans %}Visibility{% endblocktrans %}
+	 				</a>
+	 			</li>
+	 			<li class="{% if social.snap%}active {% endif %}">
+	 				<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=snap">
+	 					<i class="fa fa-file-image-o fa-fw"></i> 
+	 					{% blocktrans %}Snap{% endblocktrans %}
+	 				</a>
+	 			</li>
+	 			<li class="{% if social.updates%}active {% endif %}">
+	 				<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=updates">
+	 					<i class="fa fa-fax fa-fw"></i> 
+	 					{% blocktrans %}Updates{% endblocktrans %}
+	 				</a>
+	 			</li>
+	 			<li class="{% if social.password%}active {% endif %}">
+	 				<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=password">
+	 					<i class="fa fa-lock fa-fw"></i> 
+	 					{% blocktrans %}Password{% endblocktrans %}
+	 				</a>
+	 			</li>
+	 			<li class="dropdown {% if social.account%}active {% endif %}">
+        			<a class="dropdown-toggle" data-toggle="dropdown">
+        				<i class="fa fa-angle-double-down fa-fw"></i>
+        				{% blocktrans %}Others{% endblocktrans %}
+        			</a>
+        			<ul class="dropdown-menu" id="icons">
+         				<li>
+         					<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=account">
+         						<i class="uimLogo homeUimLogo"></i>
+         						{% blocktrans %}Account{% endblocktrans %}
+         					</a>
+         				</li>
+       				</ul>
+	         	</li>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li class="dropdown active">
+          			<a href="{% url 'uim.profile.setting.by.app' 'social'%}?ref=password" class="dropdown-toggle" data-toggle="dropdown">
+          				{% blocktrans %}Social{% endblocktrans %} 
+          				<b class="caret"></b>
+          			</a>
+          			<ul class="dropdown-menu">
+          				{% for app in apps %}
+		           			<li id="uim_app_{{forloop.counter}}"><a href="{% url 'uim.profile.setting.by.app' app.name|lower%}">{{app.name}}</a></li>
+						{% endfor %}
+          			</ul>
+        		</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+  	</div>
 </nav>

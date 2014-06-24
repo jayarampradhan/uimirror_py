@@ -1,4 +1,4 @@
-{% extends '_base.html' %}
+{% extends 'profile/settings/_base.html' %}
 {% load i18n %}
 {% block boot_starp_css_media %}
 {% endblock boot_starp_css_media %}
@@ -12,27 +12,37 @@
 	{% include "profile/settings/_top.html"%}
 	{% include "profile/settings/social/_sub_top.html"%}
 	<div id="wrapper" class="active">
-      {% include "profile/settings/social/_sidebar.html"%}    
+	  <!-- Chat Left PageLet -->
+      {% include "common/_chat.html"%}    
       <!-- Page content -->
       <div id="page-content-wrapper">
-        <!-- Keep all page content within the page-content inset div! -->
         <div class="page-content inset">
           <div class="row">
-				<div class="col-md-7 no_padding">
-					<div class="well well-lg contentHolder">
+			<div class="col-md-7 no_padding">
+				<div class="well well-lg contentHolder">
+					{% if social.chat%} 
+						{% include "profile/settings/social/_chat.html"%}
+					{% endif %}
+					{% if social.visibility%} 
+						{% include "profile/settings/social/_visibility.html"%}
+					{% endif %}
+					{% if social.snap%} 
+						{% include "profile/settings/social/_image.html"%}
+					{% endif %}
+					{% if social.updates%} 
 						{% include "profile/settings/social/_update.html"%}
-						{#{% include "profile/settings/social/_image.html"%}#}
-						{#{% include "profile/settings/social/_visibility.html"%}#}
-						{#{% include "profile/settings/social/_chat.html"%}#}
-					</div>
-				</div>
-				<div class="col-md-10 col-md-2 visible-md visible-lg">
-					Addd
+					{% endif %}
+					{% if social.account%} 
+						{% include "profile/settings/social/_account.html"%}
+					{% endif %}
 				</div>
 			</div>
-        </div>
+			<div class="col-md-10 col-md-2 visible-md visible-lg">
+				Addd
+			</div>
+		</div>
+       </div>
       </div>
-      
     </div>
 {% endblock content %}
 {% block footer %}
