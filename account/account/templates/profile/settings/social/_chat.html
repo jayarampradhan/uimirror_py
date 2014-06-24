@@ -1,10 +1,6 @@
 {% load i18n %}
 {#Chat Settings Page#}
 <div class="row no-margin">
-	<p>{% blocktrans %}These below set ups helps you to manage how chat application will appear for you{% endblocktrans %},
-		<br/>
-		{% blocktrans %}How you will appear in others chat list{% endblocktrans %}.
-	</p>
 	<div class="checkbox">
   		<label class="settingsText">
   			<form class="form-horizontal" 
@@ -12,14 +8,13 @@
   				action="#"
   				data-unsaved="">
   				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.showlocation}}" 
-					{% if usr.settings.chat.showlocation %}checked{% endif %} data-current="{{usr.settings.chat.showlocation}}">
+				<input type="checkbox" data-old="{{social.chat.showlocation}}" 
+					{% if social.chat.showlocation %}checked{% endif %} data-current="{{social.chat.showlocation}}">
 			</form>
 			{% blocktrans %}Display My Location To others{% endblocktrans %}
   		</label>
   		<p>
   			<small>{% blocktrans %}This controls your current location visibility to the people in your chat list{% endblocktrans %}.</small>
-  			<br/>
 			<small>{% blocktrans %}By selecting you are allowing us to show your current location to your chat list{% endblocktrans %}.</small>
 		</p>
 	</div>
@@ -30,50 +25,46 @@
   				action="#"
   				data-unsaved="">
   				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
-					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+				<input type="checkbox" data-old="{{social.chat.minimizewindow}}"
+					{% if social.chat.minimizewindow %}checked{% endif %} data-current="{{social.chat.minimizewindow}}">
 			</form>
     		{% blocktrans %}Minimize Always{% endblocktrans %}
   		</label>
   		<p>
 			<small>{% blocktrans %}This controls the chat window display option{% endblocktrans %}.</small>
-			<br/>
 			<small>{% blocktrans %}By Selecting, chat list will be always in minimize mode{% endblocktrans %}.</small>
 		</p>
 	</div>
 	<div class="row mbxs mlxl uimSetingLeftPad">
 		<span class="list-inline settingsText">{% blocktrans %}Make Me{% endblocktrans %} </span>
 		<div class="btn-group">
-			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown">
-				{% blocktrans %}Invisible to selected people or Group{% endblocktrans %}
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown"
+			        data-old="{{social.chat.visible.id}}" data-current="{{social.chat.visible.id}}">
+			    {% for visibility in SOCIAL_CHAT_VISIBILITIES %}
+			    	{% if visibility.id == social.chat.visible.id%} 
+						{{visibility.name}}
+					{% endif %}
+				{% endfor %}
 			</button>
 			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
 				data-toggle="dropdown">
 				<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">{% blocktrans %}Visible To all{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Invisible{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Visible to selected people or Group{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Invisible to selected people or Group{% endblocktrans %}</a></li>
+				{% for visibility in SOCIAL_CHAT_VISIBILITIES %}
+					{% if visibility.id != social.chat.visible.id%}
+						{% if forloop.last %}
+							<li class="divider"></li>
+						{% endif %}  
+						<li id="uim_social_chat_visibility_wrap_{{forloop.counter}}">
+							<a href="#" data-val="{{visibility.id}}">{{visibility.name}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 		</div>
-		<!-- # TODO : Update this latter-->
 		<p class="row">
-			<small>{% blocktrans %}This controls the chat window display option{% endblocktrans %}.</small>
-			<br/>
-			<small>{% blocktrans %}By Selecting, chat list will be always in minimize mode{% endblocktrans %}.</small>
+			<small>{% blocktrans %}This controls your visibility/presence that you want to show to others{% endblocktrans %}.</small>
 		</p>
 	</div>
-	<!-- # TODO : Update this latter-->
-	<div class="row mbxs mlxl uimSetingLeftPad">
-		<form class="form-inline" role="form">
-			<div class="form-group">
-				<label for="exampleInputEmail1">Email address</label> <input
-					type="email" class="form-control" id="exampleInputEmail1"
-					placeholder="Enter email">
-			</div>
-		</form>
-	</div>
-	<!-- /input-group -->
 </div>

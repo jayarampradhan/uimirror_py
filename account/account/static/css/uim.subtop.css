@@ -9,6 +9,9 @@
 #uimLeftMenuTogl{
 	margin-right: 5px;
 }
+#uimLeftMenuTogl:hover{
+	text-decoration: none;
+}
 .uimSubHead .actorName {
 	max-width: 90px;
 	white-space: nowrap; 

@@ -4,7 +4,7 @@
 		<div class="navbar-header">
 	    	<p class="navbar-text actorGreetingWrap no_tb_margin">
 	       		<a id="uimLeftMenuTogl" href="#">
-	       			<span id="uimLeftMenuToglIco" class="glyphicon glyphicon-indent-right"></span>
+	       			<span id="uimLeftMenuToglIco" class="fa fa-caret-square-o-left fa-fw"></span>
 	       		</a>
 		   		<span>{% blocktrans %}Hello{% endblocktrans %}, </span>
 		   		<a href="#" title="{{usr.fname}} {{usr.lname}}" class="navbar-link actorNameLn">
@@ -45,7 +45,7 @@
 	 				</a>
 	 			</li>
 	 			<li class="dropdown {% if social.account%}active {% endif %}">
-        			<a class="dropdown-toggle" data-toggle="dropdown">
+        			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
         				<i class="fa fa-angle-double-down fa-fw"></i>
         				{% blocktrans %}Others{% endblocktrans %}
         			</a>

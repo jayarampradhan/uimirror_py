@@ -1,0 +1,70 @@
+{% load i18n %}
+{#Chat Settings Page#}
+<div class="row no-margin">
+	<div class="row mbxs mlxl uimSetingLeftPad mtl">
+		<span class="list-inline settingsText">{% blocktrans %}Who Can DownLoad my snap(s){% endblocktrans %}? </span>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown"
+					data-old="{{social.snap.downdloadable.id}}" data-current="{{social.snap.downdloadable.id}}">
+			    {% for downloadable in SOCIAL_SNAP_DOWNLOADABLES %}
+			    	{% if downloadable.id == social.snap.downdloadable.id%} 
+						{{downloadable.name}}
+					{% endif %}
+				{% endfor %}
+			</button>
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
+				data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{% for downloadable in SOCIAL_SNAP_DOWNLOADABLES %}
+					{% if downloadable.id != social.snap.downdloadable.id%}
+						{% if forloop.last %}
+							<li class="divider"></li>
+						{% endif %}  
+						<li id="uim_social_snap_downloadable_wrap_{{forloop.counter}}">
+							<a href="#" data-val="{{downloadable.id}}">{{downloadable.name}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		<!-- # TODO : Update this latter-->
+		<p class="row">
+			<small>{% blocktrans %}This controls Who can help you to add/update your album/snap{% endblocktrans %}.</small>
+		</p>
+	</div>
+	<div class="row mbxs mlxl uimSetingLeftPad">
+		<span class="list-inline settingsText">{% blocktrans %}Who Can Contribute to my snap{% endblocktrans %} </span>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown"
+					data-old="{{social.snap.contributor.id}}" data-current="{{social.snap.contributor.id}}">
+			    {% for contributor in SOCIAL_SNAP_CONTRIBUTORS %}
+			    	{% if contributor.id == social.snap.contributor.id%} 
+						{{contributor.name}}
+					{% endif %}
+				{% endfor %}
+			</button>
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
+				data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{% for contributor in SOCIAL_SNAP_CONTRIBUTORS %}
+					{% if contributor.id != social.snap.contributor.id%}
+						{% if forloop.last %}
+							<li class="divider"></li>
+						{% endif %} 
+						<li id="uim_social_snap_contributor_wrap_{{forloop.counter}}">
+							<a href="#" data-val="{{contributor.id}}">{{contributor.name}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		<!-- # TODO : Update this latter-->
+		<p class="row">
+			<small>{% blocktrans %}This controls Who can help you to add/update your album/snap{% endblocktrans %}.</small>
+		</p>
+	</div>
+</div>

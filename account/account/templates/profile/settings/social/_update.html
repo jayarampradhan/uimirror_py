@@ -8,14 +8,13 @@
   				action="#"
   				data-unsaved="">
   				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.showlocation}}" 
-					{% if usr.settings.chat.showlocation %}checked{% endif %} data-current="{{usr.settings.chat.showlocation}}">
+				<input type="checkbox" data-old="{{social.updates.showlocation}}" 
+					{% if social.updates.showlocation %}checked{% endif %} data-current="{{social.updates.showlocation}}">
 			</form>
 			{% blocktrans %}Show My Location in my updates{% endblocktrans %}
   		</label>
   		<p>
   			<small>{% blocktrans %}This allows you to control your location in your updates{% endblocktrans %}.</small>
-  			<br/>
 			<small>{% blocktrans %}By selecting People can see the location from where you post your update{% endblocktrans %}.</small>
 		</p>
 	</div>
@@ -26,14 +25,13 @@
   				action="#"
   				data-unsaved="">
   				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.showlocation}}" 
-					{% if usr.settings.chat.showlocation %}checked{% endif %} data-current="{{usr.settings.chat.showlocation}}">
+				<input type="checkbox" data-old="{{social.updates.showdevice}}" 
+					{% if social.updates.showdevice %}checked{% endif %} data-current="{{social.updates.showdevice}}">
 			</form>
 			{% blocktrans %}Show My Device in my updates{% endblocktrans %}
   		</label>
   		<p>
   			<small>{% blocktrans %}This allows you to control your device in your updates{% endblocktrans %}.</small>
-  			<br/>
 			<small>{% blocktrans %}By selecting People can see the device from which you post your update{% endblocktrans %}.</small>
 		</p>
 	</div>
@@ -44,15 +42,14 @@
   				action="#"
   				data-unsaved="">
   				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
-					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+				<input type="checkbox" data-old="{{social.updates.noupdatesfrom.enable}}"
+					{% if social.updates.noupdatesfrom.enable %}checked{% endif %} data-current="{{social.updates.noupdatesfrom.enable}}">
 			</form>
-    		{% blocktrans %}Show me updates from my Reachable{% endblocktrans %}
+    		{% blocktrans %}Don't Show me Updates from specific people{% endblocktrans %}
   		</label>
   		<p>
-			<small>{% blocktrans %}This allows you to manage if you want to get updates from Reachable{% endblocktrans %}.</small>
-			<br/>
-			<small>{% blocktrans %}By selecting You will see the updates from the Reachable list marked for you{% endblocktrans %}.</small>
+			<small>{% blocktrans %}This allows you to create a list of user from whom you don't want to get updates{% endblocktrans %}.</small>
+			<small>{% blocktrans %}By Selecting You have to make a list of users whom you don't want to get updates{% endblocktrans %}.</small>
 		</p>
 	</div>
 	<div class="checkbox">
@@ -62,87 +59,39 @@
   				action="#"
   				data-unsaved="">
   				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
-					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
+				<input type="checkbox" data-old="{{social.updates.noupdatesto.enable}}"
+					{% if social.updates.noupdatesto.enable %}checked{% endif %} data-current="{{social.updates.noupdatesto.enable}}">
 			</form>
-    		{% blocktrans %}Don't Show me Updates from specific people{% endblocktrans %}
+    		{% blocktrans %}Don't Show My Updates to specific people{% endblocktrans %}
   		</label>
   		<p>
-			<small>{% blocktrans %}This allows you to create a list of user from whom you don't want to get updates{% endblocktrans %}.</small>
-			<br/>
-			<small>{% blocktrans %}By Selecting You have to make a list of users whom you don't want to get updates{% endblocktrans %}.</small>
-		</p>
-	</div>
-	<div class="row mbxs mlxl uimSetingLeftPad">
-		<span class="list-inline settingsText">{% blocktrans %}Allow View in my updates from{% endblocktrans %} </span>
-		<div class="btn-group">
-			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown">
-				{% blocktrans %}Everybody{% endblocktrans %}
-			</button>
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
-				data-toggle="dropdown">
-				<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">{% blocktrans %}Reachable and followers{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Reachable users only{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Followers only{% endblocktrans %}</a></li>
-				<li class="divider"></li>
-				<li><a href="#">{% blocktrans %}Update Specific{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Custom{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}No One{% endblocktrans %}</a></li>
-			</ul>
-		</div>
-		<!-- # TODO : Update this latter-->
-		<p class="row">
-			<small>{% blocktrans %}This controls Who can give their views on your update{% endblocktrans %}.</small>
+			<small>{% blocktrans %}This allows you to create a list of user to whom your Updates will not be published{% endblocktrans %}.</small>
 		</p>
 	</div>
 	<div class="row mbxs mlxl uimSetingLeftPad">
 		<span class="list-inline settingsText">{% blocktrans %}Allow to Spread my updates from{% endblocktrans %} </span>
 		<div class="btn-group">
-			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown">
-				{% blocktrans %}Everybody{% endblocktrans %}
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown"
+				data-old="{{social.updates.spreader.id}}" data-current="{{social.updates.spreader.id}}">
+				{% for spreader in SOCIAL_UPDATE_SPREAD_OPTNS %}
+			    	{% if spreader.id == social.updates.spreader.id%} 
+						{{spreader.name}}
+					{% endif %}
+				{% endfor %}
 			</button>
 			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
 				data-toggle="dropdown">
 				<span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">{% blocktrans %}Reachable and followers{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Reachable users only{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Followers only{% endblocktrans %}</a></li>
-				<li class="divider"></li>
-				<li><a href="#">{% blocktrans %}Update Specific{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}Custom{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}No One{% endblocktrans %}</a></li>
+				{% for spreader in SOCIAL_UPDATE_SPREAD_OPTNS %}
+					{% if spreader.id != social.updates.spreader.id%}
+						<li id="uim_social_update_who_can_spread_wrap_{{forloop.counter}}">
+							<a href="#" data-val="{{spreader.id}}">{{spreader.name}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
 			</ul>
 		</div>
-		<!-- # TODO : Update this latter-->
-		<p class="row">
-			<small>{% blocktrans %}This controls Who can spread your update{% endblocktrans %}.</small>
-		</p>
-	</div>
-	<div class="row mbxs mlxl uimSetingLeftPad">
-		<span class="list-inline settingsText">{% blocktrans %}Allow Views in emtion{% endblocktrans %} </span>
-		<div class="btn-group">
-			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown">
-				{% blocktrans %}All Update{% endblocktrans %}
-			</button>
-			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
-				data-toggle="dropdown">
-				<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#">{% blocktrans %}Personal Update{% endblocktrans %}</a></li>
-				<li class="divider"></li>
-				<li><a href="#">{% blocktrans %}Update Specific{% endblocktrans %}</a></li>
-				<li><a href="#">{% blocktrans %}None{% endblocktrans %}</a></li>
-			</ul>
-		</div>
-		<!-- # TODO : Update this latter-->
-		<p class="row">
-			<small>{% blocktrans %}This controls Who can spread your update{% endblocktrans %}.</small>
-		</p>
 	</div>
 </div>

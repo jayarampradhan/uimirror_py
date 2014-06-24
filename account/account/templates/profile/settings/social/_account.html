@@ -1,39 +1,7 @@
 {% load i18n %}
 {#Chat Settings Page#}
 <div class="row no-margin">
-	<div class="checkbox">
-  		<label class="settingsText">
-  			<form class="form-horizontal" 
-  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
-  				action="#"
-  				data-unsaved="">
-  				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.showlocation}}" 
-					{% if usr.settings.chat.showlocation %}checked{% endif %} data-current="{{usr.settings.chat.showlocation}}">
-			</form>
-			{% blocktrans %}Don't show my updates to specific Users{% endblocktrans %}
-  		</label>
-  		<p>
-  			<small>{% blocktrans %}This controls to block users who will not get your update{% endblocktrans %}.</small>
-		</p>
-	</div>
-	<div class="checkbox">
-  		<label class="settingsText">
-  			<form class="form-horizontal" 
-  				enctype="application/x-www-form-urlencoded" method="post" id="chatSettingDisplayLocForm" 
-  				action="#"
-  				data-unsaved="">
-  				{% csrf_token %}
-				<input type="checkbox" value="{{usr.settings.chat.minimizewindow}}"
-					{% if usr.settings.chat.minimizewindow %}checked{% endif %} data-current="{{usr.settings.chat.minimizewindow}}">
-			</form>
-    		{% blocktrans %}Don't update me from specific users{% endblocktrans %}
-  		</label>
-  		<p>
-			<small>{% blocktrans %}This controls to block users from whom you will not get any updates{% endblocktrans %}.</small>
-		</p>
-	</div>
-	<div class="row mbxs mlxl uimSetingLeftPad">
+	<div class="row mbxs mlxl uimSetingLeftPad mtl">
 		<a class="list-inline settingsText">{% blocktrans %}Download a local copy of my profile{% endblocktrans %}.</a>
 	</div>
 	<div class="row mbxs mlxl uimSetingLeftPad">

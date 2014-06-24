@@ -45,4 +45,5 @@ class Constants(object):
     NEXT_GET_KEY = 'next';
     IMPORT_SERVICE_PRVOVIDER = 'importsp';
     LOCATION_KEY = 'loc.'
+    PROFILE_KEY = 'prf';
     #######Common Terminology END#############
