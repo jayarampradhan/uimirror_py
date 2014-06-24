@@ -35,6 +35,9 @@
 					{% if social.account%} 
 						{% include "profile/settings/social/_account.html"%}
 					{% endif %}
+					{% if social.password%} 
+						{% include "profile/settings/_password.html"%}
+					{% endif %}
 				</div>
 			</div>
 			<div class="col-md-10 col-md-2 visible-md visible-lg">

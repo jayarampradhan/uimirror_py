@@ -72,9 +72,6 @@
 			<ul class="dropdown-menu" role="menu">
 				{% for reachable in SOCIAL_VISIBILITY_RECHABLES %}
 					{% if reachable.id != social.visibility.whocanreachme.id%}
-						{% if forloop.last %}
-							<li class="divider"></li>
-						{% endif %}  
 						<li id="uim_social_visiility_who_can_reach_wrap_{{forloop.counter}}">
 							<a href="#" data-val="{{reachable.id}}">{{reachable.name}}</a>
 						</li>

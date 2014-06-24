@@ -1,12 +1,63 @@
 {% load i18n %}
-{#Chat Settings Page#}
+{#Account Settings Page#}
 <div class="row no-margin">
 	<div class="row mbxs mlxl uimSetingLeftPad mtl">
+		<span class="list-inline settingsText">{% blocktrans %}Display My Name As{% endblocktrans %} </span>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown"
+				data-old="{{social.account.displaynameas}}" data-current="{{social.account.displaynameas}}">
+			    {% for nameformat in SOCIAL_ACCOUNT_DISPLAYNAME_OPTNS %}
+			    	{% if nameformat.id == social.account.displaynameas%} 
+						{{nameformat.name}}
+					{% endif %}
+				{% endfor %}
+			</button>
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
+				data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{% for nameformat in SOCIAL_ACCOUNT_DISPLAYNAME_OPTNS %}
+					{% if nameformat.id != social.account.displaynameas%}
+						<li id="uim_social_account_name_format_wrap_{{forloop.counter}}">
+							<a href="#" data-val="{{nameformat.id}}">{{nameformat.name}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="row mbxs mlxl uimSetingLeftPad mtl">
+		<span class="list-inline settingsText">{% blocktrans %}Show Me Date in {% endblocktrans %} </span>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default btn-sm selectedVal dropdown-toggle" data-toggle="dropdown"
+				data-old="{{social.account.dateformat}}" data-current="{{social.account.dateformat}}">
+			    {% for dateformat in SOCIAL_ACCOUNT_DISPLAYDATE_FORMAT_OPTNS %}
+			    	{% if dateformat.id == social.account.dateformat%} 
+						{{dateformat.name}}
+					{% endif %}
+				{% endfor %}
+			</button>
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm"
+				data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				{% for dateformat in SOCIAL_ACCOUNT_DISPLAYDATE_FORMAT_OPTNS %}
+					{% if dateformat.id != social.account.dateformat%}
+						<li id="uim_social_account_dateformat_wrap_{{forloop.counter}}">
+							<a href="#" data-val="{{dateformat.id}}">{{dateformat.name}}</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="row mbxs mlxl uimSetingLeftPad">
 		<a class="list-inline settingsText">{% blocktrans %}Download a local copy of my profile{% endblocktrans %}.</a>
 	</div>
 	<div class="row mbxs mlxl uimSetingLeftPad">
 		<a class="list-inline settingsText">{% blocktrans %}Delete my Profile{% endblocktrans %}.</a>
-		<!-- # TODO : Update this latter-->
 		<p class="row">
 			<small>{% blocktrans %}By Clicking you will be inactive{% endblocktrans %}.</small>
 			<br/>

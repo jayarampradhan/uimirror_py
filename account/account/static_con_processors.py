@@ -9,6 +9,8 @@ def global_settings(request):
         'SOCIAL_SNAP_CONTRIBUTORS' : getSocialSnapContributorsOptions(),
         'SOCIAL_VISIBILITY_RECHABLES' : getSocialVisibilityReachMeOptions(),
         'SOCIAL_UPDATE_SPREAD_OPTNS' : getSocialUpdateSpreadOptions(),
+        'SOCIAL_ACCOUNT_DISPLAYNAME_OPTNS' : getSocialAccountDisplayNameOptions(),
+        'SOCIAL_ACCOUNT_DISPLAYDATE_FORMAT_OPTNS' : getSocialAccountDisplayDateFormatOptions(),
     }
     
 def getAvailableApplication():
@@ -84,3 +86,24 @@ def getSocialUpdateSpreadOptions():
     spread_options.append({'id':5, 'name':'Custom'});
     spread_options.append({'id':6, 'name':'No One'});
     return spread_options;
+
+def getSocialAccountDisplayNameOptions():
+    '''
+       This will be the maximum options available for the options to display Name list in social page. 
+    '''
+    displayname_options = []
+    displayname_options.append({'id':0, 'name':'First Name'});
+    displayname_options.append({'id':1, 'name':'Last Name'});
+    return displayname_options;
+
+def getSocialAccountDisplayDateFormatOptions():
+    '''
+       This will be the maximum options available for the options to display Date Format list in social page. 
+    '''
+    dateformat_options = []
+    dateformat_options.append({'id':0, 'name':'YYYY-MM-DD HH:MM:SS'});
+    dateformat_options.append({'id':1, 'name':'DD-MM-YYYY HH:MM:SS'});
+    dateformat_options.append({'id':2, 'name':'MM-DD-YYYY HH:MM:SS'});
+    dateformat_options.append({'id':3, 'name':'DD-Month-YYYY HH:MM:SS'});
+    dateformat_options.append({'id':4, 'name':'Month-DD-YYYY HH:MM:SS'});
+    return dateformat_options;

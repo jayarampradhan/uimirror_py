@@ -19,6 +19,7 @@ def findOrUpdateBasicProfileCache(profile_id):
     dic = {};
     dic['fname'] = "Jayaram";
     dic['lname'] = 'Pradhan';
+    dic['displayname'] = 'Jayaram';
     dic['sex'] = 'M';
     dic['tz'] = 'Asia/Kolkota';
     dic['locale'] = 'en';
@@ -78,6 +79,8 @@ def getSocialDummySettings(tab):
         return buildDummyVisibilitySettings();
     elif tab == 'updates':
         return buildDummyUpdatesSettings();
+    elif tab == 'account':
+        return buildDummyAccountSettings();
     else:
         return 'test';
     
@@ -94,3 +97,6 @@ def buildDummyVisibilitySettings():
 def buildDummyUpdatesSettings():
     # TODO : Delete This as This was for only dummy data
     return {'showlocation' : 'y', 'showdevice' : 'y', 'noupdatesfrom': {'enable':'Y'}, 'noupdatesto': {'enable':'Y'}, 'spreader':{'id':0}};
+def buildDummyAccountSettings():
+    # TODO : Delete This as This was for only dummy data
+    return {'displaynameas' : 0, 'dateformat' : 1};
