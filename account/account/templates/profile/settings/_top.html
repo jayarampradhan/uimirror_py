@@ -10,28 +10,34 @@
 		<div class="navbar-collapse collapse visible-lg visible-md">
 			<ul class="nav navbar-nav">
 	          	<li class="" id="">
-	          		<a>
+	          		<a class="dropdown-toggle hasGlobalNotiDrop" data-toggle="dropdown">
 	          			<i class="fa fa-globe fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
+	          		{% if social%}
+	          			{% include "common/flyout/social/_global_notification.html"%}
+	          		{% endif %}
 	          	</li>
 	          	<li class="" id="">
-	          		<a>
+	          		<a class="dropdown-toggle hasReachableDrop" data-toggle="dropdown">
 	          			<i class="fa fa-signal fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
+	          		{% include "common/flyout/_reachable.html"%}
 	          	</li>
 	          	<li class="" id="">
-	          		<a>
+	          		<a class="dropdown-toggle hasMessageDrop" data-toggle="dropdown">
 	          			<i class="fa fa-envelope-o fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
+	          		{% include "common/flyout/_message.html"%}
 	          	</li>
 	          	<li class="" id="">
-	          		<a>
+	          		<a class="dropdown-toggle hasReminderDrop" data-toggle="dropdown">
 	          			<i class="fa fa-bell-o fa-fw flyOutIco"></i>
 	          			<span class="badge badge-error ">6</span>
 	          		</a>
+	          		{% include "common/flyout/_reminder.html"%}
 	          	</li>
 	        </ul>
 			<div class="col-sm-4 col-md-4">
@@ -49,12 +55,13 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="" id="">
-	          		<a>
+	          		<a class="dropdown-toggle hasUserProfileLogoutDrop" data-toggle="dropdown">
 	          			<img class="uimHeaderPic img-circle img-responsive" id="actorSnapOrginal"
 									src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
 									alt="{{usr.fname}} {{usr.lname}}"/>
 	          		</a>
-	          	</li>
+	          		{% include "common/flyout/_usr_logout.html"%}
+				</li>
 	        	<li class="" id="actorGreetings">
 	        		<p class="navbar-text actorGreetingWrap">
 	        			<span>{% blocktrans %}Ban, IND{% endblocktrans %}</span>

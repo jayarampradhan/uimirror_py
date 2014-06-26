@@ -1,0 +1,65 @@
+{#User Message Pop Up#}
+{% load i18n %}
+<ul class="dropdown-menu flyOutContentWrap">
+	<li class="flyOutContent flyOutReachable">
+		<div class="">
+			<div class="row">
+				<div class="col-md-2 no_padding">
+					<img class="uimHeaderPicL img-circle img-responsive"
+						id="actorSnapOrginal"
+						src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
+						alt="{{usr.fname}} {{usr.lname}}" />
+				</div>
+				<div class="col-md-10 xsplr fs12 nop">
+					<span class="fwb">{{usr.fname}} {{usr.lname}}</span>
+					<p class="text-muted small">Software Developer, EMC, Bangalore</p>
+					<div class="row">
+						<div class="col-md-12 no_padding">
+							<div class="btn-group">
+								<a href="http://www.jquery2dotnet.com"
+									class="btn btn-success btn-xs"> <i
+									class="fa fa-signal fa-fw"></i>{% blocktrans %}Reaching{% endblocktrans %}</a> <a href="http://www.jquery2dotnet.com"
+									class="btn btn-success btn-xs">{% blocktrans %}Cancel{% endblocktrans %}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li class="flyOutContent flyOutReachable">
+		<div class="">
+			<div class="row">
+				<div class="col-md-2 no_padding">
+					<img class="uimHeaderPicL img-circle img-responsive"
+						id="actorSnapOrginal"
+						src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
+						alt="{{usr.fname}} {{usr.lname}}" />
+				</div>
+				<div class="col-md-10 xsplr fs12 nop">
+					<span class="fwb">{{usr.fname}} {{usr.lname}}</span>
+					<p class="text-muted small">Software Developer, EMC, Bangalore</p>
+					<div class="row">
+						<div class="col-md-12 no_padding">
+							<div class="btn-group">
+								<a href="http://www.jquery2dotnet.com"
+									class="btn btn-success btn-xs"> <i
+									class="fa fa-signal fa-fw"></i>{% blocktrans %}Reaching{% endblocktrans %}</a> <a href="http://www.jquery2dotnet.com"
+									class="btn btn-success btn-xs">{% blocktrans %}Cancel{% endblocktrans %}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li class="nop">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12 no_padding">
+					<button type="button" class="btn btn-success btn-xs mxxlwd">{% blocktrans %}Find More Reachable{% endblocktrans %}.</button>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>

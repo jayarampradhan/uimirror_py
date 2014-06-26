@@ -33,6 +33,47 @@
 	height: 20px;
 	width: 25px;
 }
-.uimHeaderPic:hover{
+.uimHeaderNotiActorSnapl{
+	height: 70px;
+	width: 70px;
+}
+.uimHeaderNotiActorSnaps{
+	height: 40px;
+	width: 45px;
+}
+.uimHeaderPic:hover, li.flyOutReachable:hover,li.flyOutReachable:ACTIVE, li.flyOutReachable:FOCUS{
+	cursor: pointer;
+}
+.navbar-content
+{
+    width:320px;
+    padding: 15px;
+    padding-bottom:0px;
+}
+.navbar-content:before, .navbar-content:after
+{
+    display: table;
+    content: "";
+    line-height: 0;
+}
+/* .dropdown-menu {
+padding: 0px;
+overflow: hidden;
+} */
+ul.flyOutContentWrap{
+	width:320px;
+}
+.flyOutContentWrap>li.flyOutContent{
+	padding: 15px;
+	padding-bottom: 2px;
+}
+.flyOutContentWrap>li.flyOutContent{
+	border-bottom: 1px solid #e5e5e5;
+}
+/*TODO work on color*/
+li.flyOutMessage:hover,li.flyOutMessage:ACTIVE, 
+li.flyOutMessage:FOCUS, li.flyOutReminder:hover,li.flyOutReminder:ACTIVE, li.flyOutReminder:FOCUS,
+li.flyOutGlobalNoti:FOCUS, li.flyOutGlobalNoti:hover,li.flyOutGlobalNoti:ACTIVE, li.flyOutGlobalNoti:FOCUS{
+	background-color: #DDD;
 	cursor: pointer;
 }

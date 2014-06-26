@@ -21,6 +21,7 @@ def findOrUpdateBasicProfileCache(profile_id):
     dic['lname'] = 'Pradhan';
     dic['displayname'] = 'Jayaram';
     dic['sex'] = 'M';
+    dic['email'] = 'jayaramimca@gmail.com';
     dic['tz'] = 'Asia/Kolkota';
     dic['locale'] = 'en';
     status = {}
