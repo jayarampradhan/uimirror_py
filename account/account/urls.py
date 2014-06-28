@@ -3,6 +3,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from account.views.ThirdPartyContactImport import ContactImporter
+from account.views.WelcomeLandingView import WelcomeLandingView
 from account.views.invite_contacts import InviteEmailContact
 from account.views.register_view import RegisterView
 from account.views.resend_register_verify_token_view import ResendVrfyEmailView
@@ -10,10 +11,6 @@ from account.views.verify_change_email_view import ChangeEmailView
 from account.views.verify_register_token_view import VerifyView
 from account.views.welcome_view import WelcomeView
 from create_page_view import CreatePage
-from forgot_password_view import ForgotPasswordView
-from profile_manage_view import ProfileManageView
-from reset_password_view import ResetPasswordView
-from account.views.WelcomeLandingView import WelcomeLandingView
 
 admin.autodiscover()
 
@@ -41,21 +38,15 @@ urlpatterns = patterns('',
     
     #Once Contact Avaialable by provider process them
     url(r'^contacts/invite/$', InviteEmailContact.as_view(), name='account.uiwelcome.contacts.invite'),
-    #Reset password request will be landed here
-    url(r'^forgotPassword/$', ForgotPasswordView.as_view(), name='account.forgot.password'),
-    #Reset Pass word
-    url(r'^resetPassword/$', ResetPasswordView.as_view(), name='account.reset.password'),
     #Create Page
     url(r'^createPage/$', CreatePage.as_view(), name='account.create.page'),
-    #Manage Profile
-    url(r'^manageProfile/$', ProfileManageView.as_view(), name='account.manage.profile'),
     (r'^facebook/', include('facebook_sdk.urls')),
     #Upload file
     (r'^upload/', include('file_uploader.urls')),
     #location
     (r'^location/', include('locationservice.urls')),
     #Settings
-    (r'^setting/', include('profile_settings.urls')),
+    (r'^settings/', include('profile_settings.urls')),
 )
 
 if settings.DEBUG:

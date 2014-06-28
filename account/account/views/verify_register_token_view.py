@@ -72,7 +72,7 @@ class VerifyView(View):
            @param _errors: if it has any error it will render.
            @return: response for the verify 
         '''
-        from account.verify_helper import buildVerifyPageContext
+        from ui_utilities.verify_helper import buildVerifyPageContext
         _data = buildVerifyPageContext(tempProfileId, email, source, app, destination, _errors);
         context = RequestContext(request,_data);
         response = render_to_response('verify/verify_user.html', context)
@@ -85,7 +85,7 @@ class VerifyView(View):
            @param app: Application Code where request has been generated.
            @param destination: A destination where it will be navigated. 
         '''
-        from account.reg_helper import buildRegisterViewGetArguments
+        from ui_utilities.reg_helper import buildRegisterViewGetArguments
         if (app and destination and issues) or (app and destination) or (app and issues):
             return redirect('%s?%s' % (reverse('uim.register.create.with.path.app'
                                                , kwargs={'app_code':app}), buildRegisterViewGetArguments(destination, issues)));
@@ -107,7 +107,7 @@ class VerifyView(View):
         if not token:
             #add Context and return to the page
             log.info('[END]- Some Entered details are invalid so sending user the warnings and error to rectify.')
-            from account.dic_builder import buildValidationErrorDic
+            from ui_utilities.dic_builder import buildValidationErrorDic
             errors = buildValidationErrorDic('token', 'Entered Token is not valid!!!', 'Please enter the token you received in your mail.');
             return self.renderPage(tpid, email, source, app, destination, request, errors);
         log.info('[INTERIM]- Verifying the token submitted from the verify screen for user verifications.')
@@ -202,7 +202,7 @@ class VerifyView(View):
            @param destination: Destination Endpoint to keep track of.
            @return: The login page and error message on that. 
         '''
-        from account.lgn_helper import buildLoginGetArguments
+        from ui_utilities.lgn_helper import buildLoginGetArguments
         return redirect('%s?%s' % (reverse('uim.login', kwargs={'app_code':app_code}), buildLoginGetArguments(destination, _issues)))
     
     def handelSucessResponse(self, response):

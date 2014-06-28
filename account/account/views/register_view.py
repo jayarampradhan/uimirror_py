@@ -1,4 +1,4 @@
-from account.reg_helper import prepareRegisterPageContext
+from ui_utilities.reg_helper import prepareRegisterPageContext
 from django.conf import settings
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
@@ -181,7 +181,7 @@ class RegisterView(View):
         key = key.rstrip(', ') if key else None
         msg = key.rstrip('\n') if msg else None
         sug = key.rstrip('\n') if sug else None
-        from account.dic_builder import buildValidationErrorDic
+        from ui_utilities.dic_builder import buildValidationErrorDic
         return buildValidationErrorDic(key, msg, sug);
         
     def register(self, request, form):
@@ -213,7 +213,7 @@ class RegisterView(View):
             log.info('[END]- Registration process completed, redirecting to verify screen.');
             return self.nextView(DSUtility().getlistitem(res_msg, 'tmpprfid'), form.get('email'), form.get('destination'), form.get('app'))
         else:
-            from account.dic_builder import buildValidationErrorDic
+            from ui_utilities.dic_builder import buildValidationErrorDic
             if res_code == "406" or res_code == 406:
                 #Invalid Field
                 errors = buildValidationErrorDic(DSUtility().getlistitem(res_msg, 'INVLDKEY'), DSUtility().getlistitem(res_msg, 'INVLDMSG'), DSUtility().getlistitem(res_msg, 'INVLDSUG'));
@@ -238,7 +238,7 @@ class RegisterView(View):
            @param destination: Destination Where It will be Navigated.
            @param app: Application Code 
         '''    
-        from account.verify_helper import buildRegisterTokenVerifyGetArguments;
+        from ui_utilities.verify_helper import buildRegisterTokenVerifyGetArguments;
         from django.shortcuts import redirect
         from django.core.urlresolvers import reverse
         return redirect('%s?%s' % (reverse('uim.register.token.verify', kwargs={'tpid':tempProfileId}), buildRegisterTokenVerifyGetArguments(email, destination, 'form', app)));
