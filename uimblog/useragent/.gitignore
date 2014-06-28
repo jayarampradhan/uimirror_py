@@ -1,0 +1,5 @@
+/__init__.pyc
+/admin.pyc
+/determine_user_agent.pyc
+/models.pyc
+/user_agent_parser.pyc
