@@ -1,0 +1,28 @@
+@charset "utf-8";
+.navbar-xs { min-height:22px; border-radius:0} 
+.navbar-xs .navbar-brand{ padding: 2px 8px;font-size: 14px;line-height: 14px; height: auto;} 
+.navbar-xs .navbar-nav > li > a { border-right:1px solid #ddd; padding-top: 2px; padding-bottom: 2px; line-height: 16px }
+.uimSubHead .actorGreetingWrap, .uimSubHead .actorGreetingWrap>a{
+	font-size: 14px;
+	color: #5b74a8;
+}
+#uimLeftMenuTogl{
+	margin-right: 5px;
+}
+#uimLeftMenuTogl:hover{
+	text-decoration: none;
+}
+.uimSubHead .actorName {
+	max-width: 90px;
+	white-space: nowrap; 
+	word-break: no;
+	overflow : hidden;
+	-ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: inline-block;
+	vertical-align: text-top;
+}
+a.actorNameLn:hover{
+	text-decoration: underline;
+}

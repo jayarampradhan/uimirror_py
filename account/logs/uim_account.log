@@ -1152,3 +1152,64 @@ INFO 2014-06-27 18:14:33,801 ProfileSettingsView 959 4549914624 [START]- Request
 INFO 2014-06-27 18:14:43,094 ProfileSettingsView 959 4549914624 [START]- Request Received for the settings Page
 DEBUG 2014-06-27 18:14:43,169 ProfileSettingsView 959 4549914624 Response Getting Send is  {'usr': {'status': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'tz': 'Asia/Kolkota', 'locale': 'en', 'sex': 'M', 'lname': 'Pradhan', 'dob': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'fname': 'Jayaram', 'displayname': 'Jayaram', 'email': 'jayaramimca@gmail.com'}, u'social': {u'snap': {'contributor': {'id': 0}, 'downdloadable': {'id': 0}}}}
 INFO 2014-06-27 18:14:43,173 ProfileSettingsView 959 4549914624 [START]- Request Rendered for the settings Page
+INFO 2014-06-28 13:14:22,052 register_view 592 4462178304 [START]-Request Received for Register Page.
+INFO 2014-06-28 13:14:22,155 register_view 592 4462178304 [END]- Request Served for the register page.
+ERROR 2014-06-28 13:14:36,677 base 592 4466384896 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 23, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+ERROR 2014-06-28 13:14:36,683 base 592 4462178304 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 23, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+WARNING 2014-06-28 13:14:39,380 base 592 4470591488 Not Found: /favicon.ico
+INFO 2014-06-28 13:16:32,396 welcome_view 592 4462178304 [START]- Request Received for the Welcome View
+INFO 2014-06-28 13:16:32,397 welcome_view 592 4462178304 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-28 13:16:32,458 welcome_view 592 4462178304 [END]- Welcome View rendered.
+INFO 2014-06-28 13:16:51,356 ProfileSettingsView 592 4462178304 [START]- Request Received for the settings Page
+DEBUG 2014-06-28 13:16:51,463 ProfileSettingsView 592 4462178304 Response Getting Send is  {'usr': {'status': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'tz': 'Asia/Kolkota', 'locale': 'en', 'sex': 'M', 'lname': 'Pradhan', 'dob': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'fname': 'Jayaram', 'displayname': 'Jayaram', 'email': 'jayaramimca@gmail.com'}, 'social': {'chat': {'visible': {'id': 0}, 'showlocation': 'Y', 'minimizewindow': 'y'}}}
+INFO 2014-06-28 13:16:51,468 ProfileSettingsView 592 4462178304 [START]- Request Rendered for the settings Page
+INFO 2014-06-28 13:17:10,036 ProfileSettingsView 592 4462178304 [START]- Request Received for the settings Page
+DEBUG 2014-06-28 13:17:10,107 ProfileSettingsView 592 4462178304 Response Getting Send is  {'usr': {'status': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'tz': 'Asia/Kolkota', 'locale': 'en', 'sex': 'M', 'lname': 'Pradhan', 'dob': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'fname': 'Jayaram', 'displayname': 'Jayaram', 'email': 'jayaramimca@gmail.com'}, u'social': {u'account': {'displaynameas': 0, 'dateformat': 1}}}
+INFO 2014-06-28 13:17:10,111 ProfileSettingsView 592 4462178304 [START]- Request Rendered for the settings Page
+INFO 2014-06-28 13:17:20,298 ProfileSettingsView 592 4462178304 [START]- Request Received for the settings Page
+DEBUG 2014-06-28 13:17:20,373 ProfileSettingsView 592 4462178304 Response Getting Send is  {'usr': {'status': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'tz': 'Asia/Kolkota', 'locale': 'en', 'sex': 'M', 'lname': 'Pradhan', 'dob': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'fname': 'Jayaram', 'displayname': 'Jayaram', 'email': 'jayaramimca@gmail.com'}, u'social': {u'password': 'test'}}
+INFO 2014-06-28 13:17:20,375 ProfileSettingsView 592 4462178304 [START]- Request Rendered for the settings Page
+ERROR 2014-06-28 17:00:03,762 base 629 4426846208 Internal Server Error: /uiwelcome/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/LoginWithStateCheckMixin.py", line 23, in dispatch
+    if not super(LoginWithStateCheckMixin, self).check_state(request):
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/StateCheckMixin.py", line 24, in check_state
+    return self.presume_and_analyse_state(prf_id);
+  File "/Users/Jayaram/git/uimirror-py/account/custom_mixins/WelcomeStateCheck.py", line 23, in presume_and_analyse_state
+    if attr.get('age') == 'new':
+AttributeError: 'NoneType' object has no attribute 'get'
+WARNING 2014-06-28 17:00:13,316 base 629 4426846208 Not Found: /favicon.ico
+INFO 2014-06-28 17:00:37,817 welcome_view 629 4426846208 [START]- Request Received for the Welcome View
+INFO 2014-06-28 17:00:37,835 welcome_view 629 4426846208 [INTERIM]- User State Restored and doing the fresh render.
+INFO 2014-06-28 17:00:39,258 welcome_view 629 4426846208 [END]- Welcome View rendered.
+INFO 2014-06-28 17:00:58,955 ProfileSettingsView 629 4426846208 [START]- Request Received for the settings Page
+DEBUG 2014-06-28 17:00:59,113 ProfileSettingsView 629 4426846208 Response Getting Send is  {'usr': {'status': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'tz': 'Asia/Kolkota', 'locale': 'en', 'sex': 'M', 'lname': 'Pradhan', 'dob': {'status': 'Software engineer', 'type': 'job', 'id': '1234', 'name': 'EMC'}, 'fname': 'Jayaram', 'displayname': 'Jayaram', 'email': 'jayaramimca@gmail.com'}, 'social': {'chat': {'visible': {'id': 0}, 'showlocation': 'Y', 'minimizewindow': 'y'}}}
+INFO 2014-06-28 17:00:59,116 ProfileSettingsView 629 4426846208 [START]- Request Rendered for the settings Page

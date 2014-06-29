@@ -1,0 +1,428 @@
+@charset "utf-8";
+.uimHead .badge{
+	top: 4px;
+}
+
+/*Experiment*/
+.navbar.uimHead{
+	margin-bottom: 0px;
+} 
+.navbar.uimSubHead{
+	margin-bottom: 5px;
+}
+.fa:empty {
+width: 1em;
+}
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+
+/*Assuming chat css*/
+
+#wrapper {
+    padding-left: 10px;
+    transition: all .4s ease 0s;
+    height: 100%
+}
+
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: -72px;
+    width: 222px;
+    background: #fff;
+    position: fixed;
+    height: 100%;
+    /* z-index: 10000; */
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 222px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+#wrapper.active {
+    padding-left: 222px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar_name {
+    padding-top: 25px;
+    color: #fff;
+    opacity: .7;
+}
+
+
+#main_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:20px;
+}
+.sub_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:10px;
+}
+.content-header {
+  height: 65px;
+  line-height: 65px;
+}
+
+.content-header h1 {
+  margin: 0;
+  margin-left: 20px;
+  line-height: 65px;
+  display: inline-block;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 10px;
+    transition: all .4s ease 0s;
+}
+#sidebar-wrapper {
+    left: 70px;
+}
+#wrapper.active {
+    padding-left: 10px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    transition: all .4s ease 0s;
+}
+}
+.uimSubHead .btn{
+	font-size: 13px;
+}
+.contentHolder{
+	background-color: #fff;
+	min-height: 700px;
+	padding-top: 2px;
+}
+
+/*Setings finalized*/
+.settingsText{
+	font-size: 14px;
+}
+.uimSetingLeftPad{
+	margin-left: 25px;
+}
+.selectedVal{
+	color: #5b74a8;
+	font-weight: bold;
+}
+
+/*Profile View Chat Options*/
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-width: 222px;
+	min-width: 222px;
+  }
+}
+.list-view{
+	border: none;
+	border-top: 1px solid #ddd;
+}
+.panel{
+	border: none;
+}
+.panel-default>.panel-heading {
+	border: none;
+	background-color: gray;
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: inline-block !important;
+    }
+    .block {
+        display: block !important;
+        width: 100%;
+        height: 1px !important;
+    }
+}
+#back-to-bootsnipp {
+    position: fixed;
+    top: 10px; right: 10px;
+}
+
+.c-search{
+	border-top: 1px solid #CFCFCF;
+	border-right: 1px solid #CFCFCF;
+}
+.c-search > .form-control {
+   border-radius: 0px;
+   border-width: 0px;
+   border-bottom-width: 1px;
+   font-size: 1.3em;
+   padding: 12px 12px;
+   height: 30px;
+   outline: none !important;
+}
+.c-search > .form-control:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none;
+}
+.c-search > .input-group-btn .btn {
+   border-radius: 0px;
+   border-width: 0px;
+   border-left-width: 1px;
+   border-bottom-width: 1px;
+   height: 30px;
+}
+.uimChatImg{
+	width: 35px;
+	float: left;
+	margin-right: 4px;
+}
+.uimChatUserInfo{
+	line-height: 14px;
+	vertical-align: middle;
+	color: #3b5998;
+}
+.uimChatUserInfo .name {
+	max-width: 155px;
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #3b5998;
+}
+.uimChatUserInfo .c-info{
+	color: green;
+}
+/*Tool Bar*/
+.uimToolbarWrap{
+	background-color: #f7f7f7;
+}
+.uimToolbar, .uimToolbar * {
+	color: #111;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+.uimToolbar {
+	overflow: hidden;
+	background: #CFCFCF; /* Fallback */
+	background: -moz-linear-gradient(top, #cfcfcf 0%, #a8a8a8 100%); /* Firefox */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cfcfcf), to(#a8a8a8)); /* Safari + Chrome */
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	overflow: hidden;
+	text-align: center;
+	/* padding: 1px 0 0 68px; */
+}
+
+.uimToolBarNav {
+	position: absolute;
+	top: 8px;
+	left: 12px;
+}
+.uimToolBarNav a {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 14px;
+	margin-right: 7px;
+	font: bold 14px/14px 'Helvetica', 'Arial';
+	text-align: center;
+	color: #FFF;
+
+	-moz-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 3px 0 rgba(0, 0, 0, 0.80) inset, 0 1px 0px 0 rgba(255, 255, 255, 0.40); /* Firefox */
+	-webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 3px 0 rgba(0, 0, 0, 0.80) inset, 0 1px 0px 0 rgba(255, 255, 255, 0.40); /* Safari + Chrome */
+	box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3) inset, 0 1px 3px 0 rgba(0, 0, 0, 0.80) inset, 0 1px 0px 0 rgba(255, 255, 255, 0.40);
+
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+
+}
+.uimToolBarNav a.uimMenuclose {
+	background: #f12519;
+	background: -moz-linear-gradient(top, #f12519 0%, #ff8684 100%); /* Firefox */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f12519), to(#ff8684)); /* Safari + Chrome */
+	color: #630f0a;
+}
+.uimToolBarNav a.uimMenuMinimize {
+	background: #da8e28;
+	background: -moz-linear-gradient(top, #e59130 0%, #ffdf4b 100%); /* Firefox */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e59130), to(#ffdf4b)); /* Safari + Chrome */
+	color: #742a08;
+}
+.uimToolBarNav a.uimMenuExpand {
+	background: #67982f;
+	background: -moz-linear-gradient(top, #70a847 0%, #a1e268 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#70a847), to(#a1e268)); /* Safari + Chrome */
+	color: #093b00;
+}
+.uimToolBarNav a:before {
+	content: '';
+	width: 6px;
+	height: 3px;
+	background: -moz-radial-gradient(50% 50% 90deg,ellipse contain, rgba(255,255,255,1), rgba(255,255,255,0) 100%); /* Firefox */
+	position: absolute;
+	left: 50%;
+	top: 1px;
+	margin-left: -3px;
+}
+.uimToolBarNav a:after {
+	content: '';
+	line-height: 2px;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	bottom: -4px;
+	opacity:0.55;
+	background: -moz-radial-gradient(50% 50% 90deg,ellipse contain, rgba(255,255,255,1), rgba(255,255,255,0) 100%); /* Firefox */
+}
+.uimToolBarNav:hover a.uimMenuclose:after {
+	content: 'x';
+}
+.uimToolBarNav:hover a.uimMenuMinimize:after {
+	content: '-';
+}
+.uimToolBarNav:hover a.uimMenuExpand:after {
+	content: '+';
+}
+a.uimMenuclose:active {
+	background: #c84840;
+}
+a.uimMenuMinimize:active {
+	background: #bb7e39;
+}
+a.uimMenuExpand:active {
+	background: #5b9d2a;
+}
+/*Assuming List Grid View*/
+ul.challengeTagListWrap,ul#challenges{
+	list-style: none;
+	padding: 0px;
+}
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.challenge.list-view
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+}
+.challenge.list-view:nth-of-type(odd):hover,.challenge.list-view:hover
+{
+    background: #428bca;
+}
+.challenge.list-view .thumbnail
+{
+    margin-bottom: 0px;
+}
+.challenge.list-view .caption
+{
+    padding: 9px 9px 5px 9px;
+}
+.challenge.list-view:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+/* .challenge.list-view:before, .challenge.list-view:after
+{
+    display: table;
+    content: " ";
+} */
+
+.challenge.list-view img
+{
+    float: left;
+}
+.challenge.list-view:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+.challenge>.thumbnail>.banner{
+	height: 120px;
+	width: 195px;
+}
+.challenge.list-view>.thumbnail>.banner{
+	height: 130px;
+	width: 130px;
+}
+.challengeFeedWrap.well{
+	border-top: none;
+}
+.challenge.list-view>.thumbnail>.banner
+{
+    margin-right: 10px;
+}
+.challenge.list-view>.thumbnail
+{
+    border: none;
+}
+.challenge.list-view .detailsWrap{
+	max-height: 146px;
+	max-width: 587px;
+	overflow: hidden;
+	min-height: 121px;
+}
+.challenge .actorImage{
+	height: 30px;
+	width: 45px;
+}
+
+ul.challengeTagListWrap>li.tag{
+	display: inline;
+	float: left;
+}
