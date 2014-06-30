@@ -67,8 +67,6 @@ width: 1em;
     color: #fff;
     opacity: .7;
 }
-
-
 #main_icon
 {
     float:right;
@@ -117,18 +115,6 @@ width: 1em;
 	background-color: #fff;
 	min-height: 700px;
 	padding-top: 2px;
-}
-
-/*Setings finalized*/
-.settingsText{
-	font-size: 14px;
-}
-.uimSetingLeftPad{
-	margin-left: 25px;
-}
-.selectedVal{
-	color: #5b74a8;
-	font-weight: bold;
 }
 
 /*Profile View Chat Options*/
@@ -337,92 +323,87 @@ a.uimMenuMinimize:active {
 a.uimMenuExpand:active {
 	background: #5b9d2a;
 }
-/*Assuming List Grid View*/
-ul.challengeTagListWrap,ul#challenges{
+/*Test*/
+ul#challenges, ul#challengeReminders, .challenge .details ul.tags, ul#challengeFilterTags{
 	list-style: none;
-	padding: 0px;
+	padding: 0;
+	margin: 0 auto;
+	border: none;
 }
-.thumbnail
-{
-    margin-bottom: 20px;
-    padding: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+ul#challenges>li.challenge, ul#challengeReminders>li.reminder{
+	padding: 2px;
+	margin-top: 5px;
 }
-
-.challenge.list-view
-{
-    float: none;
-    width: 100%;
-    background-color: #fff;
+ul#challenges>li.challenge.favourite{
+	background-color: #FCEFA6;
 }
-.challenge.list-view:nth-of-type(odd):hover,.challenge.list-view:hover
-{
-    background: #428bca;
+ul#challenges>li.challenge.loos{
+	background-color: #FFB9B0;
 }
-.challenge.list-view .thumbnail
-{
-    margin-bottom: 0px;
+ul#challenges>li.challenge.win{
+	background-color: #C8FAE0;
 }
-.challenge.list-view .caption
-{
-    padding: 9px 9px 5px 9px;
+ul#challenges>li.challenge.submitted{
+	background-color: #CCE7F5;
 }
-.challenge.list-view:nth-of-type(odd)
-{
-    background: #eeeeee;
+#challenges>li:not(:last-child){
+	border-bottom: 1px solid #eaeaea;
 }
-
-/* .challenge.list-view:before, .challenge.list-view:after
-{
-    display: table;
-    content: " ";
-} */
-
-.challenge.list-view img
-{
-    float: left;
+.challenge .banner{
+	height: 70px;
+	width: 90px;
 }
-.challenge.list-view:after
-{
-    clear: both;
-}
-.list-group-item-text
-{
-    margin: 0 0 11px;
-}
-.challenge>.thumbnail>.banner{
-	height: 120px;
-	width: 195px;
-}
-.challenge.list-view>.thumbnail>.banner{
-	height: 130px;
-	width: 130px;
-}
-.challengeFeedWrap.well{
-	border-top: none;
-}
-.challenge.list-view>.thumbnail>.banner
-{
-    margin-right: 10px;
-}
-.challenge.list-view>.thumbnail
-{
-    border: none;
-}
-.challenge.list-view .detailsWrap{
-	max-height: 146px;
-	max-width: 587px;
+.challenge .metaInfo{
+	max-width: 200px;
 	overflow: hidden;
-	min-height: 121px;
+	font-size: 12px;
 }
-.challenge .actorImage{
-	height: 30px;
-	width: 45px;
+.challenge .details .title, .challenge .details .summery{
+	font-size: 14px;
+	padding: 0;
+	margin: 0 auto;
+}
+.challenge.favourite .fav, .challenge .fav.marked{
+	color: #333;
+	font-weight: bold;
+}
+.challenge .fav{
+	cursor: pointer;
+}
+.challenge .details ul.tags > li.tag, ul#challengeFilterTags > li.tag{
+	float: left;
+	display: inline;
+}
+.challenge .details ul.tags > li:not(:last-child), ul#challengeFilterTags > li.tag:not(:last-child){
+	margin-right: 5px;
+}
+.challenge .metaInfo .time{
+	color: #999;
+	font-size: 11px;
+}
+.challenge .tags .badge{
+	font-size: 10px;
+	color: #3e6d8e;
+	background-color: #e0eaf1;
+	border-bottom: 1px solid #b3cee1;
+	border-right: 1px solid #b3cee1;
+}
+.challenge .tags .badge:hover{
+	background-color: #c4dae9;
+	border-bottom: 1px solid #c4dae9;
+	border-right: 1px solid #c4dae9;
+	text-decoration: none;
+}
+.reminders{
+	display: none;
+}
+.hasReminder .reminders{
+	display: block;
+}
+/*Left Side*/
+
+ul#challengeReminders>li.reminder.seAll>a{
+	width: 100%
 }
 
-ul.challengeTagListWrap>li.tag{
-	display: inline;
-	float: left;
-}
+/*Tag Filter*/

@@ -52,8 +52,23 @@ label{
 .mtl{
 	margin-top: 15px;
 }
+.mtxs{
+	margin-top: 5px;
+}
+.mtsl{
+	margin-top: 10px;
+}
 ._mtxl{
 	margin-top: -15px;
+}
+._mtxxl{
+	margin-top: -30px;
+}
+.mtxl{
+	margin-top: 50px;
+}
+._mls{
+	margin-left: -5px;
 }
 .mll{
 	margin-left: 15px;
@@ -64,14 +79,20 @@ label{
 .mrl{
 	margin-right: 15px;
 }
-.mtxl{
-	margin-top: 50px;
+.mrs{
+	margin-right: 5px;
 }
 .nop{
 	padding: 0px;
 }
+.nom{
+	margin: 0px;
+}
 .spl{
 	padding-left: 5px;
+}
+.spt{
+	padding-top: 5px;
 }
 .xsplr{
 	padding-left: 5px;
@@ -98,7 +119,14 @@ label{
 .db{
 	display: block;
 }
-
+.elpse{
+	white-space: nowrap;
+	display: block;
+	word-break: normal;
+	word-spacing: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 /*Ajax Loading Image*/
 .ajxLoad {
 	background-image: url('/static/images/ajax_wifi_load.gif');
@@ -136,6 +164,7 @@ label{
 .uimFieldErr{
 	border-bottom: 1px solid red !important;
 }
+
 /*Badges*/
 .badge-top {
   display: block;
