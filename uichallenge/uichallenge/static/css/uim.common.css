@@ -119,6 +119,9 @@ label{
 .db{
 	display: block;
 }
+.bbd{
+	border-bottom: 1px solid #eaeaea;
+}
 .elpse{
 	white-space: nowrap;
 	display: block;
