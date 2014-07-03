@@ -334,3 +334,416 @@ Traceback (most recent call last):
 NoReverseMatch: Reverse for 'uim.profile.setting.by.app' with arguments '(u'social',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
 WARNING 2014-06-29 09:26:05,197 base 1146 4529160192 Not Found: /testref=snap
 WARNING 2014-06-29 11:13:52,203 base 1146 4529160192 Not Found: /testref=password
+ERROR 2014-07-02 17:52:24,689 base 1771 4388319232 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 263, in do_include
+    isolated_context=isolated_context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/Library/Python/2.7/site-packages/debug_toolbar/panels/templates/panel.py", line 71, in new_template_init
+    old_template_init(self, template_string, origin, name)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 1328, in url
+    args.append(parser.compile_filter(value))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 360, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 577, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: 't' from ''This is a Test And Can't'
+WARNING 2014-07-02 17:52:27,928 base 1771 4392525824 Not Found: /favicon.ico
+ERROR 2014-07-02 17:52:55,749 base 1771 4388319232 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(u'1234', u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\d+)/(?P<cname>\\w+)/$']
+ERROR 2014-07-02 17:53:38,319 base 1771 4388319232 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(1234, u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\d+)/(?P<cname>\\w+)/$']
+ERROR 2014-07-02 18:00:54,478 base 1771 4388319232 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(1234, u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\d+)/(?P<cname>\\w+)/$']
+ERROR 2014-07-02 18:01:27,663 base 2341 4528852992 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(1234, u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\d+)/(?P<cname>\\.*)/$']
+ERROR 2014-07-02 18:10:32,369 base 2341 4528852992 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(1234, u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\d+)/(?P<cname>\\.*)/$']
+ERROR 2014-07-02 18:11:39,558 base 2495 4442017792 Internal Server Error: /
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/UpdatesView.py", line 8, in get
+    return render_to_response('individual/feed/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(1234, u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\*)/(?P<cname>\\*)/$']
+WARNING 2014-07-02 18:56:24,693 base 2507 4491120640 Not Found: /favicon.ico

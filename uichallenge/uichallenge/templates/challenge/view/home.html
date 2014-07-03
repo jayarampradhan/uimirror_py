@@ -1,16 +1,16 @@
-{% extends 'individual/feed/_base.html' %}
+{% extends 'challenge/view/_base.html' %}
 {% load i18n %}
 {% block boot_starp_css_media %}
 {% endblock boot_starp_css_media %}
 {% block css_media %}
-    {% include "individual/feed/_media.html"%}
+    {% include "challenge/view/_media.html"%}
 {% endblock css_media %}
 {% block title %}
 	<title>{% trans "Challenge" %} - {{usr.fname}} {{usr.lname}} - UIMirror</title>
 {% endblock title %}
 {% block content %}
-	{% include "individual/feed/_top.html"%}
-	{% include "individual/feed/_sub_top.html"%}
+	{% include "challenge/view/_top.html"%}
+	{% include "challenge/view/_sub_top.html"%}
 	<div id="wrapper" class="active">
 	  <!-- Chat Left PageLet -->
       {% include "common/_chat.html"%}    
@@ -20,13 +20,13 @@
           		<div class="row">
 					<div class="col-md-7 col-xs-5 no_padding">
 						<div class="well well-lg contentHolder nop challengeFeedWrap">
-							<div id="challengeIndividualFeedPageLet">
-    							{% include "individual/feed/_stream.html"%}
+							<div id="challengeViewPageLet">
+    							{% include "challenge/view/_view.html"%}
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 col-xs-4 visible-md visible-lg">
-						{% include "individual/feed/_left.html"%}
+						{#{% include "individual/feed/_left.html"%}#}
 					</div>
 				</div>
 			</div>
@@ -36,5 +36,5 @@
 {% block footer %}
 {% endblock footer %}
 {% block script_media %}
-	{% include "individual/feed/_script_media.html" %}
+	{% include "challenge/view/_script_media.html" %}
 {% endblock script_media %}

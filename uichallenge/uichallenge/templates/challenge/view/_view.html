@@ -1,0 +1,85 @@
+{% load i18n %}
+<div class="container-fluid nop">
+	<!-- Challenge  -->
+	<div class="row challenge pbxs">
+		<div class="col-xs-2 col-md-2 nop">
+			<img class="banner img-rounded img-responsive" src="http://placehold.it/90x70/000/fff" alt="" />
+			<div class="row">
+				<small class="appearedCount xsplr">200+ Appeared</small>
+			</div>
+		</div>
+		<div class="col-xs-9 col-md-9 nop">
+			<div class="row">
+				<h3 class="title">
+					<a href="{% url 'uim.challenge.view' 1234 'This is a Test And Can\'t be removed'|slugify %}">
+						<span>This is a Test And Can't be removed</span>
+					</a>
+				</h3>
+			</div>
+			<div class="row no_margin pull-right metaInfo">
+				<div class="container-fluid nop time">
+					<small class="elpse"><span>Created</span> <span>19 Minutes Ago</span></small>
+				</div>
+				<div class="container-fluid nop mtxs">
+					<div class="col-xs-2 col-md-2 nop mrs">
+                        <img class="actorImage img-circle img-responsive" id=""
+						src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.120.120/p120x120/1795689_10152214496584911_1020271541_n.jpg"
+						alt="{{usr.fname}} {{usr.lname}}"/>
+                    </div>
+               		<div class="col-xs-8 col-md-8 nop">
+               			<div class="row no_margin">
+               				<a href="#">Cisco Inc.</a>
+               			</div>
+               		</div>
+				</div>
+            </div>
+		</div>
+		<div class="col-xs-1 col-md-1 nop _mls">
+			<a href="#" class="mtxl"><i class="fa fa-fw fa-star-o pull-right fav mtl"></i></a>
+		</div>
+	</div>
+	<!-- Challenge Details like attribute/rule/appear -->
+	<div class="row challengeMetaInfo xsplr">
+		<div class="container-fluid fs15 ptsl challengeMetaInfoWrap">
+			<div class="row">
+				<div class="col-xs-6 col-md-6 nop ">
+					<span class="label label-info mrs">Start From :</span><time>12 july 2012 12:00:00 IST</time>
+				</div>
+				<div class="col-xs-6 col-md-6 nop">
+					<span class="label label-info mrs">Ends On :</span><time>12 july 2012 12:00:00 IST</time>
+				</div>
+			</div>
+			<div class="row">
+				<span class="label label-info mrs">Test Duration :</span><time>2 Hours</time>
+			</div>
+			<div class="row">
+				<span class="label label-info">Rules :</span>
+				<div class="xsplr">This is a test</div>
+			</div>
+			<div class="row">
+				<span class="label label-info">Tags :</span>
+				<div class="xsplr">
+					<ul class="tags">
+            			<li class="tag"><a href="#"><small class="badge">Java</small></a></li>
+            			<li class="tag"><a href="#"><small class="badge">Java</small></a></li>
+            		</ul>
+				</div>
+			</div>
+			<div class="row">
+				<span class="label label-info">Benifits :</span>
+				<div class="xsplr">
+					<ul class="tags">
+            			<li class="tag"><a href="#"><small class="badge">Java</small></a></li>
+            			<li class="tag"><a href="#"><small class="badge">Java</small></a></li>
+            		</ul>
+				</div>
+			</div>
+			<div class="row">
+				<p>
+  					<button type="button" class="btn btn-success btn-sm btn-block">Appear Now <i class="fa fa-fw fa-play"></i></button>
+				</p>
+			</div>
+		</div>
+	
+	</div>
+</div>

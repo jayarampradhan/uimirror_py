@@ -1,0 +1,129 @@
+@charset "utf-8";
+.uimHead .badge{
+	top: 4px;
+}
+.navbar.uimHead{
+	margin-bottom: 0px;
+} 
+.navbar.uimSubHead{
+	margin-bottom: 5px;
+}
+.fa:empty {
+width: 1em;
+}
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+#page-content-wrapper {
+  width: 100%;
+}
+#wrapper {
+    padding-left: 10px;
+    transition: all .4s ease 0s;
+    height: 100%
+}
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: -72px;
+    width: 222px;
+    background: #fff;
+    position: fixed;
+    height: 100%;
+    /* z-index: 10000; */
+    transition: all .4s ease 0s;
+}
+#wrapper.active {
+    padding-left: 222px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+}
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 10px;
+    transition: all .4s ease 0s;
+}
+#sidebar-wrapper {
+    left: 70px;
+}
+#wrapper.active {
+    padding-left: 10px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    transition: all .4s ease 0s;
+}
+}
+#main_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:20px;
+}
+.contentHolder{
+	background-color: #fff;
+	min-height: 700px;
+	padding-top: 2px;
+}
+.uimSubHead .btn{
+	font-size: 13px;
+}
+/*Test*/
+.challenge{
+	border-bottom: 1px solid #eaeaea;
+}
+.challenge .title{
+	font-size: 18px;
+}
+.challenge .banner {
+	height: 70px;
+	width: 90px;
+}
+.challenge .fav{
+	font-size: 20px;
+	cursor: pointer;
+}
+.challenge.favourite .fav, .challenge .fav.marked{
+	color: #333;
+	font-weight: bold;
+}
+/*Ch Details*/
+.challengeMetaInfoWrap >.row{
+	margin-bottom: 10px;
+}
+.challengeMetaInfo ul.tags{
+	list-style: none;
+	float: left;
+	padding: 0;
+	margin: 0 auto;
+	border: none;
+}
+
+.challengeMetaInfo ul.tags>li.tag{
+	padding: 2px;
+}
+.challengeMetaInfo ul.tags>li.tag{
+	float: left;
+}
+.challengeMetaInfo .tags .badge{
+	font-size: 10px;
+	color: #3e6d8e;
+	background-color: #e0eaf1;
+	border-bottom: 1px solid #b3cee1;
+	border-right: 1px solid #b3cee1;
+}
+.challengeMetaInfo .tags .badge:hover{
+	background-color: #c4dae9;
+	border-bottom: 1px solid #c4dae9;
+	border-right: 1px solid #c4dae9;
+	text-decoration: none;
+	cursor: pointer;
+}

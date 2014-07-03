@@ -88,11 +88,17 @@ label{
 .nom{
 	margin: 0px;
 }
+.pbxs{
+	padding-bottom: 5px;
+}
 .spl{
 	padding-left: 5px;
 }
 .spt{
 	padding-top: 5px;
+}
+.ptsl{
+	padding-top: 10px;
 }
 .xsplr{
 	padding-left: 5px;
@@ -100,6 +106,9 @@ label{
 }
 .fs12{
 	font-size: 12px;
+}
+.fs15{
+	font-size: 15px;
 }
 .mxxlwd{
 	width: 100%;
