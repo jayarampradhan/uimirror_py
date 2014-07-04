@@ -1,0 +1,99 @@
+{% load compress %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    {# Mobile meta tag #}
+	    <meta name="HandheldFriendly" content="True">
+	    <meta name="MobileOptimized" content="320">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	    <meta name="description" content="Utility Application made easy by UIMirror.">
+    	<meta name="author" content="Uimirror Team.">
+	    <meta http-equiv="cleartype" content="on">
+	    {% block meta %}
+	    	<meta name="org:title" content="Uimirror">
+	    	<meta name="org:content" content="Social Calendar expense challenge blog consulting counsltancy">
+	    {% endblock meta %}
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    	<!--[if lt IE 9]>
+      	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<script>
+			window.html5 || document.write('<script src="/static/js/vendor/html5shiv-3.7.0.js">\x3C/script>')
+			window.respond || document.write('<script type="text/javascript" src="/static/js/vendor/respond-1.4.2.min.js">\x3C/script>')
+		</script>
+    	<![endif]-->
+	    {# Favicons #}
+	    <!-- <link rel="icon" href="{{static}}images/uimirror.ico" type="image/x-icon"> -->
+	    {% load static from staticfiles %}
+	    <link rel='shortcut icon' href="{{ STATIC_URL }}uimirror.ico" />
+	    {% block title %}
+	    	<title>{% trans "Welcome To" %} - UIMirror</title>
+	    {% endblock title %}
+	    {# Tile icon for Win8 (144x144 + tile color) #}
+		{% block boot_starp_css_media %}
+			<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap/vendor/bootstrap-3.1.1.min.css">
+		{% endblock boot_starp_css_media %}
+	    {% block css_media %}
+		{% endblock css_media %}
+	</head>
+	<body>
+	{% block content %}
+		
+	{% endblock content %}
+	{% block footer %}
+			<div id="footer" class="f10">
+				<div id="footerwrapper" class="fhp fbard">
+					<div class="fbar lh-40 fsmall _ui_top_f_cr">
+						<span id="fsr" class="f-right mr30">
+							<a class="fblf dib tc-5" href="#">{% trans "Privacy &amp; Terms" %}</a>.
+							<span class="dib _ui_cl_u _ui_f_sp">|</span>
+							<a class="fbl" href="#" jsaction="foot.cst">{% trans "Suggest Us" %}</a>.
+							<span class="dib _ui_cl_i _ui_f_sp">|</span>
+							<a class="fbl" href="#">{% trans "Help Me" %}</a>.
+						</span>
+						<span id="fsl" class="ml30">
+							 <a class="fblf" href="#">{% trans "Why UIMirror?" %}</a>
+							 <span class="dib _ui_cl_u _ui_f_sp">|</span> 
+							 <a class="fbl" href="#">{% trans "About" %}</a>.
+							 <span class="dib _ui_cl_i _ui_f_sp">|</span> 
+						</span>
+						<span id="lang-chooser-wrap" class="lang-chooser-wrap dib ml20">
+  							<label for="lang-chooser">
+  								<img src="{{ STATIC_URL }}images/language_21-21.png" alt="{% blocktrans %}Change language{% endblocktrans %}"/>
+  							</label>
+  							<select id="lang-chooser" class="lang-chooser lh-24 f13" name="lang-chooser">
+  								<option value="en" selected="selected">English (United States)‬</option>
+  								<option value="ka">‪ქართული‬</option>
+  								<option value="hy">‪հայերեն‬</option>
+								<option value="mr">‪मराठी‬</option>
+  								<option value="hi">‪हिन्दी‬</option>
+  								<option value="bn">‪বাংলা‬</option>
+  								<option value="gu">‪ગુજરાતી‬</option>
+  								<option value="ta">‪தமிழ்‬</option>
+ 								<option value="te">‪తెలుగు‬</option>
+  								<option value="kn">‪ಕನ್ನಡ‬</option>
+  								<option value="ml">‪മലയാളം‬</option>
+  								<option value="si">‪සිංහල‬</option>
+  								<option value="th">‪ไทย‬</option>
+  								<option value="lo">‪ລາວ‬</option>
+  								<option value="km">‪ខ្មែរ‬</option>
+								<option value="ko">‪한국어‬</option>
+  							</select>
+  						</span>
+					</div>
+				</div>
+			</div>
+		{% endblock footer %}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.11.1.min.js">\x3C/script>');
+		</script>
+		{% block script_media %}
+		{% endblock script_media %}
+	</body>
+</html>

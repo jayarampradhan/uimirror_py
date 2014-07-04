@@ -747,3 +747,69 @@ Traceback (most recent call last):
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'uim.challenge.view' with arguments '(1234, u"This is a Test And Can't be removed")' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ch/rule/(?P<cid>\\*)/(?P<cname>\\*)/$']
 WARNING 2014-07-02 18:56:24,693 base 2507 4491120640 Not Found: /favicon.ico
+ERROR 2014-07-03 08:04:00,749 base 3731 4437053440 Internal Server Error: /ch/rule/1234/this-is-a-test-and-cant-be-removed/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Jayaram/git/uimirror-py/uichallenge/uichallenge/views/ChallengeView.py", line 9, in get
+    return render_to_response('challenge/view/home.html',context);
+  File "/Library/Python/2.7/site-packages/django/shortcuts/__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 164, in render_to_string
+    return t.render(Context(dictionary))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 155, in render
+    return self.render_template(self.template, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 137, in render_template
+    output = template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/test/utils.py", line 85, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/Library/Python/2.7/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Library/Python/2.7/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'uim.challenge.appear' with arguments '(123, u'this-is-a-test')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2014-07-03 17:24:58,196 base 4677 4502638592 Internal Server Error: /users/123/jayaram-pradhan/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 87, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'pid'

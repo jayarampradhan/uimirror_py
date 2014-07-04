@@ -1,0 +1,124 @@
+{#Welcome TOP page#}
+{% load i18n %}
+<nav class="navbar navbar-inverse navbar-fixed-top uimHead" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="#" class="navbar-brand" id="homeLogo" data-ref="" data-url="">
+				<i class="uimLogo social" id="homeLogoIco"></i> 
+			</a>
+		</div>
+		<div class="navbar-collapse collapse visible-lg visible-md">
+			<ul class="nav navbar-nav">
+	          	<li class="" id="">
+	          		<a class="dropdown-toggle hasGlobalNotiDrop" data-toggle="dropdown">
+	          			<i class="fa fa-globe fa-fw flyOutIco"></i>
+	          			<span class="badge-top badge-error ">6</span>
+	          		</a>
+	          		{% if social%}
+	          			{% include "individual/flyout/social/_global_notification.html"%}
+	          		{% endif %}
+	          	</li>
+	          	<li class="" id="">
+	          		<a class="dropdown-toggle hasReachableDrop" data-toggle="dropdown">
+	          			<i class="fa fa-signal fa-fw flyOutIco"></i>
+	          			<span class="badge-top badge-error ">6</span>
+	          		</a>
+	          		{% include "individual/flyout/_reachable.html"%}
+	          	</li>
+	          	<li class="" id="">
+	          		<a class="dropdown-toggle hasMessageDrop" data-toggle="dropdown">
+	          			<i class="fa fa-envelope-o fa-fw flyOutIco"></i>
+	          			<span class="badge-top badge-error ">6</span>
+	          		</a>
+	          		{% include "individual/flyout/_message.html"%}
+	          	</li>
+	          	<li class="" id="">
+	          		<a class="dropdown-toggle hasReminderDrop" data-toggle="dropdown">
+	          			<i class="fa fa-bell-o fa-fw flyOutIco"></i>
+	          			<span class="badge-top badge-error ">6</span>
+	          		</a>
+	          		{% include "individual/flyout/_reminder.html"%}
+	          	</li>
+	        </ul>
+			<div class="col-sm-4 col-md-4">
+				<form class="navbar-form" role="search">
+					<div class="input-group">
+						<input type="text" class="form-control uimHeadSerach" placeholder="Search"
+							name="q">
+						<div class="input-group-btn">
+							<button class="btn btn-default uimHeadSerachIco" type="submit">
+								<i class="fa fa-search fa-fw"></i>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="" id="">
+	          		<a class="dropdown-toggle hasUserProfileLogoutDrop" data-toggle="dropdown">
+	          			<img class="uimHeaderPic img-circle img-responsive" id="actorSnapOrginal"
+									src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c55.0.160.160/p160x160/1795689_10152214496584911_1020271541_n.jpg"
+									alt="{{usr.fname}} {{usr.lname}}"/>
+	          		</a>
+	          		{% include "individual/flyout/_usr_logout.html"%}
+				</li>
+	        	<li class="" id="actorGreetings">
+	        		<p class="navbar-text actorGreetingWrap">
+	        			<span>{% blocktrans %}Ban, IND{% endblocktrans %}</span>
+	        			<!-- Update the link for edit user profile page -->
+	        			<span class="fa fa-cloud fa-fw flyOutIco"></span>
+	        			<span class="badge-top badge-info">30 <sup>oC</sup></span>
+	        		</p>
+	          	</li>
+	          	<li class="dropdown">
+	          		<a class="dropdown-toggle" data-toggle="dropdown">
+	          			<i class="fa fa-th-large fa-fw flyOutIco"></i>
+	          		</a>
+	          		<ul class="dropdown-menu" id="icons">
+            			<li>
+            				<a href="#">
+            					<i class="uimLogo homeUimLogo"></i>
+            					Social
+            				</a>
+            			</li>
+            			<li>
+            				<a href="#">
+            					<i class="uimLogo homeUimLogo"></i>
+            					Calendar
+            				</a>
+            			</li>
+            			<li>
+            				<a href="#"><i class="uimLogo homeUimLogo"></i>Challenge</a>
+            			</li>
+            			<li class="divider"></li>
+            			<li><a href="#"><i class="uimLogo homeUimLogo"></i>Expense</a></li>
+            			<li><a href="#"><i class="uimLogo homeUimLogo"></i>Blog</a></li>
+          			</ul>
+	          	</li>
+	        </ul>
+			<ul class="nav navbar-nav pull-right visible-lg visible-md">
+	        	<li class="dropdown" id="uimLangDropDownWrap">
+	        		<select id="lang-chooser"
+						class="lang-chooser lh-24 f13" name="lang-chooser">
+						<option value="en" selected="selected">English (United States)‬</option>
+						<option value="ka">‪ქართული‬</option>
+						<option value="hy">‪հայերեն‬</option>
+						<option value="mr">‪मराठी‬</option>
+						<option value="hi">‪हिन्दी‬</option>
+						<option value="bn">‪বাংলা‬</option>
+						<option value="gu">‪ગુજરાતી‬</option>
+						<option value="ta">‪தமிழ்‬</option>
+						<option value="te">‪తెలుగు‬</option>
+						<option value="kn">‪ಕನ್ನಡ‬</option>
+						<option value="ml">‪മലയാളം‬</option>
+						<option value="si">‪සිංහල‬</option>
+						<option value="th">‪ไทย‬</option>
+						<option value="lo">‪ລາວ‬</option>
+						<option value="km">‪ខ្មែរ‬</option>
+						<option value="ko">‪한국어‬</option>
+					</select>
+	          </li>
+	        </ul>
+	      </div><!--/.nav-collapse -->
+	   </div>
+</nav>

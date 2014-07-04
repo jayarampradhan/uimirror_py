@@ -1,0 +1,37 @@
+{% extends 'profile/_base.html' %}
+{% load i18n %}
+{% block boot_starp_css_media %}
+{% endblock boot_starp_css_media %}
+{% block css_media %}
+    {% include "profile/_media.html"%}
+{% endblock css_media %}
+{% block title %}
+	<title>{% trans "Challenge" %} - {{usr.fname}} {{usr.lname}} - UIMirror</title>
+{% endblock title %}
+{% block content %}
+	{% include "profile/_top.html"%}
+	{% include "profile/_sub_top.html"%}
+	<div id="wrapper" class="active">
+	  <!-- Chat Left PageLet -->
+      {% include "common/_chat.html"%}    
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+        	<div class="page-content inset">
+          		<div class="row">
+					<div class="col-md-11 col-xs-9 no_padding">
+						<div class="well well-lg contentHolder nop profileWrap">
+							<div id="profilePageLet">
+    							{% include "profile/_view.html"%}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+       	</div>
+    </div>
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
+{% block script_media %}
+	{% include "profile/_script_media.html" %}
+{% endblock script_media %}

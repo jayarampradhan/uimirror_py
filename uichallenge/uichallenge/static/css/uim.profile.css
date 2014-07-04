@@ -1,0 +1,159 @@
+@charset "utf-8";
+.uimHead .badge{
+	top: 4px;
+}
+.navbar.uimHead{
+	margin-bottom: 0px;
+} 
+.navbar.uimSubHead{
+	margin-bottom: 5px;
+}
+.fa:empty {
+width: 1em;
+}
+.row{
+    margin-left:0px;
+    margin-right:0px;
+}
+#page-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+#page-content-wrapper {
+  width: 100%;
+}
+#wrapper {
+    padding-left: 10px;
+    transition: all .4s ease 0s;
+    height: 100%
+}
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: -72px;
+    width: 222px;
+    background: #fff;
+    position: fixed;
+    height: 100%;
+    /* z-index: 10000; */
+    transition: all .4s ease 0s;
+}
+#wrapper.active {
+    padding-left: 222px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+}
+@media (max-width:767px) {
+    #wrapper {
+    padding-left: 10px;
+    transition: all .4s ease 0s;
+}
+#sidebar-wrapper {
+    left: 70px;
+}
+#wrapper.active {
+    padding-left: 10px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+    width: 150px;
+    transition: all .4s ease 0s;
+}
+}
+#main_icon
+{
+    float:right;
+   padding-right: 65px;
+   padding-top:20px;
+}
+.contentHolder{
+	background-color: #fff;
+	min-height: 700px;
+	padding-top: 2px;
+}
+.uimSubHead .btn{
+	font-size: 13px;
+}
+/*Test*/
+#profileMetaActions{
+	border-bottom: 1px solid #ccc;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+}
+.profileMetaActions h1.name{
+float: left;
+font-size: 18px;
+line-height: 34px;
+margin-bottom: 0;
+}
+.profileMetaActions .name{
+	max-width: 266px;
+}
+.profileMetaActions .toggle-summary-wrap {
+margin-left: 15px;
+float: left;
+margin-top: 20px;
+}
+.profileMetaActions .metaAction{
+	margin-top: 15px;
+	padding-bottom: 5px;
+}
+#profileShortSummery .data{
+	width: auto;
+	background-color: #fcfcfc;
+	border-top: solid 1px #eaeaea;
+	border-bottom: solid 1px #eaeaea;
+	padding: 5px;
+	float: none;
+}
+#profileShortSummery .actorImage{
+	height: 42px;
+}
+#profileShortSummery .actor .details>.row:FIRST-CHILD{
+	padding-bottom: 5px;
+}
+.grayOut{
+	color: #a0a0a0;
+}
+#profileSummery .data{
+	padding: 5px;
+}
+#profileSummery .actorImage{
+	height: 128px;
+	width: 128px;
+}
+#profileSummery .reputation{
+	margin-top: 10px;
+	width: 128px;
+}
+#profileSummery .awards{
+	margin-top: 5px;
+	width: 128px;
+}
+#profileSummery .reputation span{
+	font-size: 15px;
+	color: #000;
+}
+#profileSummery .actor .details>.row{
+	color: #333;
+}
+#profileSummery .actor .details>.row:last-child{
+	padding-bottom: 15px;
+}
+
+#profileSummery .actorAboutMe{
+	height: 225px;
+	float: right;
+	overflow-y: auto;
+}
+#profileSummery .actorAboutMe {
+	padding: 10px;
+	font-size: 12px;
+	background-color: #f8f8f8;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #eee;
+	line-height: 1.3;
+}

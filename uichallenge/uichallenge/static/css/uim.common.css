@@ -23,6 +23,9 @@ label{
 	margin-left: 0px;
 	margin-right: 0px;
 }
+.nom{
+	margin: 0;
+}
 .no_tb_margin {
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -33,6 +36,9 @@ label{
 
 .text-muted{
 	color: #ccd5e4;
+}
+.supernova {
+color: #fe7a15;
 }
 .fs-13{
 	font-size: 13px;
@@ -69,6 +75,9 @@ label{
 }
 ._mls{
 	margin-left: -5px;
+}
+._mlxxl{
+	margin-left: -50px;
 }
 .mll{
 	margin-left: 15px;
@@ -225,7 +234,18 @@ label{
 .badge-inverse:hover {
   background-color: #1a1a1a;
 }
-
+.badgeAward{
+	font-size: 8px;
+}
+.badgeAward.bronze{
+	color: #8c7853;
+}
+.badgeAward.gold{
+	color: #FFD700;
+}
+.badgeAward.silver{
+	color: #C0C0C0;
+}
 .btn {
   .badge-top {
     position: absolute;
